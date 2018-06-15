@@ -643,7 +643,3 @@ def get_image_antal():
     c.execute('SELECT Billeder FROM varer WHERE varer_image_path=?', (image_path,))
     antal = ''.join(c.fetchone())
     return jsonify(antal)
-
-
-if __name__ == "__main__":
-    app.run()
