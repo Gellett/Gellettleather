@@ -1,0 +1,29 @@
+#footer{
+		padding-top: 5px;
+		width: 1400px;
+		height: 100px;
+		background-color: #e2e2e2;
+		margin: auto;
+	}
+		#footer_container{
+			width: 1200px;
+			margin: auto;
+		}
+
+		.footer_box{
+			position: relative;
+			width: 15%;
+			display: inline-block;
+			margin-left: 150px;
+			margin-right: 40px;
+		}
+
+		#gls_logo{
+			background-image: url("../images/gls.png");
+			background-size: cover;
+			height: 50px;
+			width: 150px;
+			position: absolute;
+			bottom: 15px;
+			right: 60px;
+		}

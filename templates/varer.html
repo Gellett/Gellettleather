@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/varer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/js/punge.js" ></script>
+    <title>{{ titel }}</title>
+
+    <style>
+
+        #content{
+            position: relative;
+            background-color: #e2e2e2;
+            width: 1400px;
+            margin: auto;
+            min-height: 900px;
+            height: {{ content_height }}px;
+        }
+
+        .billede{
+	        background-size: cover;
+	        width: 330px;
+	        height: 220px;
+            display: inline-block;
+        }
+
+        #border_container{
+			border-left: 0.5px #969696 solid;
+			width: 1030px;
+			height: {{ height }}px;
+            min-height: 780px;
+			float: right;
+		}
+
+
+    </style>
+</head>
+
+<body id="body">
+
+    {% include 'header.html' %}
+
+    <div id="content">
+
+
+        <div id="container">
+            {% include 'nav.html' %}
+
+            {% include 'menu.html' %}
+            <div id="border_container">
+                <div class="products">
+                    {% for num in image_number %}
+
+                        <div class="product_container">
+                            <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
+                            <div class="product_text">
+                                <p>{{ product_text[num] }}</p>
+                            </div>
+                            <div  id="buy" class="buy">
+                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="{{ buy_btn_value[num] }}">
+                                    <input type="image" src="https://s19.postimg.cc/x1sml6d1f/buy.jpg" border="0" name="submit" alt="PayPal – den sikre og nemme måde at betale på nettet.">
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/da_DK/i/scr/pixel.gif" width="1" height="1">
+                                </form>
+                                <div id="buy_text"><p>Læg i kurv</p></div>
+                                <p id="pris"> {{ product_price[num] }} DKK.- </p>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            <div id="overlay"></div>
+
+            <div class="show">
+                <div id="ex_container">
+                    <div id="ex">
+                        X
+                    </div>
+                </div>
+
+                <div id="show_image"></div>
+                <div class="show_pic_container">
+                        <div class="show_pic_1"></div>
+                        <div class="show_pic_2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% include 'footer.html' %}
+</body>

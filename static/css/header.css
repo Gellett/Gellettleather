@@ -1,0 +1,27 @@
+#header{
+	background-color: #e2e2e2;
+	width: 1400px;
+	margin: auto;
+}
+	#logo_container{
+		width: 300px;
+		margin-left: 550px;
+		display: inline-block;
+	}
+
+		#logo{
+			background-image: url("../images/gellettlogo.png");
+			background-size: cover;
+			width: 285px;
+			height: 100px;
+			margin: auto;
+		}
+
+	#paypal{
+		background-image: url("../images/paypal_logo.png");
+		background-size: cover;
+		width: 300px;
+		height: 100px;
+		display: inline-block;
+		margin-left: 130px;
+	}

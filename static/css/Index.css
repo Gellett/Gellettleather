@@ -1,0 +1,148 @@
+html, body{
+	position: relative;
+	width: 100%;
+	margin: 0;
+	min-height: 100%;
+}
+
+body{
+	background-color: #d1d1d1;
+	overflow: auto;
+}
+
+#content{
+	background-color: #e2e2e2;
+	overflow: auto;
+	width: 1400px;
+	margin: auto;
+}
+
+	#pic_container{
+		position: relative;
+		width: 1200px;
+		height: 500px;
+		margin: auto;
+	}
+
+		#center_pic_left{
+			position: absolute;
+			background-image: url("../images/dame2.jpg");
+			width: 500px;
+			height: 450px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 0px;
+		}
+
+		#center_pic_right{
+			position: absolute;
+			background-image: url("../images/mand1.jpg");
+			width: 480px;
+			height: 450px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			right: 0px;	
+		}
+
+		#pic_container hr{
+		position: absolute;
+		bottom: 37px;
+		width: 1200px;
+		margin: auto;
+	}
+
+	#products{
+		position: relative;
+		margin: auto;
+		margin-top: 50px;
+		width: 1200px;
+		height: 500px;
+	}
+		#bestseller h1{
+			width: 100%;
+			text-align: center;
+		}
+
+		#product_left{
+			border-right: 0.5px solid #b7b7b7;
+		}
+
+		#product_mid{
+
+		}
+
+		#product_right{
+			border-left: 0.5px solid #b7b7b7;
+		}
+
+		.product_container{
+			position: relative;
+			width: 33%;
+			height: 350px;
+			display: inline-block;
+			background-color: #e2e2e2;
+			text-align: center;
+		}
+
+			#pic_left{
+			position: absolute;
+			right: 110px;
+			background-image: url("../images/belt.png");
+			background-size: cover;
+			height: 180px;
+			width: 200px;
+			}
+
+			#pic_mid{
+			position: absolute;
+			right: 65px;
+			background-image: url("../images/skrivemappe.png");
+			background-size: cover;
+			height: 180px;
+			width: 260px;
+			}
+
+			#pic_right{
+			position: absolute;
+			right: 70px;
+			background-image: url("../images/rejsetaske.png");
+			background-size: cover;
+			height: 180px;
+			width: 270px;
+			}
+
+		.product_text{
+			width: 100%;
+			position: absolute;
+			top: 270px;
+			text-align: center;
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

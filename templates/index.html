@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/Index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<title>Gellett Leather Denmark</title>
+</head>
+
+
+<body id="body">
+	{% include 'header.html' %}
+
+	<div id="content">
+		{% include 'nav.html' %}
+
+		<div id="pic_container">
+            <a href="dametasker.html"><div id="center_pic_left"></div></a>
+            <a href="herrepunge.html"><div id="center_pic_right"></div></a>
+			<hr>
+		</div>
+
+		<div id="products">
+			<div id="bestseller"><h1>Best seller</h1></div>
+			<div class="product_container" id="product_left"> 
+				<h2>Bælte</h2>
+				<div id="pic_left"></div>
+				<div class="product_text">
+					<p>Klassisk flot bælte, fremstillet i sort kerne læder med et kvalitets spænde.</p>
+				</div>	
+			</div>
+			<div class="product_container" id="product_mid">
+				<h2>Skrivemappe</h2>
+				<div id="pic_mid"></div>
+				<div class="product_text">
+					<p>Skrive mappe i A4 størrelse med lynlås og regnmaskine.</p>
+				</div>	
+			</div>
+			<div class="product_container" id="product_right">
+				<h2>Rejsetaske</h2>
+				<div id="pic_right"></div>
+				<div class="product_text">
+					<p>Stor flot rejsetaske med meget plads indvendig og justérbar skulderrem.</p>
+				</div>	
+			</div>
+		</div>
+
+	</div>
+
+	{% include 'footer.html' %}
+
+</body>
+
+
+</html>
