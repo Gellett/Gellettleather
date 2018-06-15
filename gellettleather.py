@@ -6,13 +6,13 @@ import sqlite3
 
 app = Flask(__name__)
 
-conn = sqlite3.connect('/Users/OliverElggardGellett/PycharmProjects/Gellettleather/gellettleather.db')
+conn = sqlite3.connect('./gellettleather.db')
 c = conn.cursor()
 
 
-@app.route('/Index.html')
+@app.route('/')
 def index():
-    return render_template("Index.html")
+    return render_template("index.html")
 
 
 @app.route('/skindtasker.html')
@@ -90,7 +90,9 @@ def dametasker():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("dametasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("dametasker.html", image_path=image_path, image_number=image_number, product_text=product_text,
+                           product_price=product_price, height=height, titel=titel, content_height=content_height,
+                           antal=antal, buy_btn_value=buy_btn_value)
 
 
 @app.route('/herretasker.html')
@@ -129,7 +131,9 @@ def herretasker():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("herretasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("herretasker.html", image_path=image_path, image_number=image_number, product_text=product_text,
+                           product_price=product_price, height=height, titel=titel, content_height=content_height,
+                           antal=antal, buy_btn_value=buy_btn_value)
 
 
 @app.route('/punge.html')
@@ -168,7 +172,9 @@ def punge():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("punge.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("punge.html", image_path=image_path, image_number=image_number, product_text=product_text,
+                           product_price=product_price, height=height, titel=titel, content_height=content_height,
+                           antal=antal, buy_btn_value=buy_btn_value)
 
 
 @app.route('/damepunge.html')
@@ -207,7 +213,8 @@ def damepunge():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("damepunge.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("damepunge.html", image_path=image_path, image_number=image_number, product_text=product_text,
+                           product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
 
 
 @app.route('/herrepunge.html')
@@ -513,6 +520,7 @@ def computertasker():
                 z = 0
 
 
+
     if z:
         height = (y + 1) * 360
         content_height = (y + 1) * 360 + 127 + 20
@@ -637,9 +645,5 @@ def get_image_antal():
     return jsonify(antal)
 
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
-
-
