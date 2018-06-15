@@ -15,7 +15,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/skindtasker.html')
+@app.route('/skindtasker')
 def skindtasker():
     titel = "Skindtasker"
     x = 1
