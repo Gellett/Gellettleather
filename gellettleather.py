@@ -6,7 +6,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-conn = sqlite3.connect('/Users/OliverElggardGellett/Desktop/Gellettleather/gellettleather.db', check_same_thread=False)
+conn = sqlite3.connect('gellettleather.db', check_same_thread=False)
 c = conn.cursor()
 
 
