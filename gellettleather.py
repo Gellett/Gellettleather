@@ -17,7 +17,6 @@ def index():
 
 @app.route('/skindtasker')
 def skindtasker():
-
     titel = "Skindtasker"
     x = 1
     y = 0
@@ -30,7 +29,7 @@ def skindtasker():
     antal = []
     c.execute('SELECT * FROM varer')
     for row in c.fetchall():
-        if row[3] == "dametaske" or row[3] == "herretaske":
+        if row[3] == "dametaske" or row[3] == "computertaske":
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
@@ -96,45 +95,6 @@ def dametasker():
                            antal=antal, buy_btn_value=buy_btn_value)
 
 
-@app.route('/herretasker')
-def herretasker():
-    titel = "Herretasker"
-    x = 1
-    y = 0
-    z = 0
-    buy_btn_value = []
-    image_number = []
-    image_path = []
-    product_text = []
-    product_price = []
-    antal = []
-    c.execute('SELECT * FROM varer')
-    for row in c.fetchall():
-        if row[3] == "herretaske":
-            row_numm = c.rowcount + x
-            image_number.append(row_numm)
-            image_path.append(row[0])
-            product_text.append(row[1])
-            product_price.append(row[2])
-            antal.append(row[4])
-            buy_btn_value.append(row[5])
-            x = x + 1
-            z = z + 1
-            if z == 3:
-                y = y + 1
-                z = 0
-
-
-    if z:
-        height = (y + 1) * 360
-        content_height = (y + 1) * 360 + 127 + 20
-    else:
-        height = y * 360
-        content_height = y * 360 + 127 + 20
-
-    return render_template("herretasker.html", image_path=image_path, image_number=image_number, product_text=product_text,
-                           product_price=product_price, height=height, titel=titel, content_height=content_height,
-                           antal=antal, buy_btn_value=buy_btn_value)
 
 
 @app.route('/punge')

@@ -10,11 +10,13 @@
 	}
 
 		#logo{
+			margin-top: 10px;
 			background-image: url("../images/gellettlogo.png");
 			background-size: cover;
 			width: 285px;
 			height: 100px;
-			margin: auto;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 	#paypal{
@@ -24,4 +26,12 @@
 		height: 100px;
 		display: inline-block;
 		margin-left: 130px;
+	}
+
+	#ombygning_container{
+		width: 100%;
+		height: 25px;
+		background-color: antiquewhite;
+		text-align: center;
+		font-size: 18px;
 	}
