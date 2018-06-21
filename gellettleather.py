@@ -6,7 +6,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-conn = sqlite3.connect('gellettleather.db', check_same_thread=False)
+conn = sqlite3.connect('./gellettleather.db', check_same_thread=False)
 c = conn.cursor()
 
 
@@ -534,7 +534,7 @@ def computertasker():
 
 
 @app.route('/tilbehoer')
-def tilbehør():
+def tilbehoer():
     titel = "Tilbehør"
     x = 1
     y = 0
