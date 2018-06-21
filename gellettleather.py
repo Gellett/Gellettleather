@@ -569,7 +569,7 @@ def tilbehoer():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("tilbehør.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("tilbehoer.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
 
 
 @app.route('/om_os')
