@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/om_os.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>{{ titel }}</title>
+</head>
+<body id="body">
+
+    {% include 'header.html' %}
+
+        <div id="content">
+
+            <div id="container">
+
+                {% include 'nav.html' %}
+
+                <div id="logos">
+                    <div class="logo" id="logo1"></div>
+                    <div class="logo" id="logo2"></div>
+                    <div class="logo" id="logo3"></div>
+                </div>
+
+                <div id="projekter">
+                    <h4>Projekter</h4>
+                    <p>
+                    Gellett leather Danmark har mange års erfaring med produktion af lædervarer som punge, tasker og mapper.
+
+                    Denne know-how har ført til et samarbejde med Udenrigsministeriet og Danida under det såkaldte B2B (Business-to-Business) program.
+
+                    Danidas B2B program har som hovedformål at skaffe lokale arbejdspladser i den 3. verden.
+                    I Gellett Leather har vi derfor med vores know-how startet flere produktionsvirksomheder for Danida bl.a. i Togo, Mozambique og Burkina Faso.
+                </p>
+                </div>
+
+                <div id="støtter">
+                    <h4>Vi støtter</h4>
+                    <p>Vi har hos Gellett Leather ApS valgt at støtte følgende organisationer.</p>
+                    <div id="list">
+                        <ul>
+                            <li>Kræftens bekæmpelse</li>
+                            <li>WSPA (World Society for the Protection of Animals)</li>
+                            <li>Red barnet</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="map"></div>
+
+            </div>
+        </div>
+    {% include 'footer.html' %}
+
+</body>
+</html>

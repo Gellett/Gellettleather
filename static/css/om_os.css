@@ -1,0 +1,79 @@
+html, body{
+	position: relative;
+	width: 100%;
+	margin: 0;
+	min-height: 100%;
+}
+
+body{
+	background-color: #d6d6d6;
+}
+
+    #content{
+            position: relative;
+            background-color: #e2e2e2;
+            width: 1400px;
+            margin: auto;
+            min-height: 1000px;
+        }
+
+	#container{
+		min-height: 100%;
+		width: 1200px;
+		margin: auto;
+	}
+    
+        #projekter{
+            float: left;
+            width: 60%;
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 20px;
+        }
+        
+        #støtter{
+            float: right;
+            width: 35%;
+            line-height: 1.5;
+            font-size: 20px;
+        }
+
+        #logos{
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .logo{
+            display: inline-block;
+        }
+
+        #logo1{
+            background-image: url("../images/Kræft.png");
+			background-size: cover;
+			width: 185px;
+			height: 100px;
+            margin-left: 115px;
+        }
+
+        #logo2{
+            background-image: url("../images/WSPA_logo.png");
+			background-size: cover;
+			width: 350px;
+			height: 90px;
+            margin-left: 115px;
+            margin-right: 162.5px;
+        }
+
+        #logo3{
+            background-image: url("../images/red_barnet.png");
+			background-size: cover;
+			width: 100px;
+			height: 100px;
+            margin-right: 162.5px;
+        }
+
+        #map{
+            height: 400px;
+            width: 400px;
+        }
