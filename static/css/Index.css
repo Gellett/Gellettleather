@@ -53,10 +53,13 @@ body{
 
 	#products{
 		position: relative;
-		margin: auto;
+		padding-left: 100px;
+		padding-right: 100px;
 		margin-top: 50px;
+		margin-bottom: 50px;
 		width: 1200px;
-		height: 500px;
+		height: 450px;
+		background-color: #e2e2e2;
 	}
 		#bestseller h1{
 			width: 100%;

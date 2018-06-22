@@ -5,13 +5,13 @@
 
 }
     #nav #list{
-        width: 720px;
+        width: 650px;
         margin: auto;
     }
         #nav li{
             list-style-type: none;
             display: inline;
-            margin-right: 15px;
+            margin-right: 25px;
         }
             #nav li a{
                 color: #7f7f7f;
@@ -21,4 +21,5 @@
 
                 #nav li a:hover{
                     color: #5b5b5b;
+                    border-bottom: 1px solid #5b5b5b;
                 }
