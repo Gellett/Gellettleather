@@ -6,7 +6,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-conn = sqlite3.connect('./gellettleather.db', check_same_thread=False)
+conn = sqlite3.connect('/Users/OliverElggardGellett/Desktop/Gellettleather/gellettleather.db', check_same_thread=False)
 c = conn.cursor()
 
 @app.route('/test')
@@ -24,6 +24,7 @@ def skindtasker():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -40,6 +41,9 @@ def skindtasker():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -54,7 +58,7 @@ def skindtasker():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("skindtasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("skindtasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/dametasker')

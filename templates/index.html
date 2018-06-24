@@ -14,8 +14,10 @@
       gtag('config', 'UA-121222558-1');
     </script>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<link rel="stylesheet" type="text/css" href="/static/css/Index.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/test.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<title>Gellett Leather Denmark</title>
@@ -28,43 +30,62 @@
 	<div id="content">
 		{% include 'nav.html' %}
 
+        <div class="row">
             <div id="pic_container">
 
-                    <a href="dametasker"><div id="center_pic_left"></div></a>
+                <div class="col-6 col-s-12" id="dame">
+                    <div id="center_pic_left_container">
+                        <a href="dametasker"><div id="center_pic_left"></div></a>
+                    </div>
+                </div>
 
-
-                    <a href="herrepunge"><div id="center_pic_right"></div></a>
+                <div class="col-6 col-s-12" id="mand">
+                    <div id="center_pic_right_container">
+                        <a href="herrepunge"><div id="center_pic_right"></div></a>
+                    </div>
+                </div>
 
                 <hr>
+
             </div>
-
         </div>
-		<div id="products">
-			<div id="bestseller"><h1>Best seller</h1></div>
-			<div class="product_container" id="product_left"> 
-				<h2>Bælte</h2>
-				<div id="pic_left"></div>
-				<div class="product_text">
-					<p>Klassisk flot bælte, fremstillet i sort kerne læder med et kvalitets spænde.</p>
-				</div>	
-			</div>
-			<div class="product_container" id="product_mid">
-				<h2>Skrivemappe</h2>
-				<div id="pic_mid"></div>
-				<div class="product_text">
-					<p>Skrive mappe i A4 størrelse med lynlås og regnmaskine.</p>
-				</div>	
-			</div>
-			<div class="product_container" id="product_right">
-				<h2>Rejsetaske</h2>
-				<div id="pic_right"></div>
-				<div class="product_text">
-					<p>Stor flot rejsetaske med meget plads indvendig og justérbar skulderrem.</p>
-				</div>	
-			</div>
-		</div>
 
-	</div>
+    </div>
+    <div id="products">
+        <div id="bestseller"><h1>Best seller</h1></div>
+            <div class="row">
+
+                <div class="col-4 col-s-12">
+                    <div class="product_container" id="product_left">
+                        <div class="product_name" id="product_left_name"><h2>Bælte</h2></div>
+                        <div class="product_pic" id="pic_left"></div>
+                        <div class="product_text">
+                            <p>Klassisk flot bælte, fremstillet i sort kerne læder med et kvalitets spænde.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-s-12">
+                    <div class="product_container" id="product_mid">
+                        <div class="product_name" id="product_mid_name"><h2>Skrivemappe</h2></div>
+                        <div class="product_pic" id="pic_mid"></div>
+                        <div class="product_text">
+                            <p>Skrive mappe i A4 størrelse med lynlåslomme og regnmaskine.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-s-12">
+                    <div class="product_container" id="product_right">
+                        <div class="product_name" id="product_right_name"><h2>Rejsetaske</h2></div>
+                        <div class="product_pic" id="pic_right"></div>
+                        <div class="product_text">
+                            <p>Stor flot rejsetaske med meget plads indvendig og justérbar skulderrem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 	{% include 'footer.html' %}
 

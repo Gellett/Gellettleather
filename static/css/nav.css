@@ -1,5 +1,4 @@
 #nav{
-
     max-width: 1200px;
     margin: auto;
     padding-top: 50px;
@@ -36,12 +35,12 @@
 
 
     .dropdown .dropbtn {
-        font-size: 17px;
+        font-size: 20px;
         border: none;
         outline: none;
-        color: white;
+        color: black;
         padding: 14px 16px;
-        background-color: black;
+        background-color: darkgray;
         font-family: inherit;
         margin: 0;
     }
@@ -83,6 +82,10 @@
 
     .dropdown{
         display: block;
+    }
+
+    .row{
+        background-color: #e2e2e2;
     }
 
     #nav hr {

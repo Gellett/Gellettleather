@@ -16,49 +16,46 @@ body{
 	overflow: auto;
 	max-width: 1400px;
 	margin: auto;
+	overflow: visible;
 }
 
 	#pic_container{
 		position: relative;
 		max-width: 1200px;
-		height: 500px;
+		height: 400px;
 		margin: auto;
 	}
 		#dame{
-			height: 450px;
+			height: 360px;
 		}
 
 		#mand{
-			height: 450px;
+			height: 360px;
 		}
 
 
 		#center_pic_left{
 			position: relative;
 			background-image: url("../images/dame2.jpg");
-			width: 500px;
-			height: 450px;
+			width: 400px;
+			height: 360px;
 			background-size: cover;
 			background-repeat: no-repeat;
-
-			
 		}
 
 		#center_pic_right{
 			position: relative;
 			background-image: url("../images/mand1.jpg");
-			width: 500px;
-			height: 450px;
+			width: 400px;
+			height: 360px;
 			background-size: cover;
 			background-repeat: no-repeat;
-
-
 		}
 
 		#center_pic_left_container{
 			position: relative;
-			width: 500px;
-			height: 450px;
+			width: 400px;
+			height: 360px;
 			left: 50%;
 			transform: translate(-50%);
 
@@ -66,8 +63,8 @@ body{
 
 		#center_pic_right_container{
 			position: relative;
-			width: 500px;
-			height: 450px;
+			width: 400px;
+			height: 360px;
 			left: 50%;
 			transform: translate(-50%);
 		}
