@@ -10,16 +10,16 @@ body{
 	overflow: auto;
 }
 
+
 #content{
 	background-color: #e2e2e2;
 	overflow: auto;
-	width: 1400px;
+	max-width: 1400px;
 	margin: auto;
 }
 
 	#pic_container{
 		position: relative;
-		width: 1200px;
 		height: 500px;
 		margin: auto;
 	}
@@ -41,22 +41,24 @@ body{
 			height: 450px;
 			background-size: contain;
 			background-repeat: no-repeat;
-			right: 0px;	
+			right: 0px;
 		}
 
 		#pic_container hr{
-		position: absolute;
-		bottom: 37px;
-		width: 1200px;
-		margin: auto;
-	}
+			position: absolute;
+			bottom: 37px;
+			width: 1200px;
+			margin: auto;
+		}
+
+
 
 	#products{
 		position: relative;
-		padding-left: 100px;
+		margin: auto;
+		padding-top: 10px;
 		padding-right: 100px;
-		margin-top: 50px;
-		margin-bottom: 50px;
+		padding-left: 100px;
 		width: 1200px;
 		height: 450px;
 		background-color: #e2e2e2;

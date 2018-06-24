@@ -1,25 +1,21 @@
 #footer{
 		padding-top: 5px;
-		width: 1400px;
+		max-width: 1400px;
 		height: 150px;
 		background-color: #e2e2e2;
 		margin: auto;
 	}
 		#footer_container{
-			width: 1200px;
+			max-width: 1200px;
 			margin: auto;
 		}
 
 		.footer_text{
 			position: relative;
-			width: 15%;
 			display: inline-block;
-			margin-left: 148px;
-			margin-right: 0px;
 			text-align: center;
-		}
-		#f_left{
-			margin-left: 270px;
+			left: 50%;
+			transform: translate(-50%);
 		}
 
 		#gls_logo{
@@ -27,7 +23,6 @@
 			background-size: cover;
 			height: 50px;
 			width: 150px;
-			position: absolute;
-			bottom: 30px;
-			right: 25px;
+			position: relative;
+			bottom: 10px;
 		}

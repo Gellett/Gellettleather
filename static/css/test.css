@@ -1,0 +1,189 @@
+html, body{
+    position: relative;
+	width: 100%;
+	margin: 0;
+	min-height: 100%;
+}
+
+body{
+	background-color: #d1d1d1;
+	overflow: auto;
+}
+
+
+#content{
+	background-color: #e2e2e2;
+	overflow: auto;
+	max-width: 1400px;
+	margin: auto;
+}
+
+	#pic_container{
+		position: relative;
+		max-width: 1200px;
+		height: 500px;
+		margin: auto;
+	}
+		#dame{
+			height: 450px;
+		}
+
+		#mand{
+			height: 450px;
+		}
+
+
+		#center_pic_left{
+			position: relative;
+			background-image: url("../images/dame2.jpg");
+			width: 500px;
+			height: 450px;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			
+		}
+
+		#center_pic_right{
+			position: relative;
+			background-image: url("../images/mand1.jpg");
+			width: 500px;
+			height: 450px;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+
+		}
+
+		#center_pic_left_container{
+			position: relative;
+			width: 500px;
+			height: 450px;
+			left: 50%;
+			transform: translate(-50%);
+
+		}
+
+		#center_pic_right_container{
+			position: relative;
+			width: 500px;
+			height: 450px;
+			left: 50%;
+			transform: translate(-50%);
+		}
+
+		#pic_container hr{
+			position: relative;
+			top: 10px;
+		}
+
+
+
+	#products{
+		position: relative;
+		margin: auto;
+		padding-top: 10px;
+		max-width: 1400px;
+		height: 450px;
+		background-color: #e2e2e2;
+	}
+		#bestseller h1{
+			width: 100%;
+			text-align: center;
+		}
+
+		#product_left{
+			border-right: 0.5px solid #b7b7b7;
+		}
+
+		#product_mid{
+
+		}
+
+		#product_right{
+			border-left: 0.5px solid #b7b7b7;
+		}
+
+		.product_container{
+			position: relative;
+			height: 350px;
+			display: inline-block;
+			background-color: #e2e2e2;
+			width: 100%;
+		}
+
+			.product_name{
+				position: relative;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			#product_left_name{
+				width: 60px;
+			}
+
+			#product_mid_name{
+				width: 135px;
+			}
+
+			#product_right_name{
+				width: 115px;
+			}
+
+			#pic_left{
+				position: relative;
+				background-image: url("../images/belt.png");
+				background-size: cover;
+				height: 180px;
+				width: 200px;
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+			#pic_mid{
+				position: relative;
+				background-image: url("../images/skrivemappe.png");
+				background-size: cover;
+				height: 180px;
+				width: 260px;
+			}
+
+			#pic_right{
+				position: relative;
+				background-image: url("../images/rejsetaske.png");
+				background-size: cover;
+				height: 180px;
+				width: 270px;
+			}
+
+			.product_pic{
+				left: 50%;
+				transform: translate(-50%);
+			}
+
+		.product_text {
+			position: relative;
+			width: 85%;
+			text-align: center;
+			left: 50%;
+			transform: translate(-50%);
+		}
+
+
+@media only screen and (max-width: 600px){
+
+
+
+	#product_left{
+		border-top: 0.5px solid #b7b7b7;
+		border-right: none;
+		border-bottom: 0.5px solid #b7b7b7;
+	}
+
+	#product_right{
+		border-left: none;
+		border-top: 0.5px solid #b7b7b7;
+	}
+
+
+}

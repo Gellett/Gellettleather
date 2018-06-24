@@ -9,6 +9,9 @@ app = Flask(__name__)
 conn = sqlite3.connect('./gellettleather.db', check_same_thread=False)
 c = conn.cursor()
 
+@app.route('/test')
+def test():
+    return render_template("test.html")
 
 @app.route('/')
 def index():
