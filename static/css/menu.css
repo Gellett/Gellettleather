@@ -48,7 +48,7 @@
 		right: 50px;
 	}
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 1000px){
 	#menu{
 		display: none;
 	}
