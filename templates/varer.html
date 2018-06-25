@@ -52,13 +52,30 @@
             }
 
             #content{
-                height: {{ content_height1 }}px;
+                max-height: {{ content_height1 }}px;
             }
 
             #border_container{
                 height: {{ height1 }}px;
             }
 	    }
+
+        @media only screen and (max-width: 1160px){
+
+            #border_container {
+                border-left: none;
+                max-width: 1150px;
+                width: 100%;
+            }
+
+            .products {
+                float: none;
+                margin-top: 20px;
+                max-width: 1150px;
+                height: 330px;
+            }
+
+        }
 
     </style>
 </head>
@@ -72,35 +89,36 @@
 
         <div id="container">
             {% include 'nav.html' %}
+                <div id="sticky">
 
-            {% include 'menu.html' %}
-            <div id="border_container">
-                <div class="products">
-                    {% for num in image_number %}
+                    {% include 'menu.html' %}
+                    <div id="border_container">
+                        <div class="products">
+                            {% for num in image_number %}
 
-                        <div class="col-4 col-s-12">
-                            <div class="product_container">
-                                <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
-                                <div class="product_text">
-                                    <p>{{ product_text[num] }}</p>
+                                <div class="col-4 col-m-4 col-s-12">
+                                    <div class="product_container">
+                                        <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
+                                        <div class="product_text">
+                                            <p>{{ product_text[num] }}</p>
+                                        </div>
+                                        <div  id="buy" class="buy">
+                                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                                <input type="hidden" name="cmd" value="_s-xclick">
+                                                <input type="hidden" name="hosted_button_id" value="{{ buy_btn_value[num] }}">
+                                                <input type="image" src="https://s19.postimg.cc/x1sml6d1f/buy.jpg" border="0" name="submit" alt="PayPal – den sikre og nemme måde at betale på nettet.">
+                                                <img alt="" border="0" src="https://www.paypalobjects.com/da_DK/i/scr/pixel.gif" width="1" height="1">
+                                            </form>
+                                            <div id="buy_text"><p>Læg i kurv</p></div>
+                                            <p id="pris"> {{ product_price[num] }} DKK.- </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div  id="buy" class="buy">
-                                    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                        <input type="hidden" name="cmd" value="_s-xclick">
-                                        <input type="hidden" name="hosted_button_id" value="{{ buy_btn_value[num] }}">
-                                        <input type="image" src="https://s19.postimg.cc/x1sml6d1f/buy.jpg" border="0" name="submit" alt="PayPal – den sikre og nemme måde at betale på nettet.">
-                                        <img alt="" border="0" src="https://www.paypalobjects.com/da_DK/i/scr/pixel.gif" width="1" height="1">
-                                    </form>
-                                    <div id="buy_text"><p>Læg i kurv</p></div>
-                                    <p id="pris"> {{ product_price[num] }} DKK.- </p>
-                                </div>
-                            </div>
+
+                            {% endfor %}
                         </div>
-
-                    {% endfor %}
+                    </div>
                 </div>
-            </div>
-
 
             <div id="overlay"></div>
 

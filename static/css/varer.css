@@ -127,9 +127,9 @@ body{
 				width: 100%;
 				bottom: 100px;
 			}
+
 			        #show_image{
 						display: none;
-
 						background-size: cover;
 						position: relative;
 						top: 50%;

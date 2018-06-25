@@ -6,7 +6,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-conn = sqlite3.connect('./gellettleather.db', check_same_thread=False)
+conn = sqlite3.connect('/Users/OliverElggardGellett/Desktop/Gellettleather/gellettleather.db', check_same_thread=False)
 c = conn.cursor()
 
 @app.route('/test')
@@ -67,6 +67,7 @@ def dametasker():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -83,6 +84,9 @@ def dametasker():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -99,7 +103,7 @@ def dametasker():
 
     return render_template("dametasker.html", image_path=image_path, image_number=image_number, product_text=product_text,
                            product_price=product_price, height=height, titel=titel, content_height=content_height,
-                           antal=antal, buy_btn_value=buy_btn_value)
+                           antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 
@@ -110,6 +114,7 @@ def punge():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -126,6 +131,9 @@ def punge():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -142,7 +150,7 @@ def punge():
 
     return render_template("punge.html", image_path=image_path, image_number=image_number, product_text=product_text,
                            product_price=product_price, height=height, titel=titel, content_height=content_height,
-                           antal=antal, buy_btn_value=buy_btn_value)
+                           antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/damepunge')
@@ -151,6 +159,7 @@ def damepunge():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -167,6 +176,9 @@ def damepunge():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -182,7 +194,7 @@ def damepunge():
         content_height = y * 360 + 127 + 20
 
     return render_template("damepunge.html", image_path=image_path, image_number=image_number, product_text=product_text,
-                           product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+                           product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/herrepunge')
@@ -191,6 +203,7 @@ def herrepunge():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -207,6 +220,9 @@ def herrepunge():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -222,7 +238,7 @@ def herrepunge():
         content_height = y * 360 + 127 + 20
 
 
-    return render_template("herrepunge.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("herrepunge.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/mapper')
@@ -231,6 +247,7 @@ def mapper():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -247,6 +264,9 @@ def mapper():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -261,7 +281,7 @@ def mapper():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("mapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("mapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/skrivemapper')
@@ -270,6 +290,7 @@ def skrivemapper():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -286,6 +307,9 @@ def skrivemapper():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -300,7 +324,7 @@ def skrivemapper():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("skrivemapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("skrivemapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/kredit-_&_visitkortmapper')
@@ -309,6 +333,7 @@ def kreditogvisitkortmapper():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -325,6 +350,9 @@ def kreditogvisitkortmapper():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -339,7 +367,7 @@ def kreditogvisitkortmapper():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("kredit-_&_visitkortmapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("kredit-_&_visitkortmapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/rejseserien')
@@ -348,6 +376,7 @@ def rejseserien():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -364,6 +393,9 @@ def rejseserien():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -378,7 +410,7 @@ def rejseserien():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("rejseserien.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("rejseserien.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/rejsetasker')
@@ -387,6 +419,7 @@ def rejsetasker():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -403,6 +436,9 @@ def rejsetasker():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -417,7 +453,7 @@ def rejsetasker():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("rejsetasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("rejsetasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/valutamapper')
@@ -426,6 +462,7 @@ def valutamapper():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -442,6 +479,9 @@ def valutamapper():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -456,7 +496,7 @@ def valutamapper():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("valutamapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("valutamapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/computertasker')
@@ -465,6 +505,7 @@ def computertasker():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -481,6 +522,9 @@ def computertasker():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -496,7 +540,7 @@ def computertasker():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("computertasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("computertasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 
@@ -506,6 +550,7 @@ def tilbehoer():
     x = 1
     y = 0
     z = 0
+    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
@@ -522,6 +567,9 @@ def tilbehoer():
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
+            p = p + 1
+            height1 = p * 360
+            content_height1 = height1 +127+20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -536,7 +584,7 @@ def tilbehoer():
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("tilbehoer.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("tilbehoer.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
 @app.route('/om_os')

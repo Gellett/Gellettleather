@@ -88,7 +88,23 @@
         background-color: #e2e2e2;
     }
 
+    #nav{
+     width: 100px;
+    }
+
     #nav hr {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+    #nav_row{
+        position: sticky;
+        top: -50px;
+        z-index: 1;
+    }
+
+    #nav hr {
+        margin-bottom: 0px;
     }
 }
