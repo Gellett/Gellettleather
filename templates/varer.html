@@ -13,8 +13,9 @@
 
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/varer.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.02">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/static/js/punge.js" ></script>
     <title>{{ titel }}</title>
@@ -22,7 +23,6 @@
     <style>
 
         #content{
-            position: relative;
             background-color: #e2e2e2;
             max-width: 1400px;
             margin: auto;
@@ -45,31 +45,6 @@
 			float: right;
 		}
 
-        @media only screen and (max-width: 1000px){
-
-            #container{
-
-            }
-
-            #border_container{
-                border-left: none;
-                max-width: 380px;
-                width: 100%;
-                height: {{ height1 }}px;
-            }
-
-            #content{
-                height: {{ content_height1 }}px;
-            }
-
-
-            .products {
-                float: none;
-                margin-top: 20px;
-                max-width: 850px;
-                height: 330px;
-            }
-	    }
 
         @media only screen and (max-width: 1550px){
 
@@ -88,6 +63,36 @@
 
         }
 
+        @media only screen and (max-width: 1000px){
+
+            #container{
+                width: 100%;
+            }
+
+            #border_container{
+                border-left: none;
+                max-width: 100%;
+                margin: auto;
+                height: {{ height1 }}px;
+            }
+
+            #content{
+                height: {{ content_height1 }}px;
+                max-width: 100%;
+                margin: 0px;
+            }
+
+
+            .products {
+                float: none;
+                margin-top: 20px;
+                max-width: 100%;
+                height: 330px;
+            }
+
+
+	    }
+
     </style>
 </head>
 
@@ -105,28 +110,30 @@
                     {% include 'menu.html' %}
                     <div id="border_container">
                         <div class="products">
-                            {% for num in image_number %}
+                            <div class="row">
+                                {% for num in image_number %}
 
-                                <div class="col-4 col-m-4 col-s-12">
-                                    <div class="product_container">
-                                        <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
-                                        <div class="product_text">
-                                            <p>{{ product_text[num] }}</p>
-                                        </div>
-                                        <div  id="buy" class="buy">
-                                            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                                                <input type="hidden" name="cmd" value="_s-xclick">
-                                                <input type="hidden" name="hosted_button_id" value="{{ buy_btn_value[num] }}">
-                                                <input type="image" src="https://s19.postimg.cc/x1sml6d1f/buy.jpg" border="0" name="submit" alt="PayPal – den sikre og nemme måde at betale på nettet.">
-                                                <img alt="" border="0" src="https://www.paypalobjects.com/da_DK/i/scr/pixel.gif" width="1" height="1">
-                                            </form>
-                                            <div id="buy_text"><p>Læg i kurv</p></div>
-                                            <p id="pris"> {{ product_price[num] }} DKK.- </p>
+                                    <div class="col-4 col-m-4 col-s-12">
+                                        <div class="product_container">
+                                            <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
+                                            <div class="product_text">
+                                                <p>{{ product_text[num] }}</p>
+                                            </div>
+                                            <div  id="buy" class="buy">
+                                                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                                    <input type="hidden" name="hosted_button_id" value="{{ buy_btn_value[num] }}">
+                                                    <input type="image" src="https://s19.postimg.cc/x1sml6d1f/buy.jpg" border="0" name="submit" alt="PayPal – den sikre og nemme måde at betale på nettet.">
+                                                    <img alt="" border="0" src="https://www.paypalobjects.com/da_DK/i/scr/pixel.gif" width="1" height="1">
+                                                </form>
+                                                <div id="buy_text"><p>Læg i kurv</p></div>
+                                                <p id="pris"> {{ product_price[num] }} DKK.- </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            {% endfor %}
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,9 @@
 
 
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/static/css/om_os.css">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/om_os.css?v=1.05">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>{{ titel }}</title>
 </head>
@@ -28,38 +30,48 @@
 
                 {% include 'nav.html' %}
 
-                <div id="logos">
-                    <div class="logo" id="logo1"></div>
-                    <div class="logo" id="logo2"></div>
-                    <div class="logo" id="logo3"></div>
-                </div>
-
-                <div id="projekter">
-                    <h4>Projekter</h4>
-                    <p>
-                    Gellett leather Danmark har mange års erfaring med produktion af lædervarer som punge, tasker og mapper.
-
-                    Denne know-how har ført til et samarbejde med Udenrigsministeriet og Danida under det såkaldte B2B (Business-to-Business) program.
-
-                    Danidas B2B program har som hovedformål at skaffe lokale arbejdspladser i den 3. verden.
-                    I Gellett Leather har vi derfor med vores know-how startet flere produktionsvirksomheder for Danida bl.a. i Togo, Mozambique og Burkina Faso.
-                </p>
-                </div>
-
-                <div id="støtter">
-                    <h4>Vi støtter</h4>
-                    <p>Vi har hos Gellett Leather ApS valgt at støtte følgende organisationer.</p>
-                    <div id="list">
-                        <ul>
-                            <li>Kræftens bekæmpelse</li>
-                            <li>WSPA (World Society for the Protection of Animals)</li>
-                            <li>Red barnet</li>
-                        </ul>
+                <div class="row">
+                    <div id="logos">
+                        <div class="col-4 col-m-4 col-s-12">
+                            <div class="logo" id="logo1"></div>
+                        </div>
+                        <div class="col-4 col-m-4 col-s-12">
+                            <div class="logo" id="logo2"></div>
+                        </div>
+                        <div class="col-4 col-m-4 col-s-12">
+                            <div class="logo" id="logo3"></div>
+                        </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-8 col col-s-12">
+                        <div id="projekter">
+                            <h4>Projekter</h4>
+                            <p>
+                            Gellett leather Danmark har mange års erfaring med produktion af lædervarer som punge, tasker og mapper.
 
-                <div id="map"></div>
+                            Denne know-how har ført til et samarbejde med Udenrigsministeriet og Danida under det såkaldte B2B (Business-to-Business) program.
 
+                            Danidas B2B program har som hovedformål at skaffe lokale arbejdspladser i den 3. verden.
+                            I Gellett Leather har vi derfor med vores know-how startet flere produktionsvirksomheder for Danida bl.a. i Togo, Mozambique og Burkina Faso.
+                        </p>
+                        </div>
+                    </div>
+
+                    <div class="col-4 col-s-12">
+                        <div id="støtter">
+                            <h4>Vi støtter</h4>
+                            <p>Vi har hos Gellett Leather ApS valgt at støtte følgende organisationer.</p>
+                            <div id="støtter_list">
+                                <ul>
+                                    <li>Kræftens bekæmpelse</li>
+                                    <li>WSPA (World Society for the Protection of Animals)</li>
+                                    <li>Red barnet</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     {% include 'footer.html' %}

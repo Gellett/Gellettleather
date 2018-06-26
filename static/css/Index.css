@@ -10,7 +10,6 @@ body{
 	overflow: auto;
 }
 
-
 #content{
 	background-color: #e2e2e2;
 	overflow: auto;
@@ -37,7 +36,7 @@ body{
 		#center_pic_left{
 			position: relative;
 			background-image: url("../images/dame2.jpg");
-			width: 400px;
+			width: 100%;
 			height: 360px;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -46,13 +45,13 @@ body{
 		#center_pic_right{
 			position: relative;
 			background-image: url("../images/mand1.jpg");
-			width: 400px;
+			width: 100%;
 			height: 360px;
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
 
-		#center_pic_left_container{
+		.center_pic{
 			position: relative;
 			width: 400px;
 			height: 360px;
@@ -61,13 +60,6 @@ body{
 
 		}
 
-		#center_pic_right_container{
-			position: relative;
-			width: 400px;
-			height: 360px;
-			left: 50%;
-			transform: translate(-50%);
-		}
 
 		#pic_container hr{
 			position: relative;
@@ -169,7 +161,9 @@ body{
 
 @media only screen and (max-width: 1000px){
 
-
+	.center_pic{
+		width: 100%;
+	}
 
 	#product_left{
 		border-top: 0.5px solid #b7b7b7;

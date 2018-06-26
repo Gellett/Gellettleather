@@ -12,31 +12,29 @@ body{
     #content{
             position: relative;
             background-color: #e2e2e2;
-            width: 1400px;
+            max-width: 1400px;
             margin: auto;
             min-height: 1000px;
         }
 
 	#container{
 		min-height: 100%;
-		width: 1200px;
+		max-width: 1200px;
 		margin: auto;
 	}
     
         #projekter{
-            float: left;
-            width: 60%;
             text-align: justify;
             line-height: 1.5;
             font-size: 20px;
+            width: 80%;
         }
         
         #støtter{
-            float: right;
-            width: 35%;
             line-height: 1.5;
             font-size: 20px;
         }
+
 
         #logos{
             width: 100%;
@@ -45,7 +43,8 @@ body{
         }
 
         .logo{
-            display: inline-block;
+            display: block;
+            margin-bottom: 20px;
         }
 
         #logo1{
@@ -53,7 +52,9 @@ body{
 			background-size: cover;
 			width: 185px;
 			height: 100px;
-            margin-left: 115px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
         }
 
         #logo2{
@@ -61,8 +62,10 @@ body{
 			background-size: cover;
 			width: 350px;
 			height: 90px;
-            margin-left: 115px;
-            margin-right: 162.5px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+
         }
 
         #logo3{
@@ -70,10 +73,45 @@ body{
 			background-size: cover;
 			width: 100px;
 			height: 100px;
-            margin-right: 162.5px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+
         }
 
-        #map{
-            height: 400px;
-            width: 400px;
-        }
+@media only screen and (max-width: 1550px) {
+    #projekter{
+        position: relative;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #støtter{
+        position: relative;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #projekter{
+        text-align: justify;
+        position: relative;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    #projekter p{
+        hyphens: auto;
+    }
+
+    #støtter{
+        position: relative;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
