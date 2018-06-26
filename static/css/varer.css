@@ -34,6 +34,7 @@ body{
 				left: 50%;
 				transform: translate(-50%);
 			}
+
 				.product_container:hover{
 					border-left: 0.5px #7f7f7f solid;
 					border-right: 0.5px #7f7f7f solid;

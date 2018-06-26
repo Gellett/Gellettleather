@@ -1,10 +1,14 @@
+#footer_row{
+	background-color: #bfbfbf;
+}
+
 #footer{
-		padding-top: 5px;
-		max-width: 1400px;
-		height: 150px;
-		background-color: #e2e2e2;
-		margin: auto;
-	}
+	padding-top: 0px;
+	max-width: 1400px;
+	height: 150px;
+	background-color: #bfbfbf;
+	margin: auto;
+}
 		#footer_container{
 			max-width: 1200px;
 			margin: auto;
@@ -25,4 +29,9 @@
 			width: 150px;
 			position: relative;
 			bottom: 10px;
+		}
+
+		#footer hr{
+			margin: 0px;
+			background-color: #bfbfbf;
 		}
