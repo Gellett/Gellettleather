@@ -35,7 +35,8 @@
 
 
     .dropdown .dropbtn {
-        font-size: 20px;
+        font-size: 24px;
+        font-family: "Courier New";
         border: none;
         outline: none;
         color: black;
@@ -43,6 +44,7 @@
         background-color: darkgray;
         font-family: inherit;
         margin: 0;
+        width: 100px;
     }
 
     .dropdown-content {
@@ -61,6 +63,7 @@
         text-decoration: none;
         display: block;
         text-align: left;
+        font-size: 18px;
     }
 
     .dropdown-content a:hover {
