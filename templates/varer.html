@@ -14,10 +14,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.02">
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css?v=1.01">
+    <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.09">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/static/js/punge.js" ></script>
+    <script src="/static/js/punge.js?v=1.04" ></script>
     <title>{{ titel }}</title>
 
     <style>
@@ -90,8 +90,18 @@
                 height: 330px;
             }
 
+            .show{
+                width: 80%;
+                height: 60%;
+                transform: translate3d(-50%,-50%);
+            }
 
+            #show_image{
+                width: 330px;
+                height: 220px;
+            }
 	    }
+
 
     </style>
 </head>
@@ -105,7 +115,7 @@
 
         <div id="container">
             {% include 'nav.html' %}
-                <div id="sticky">
+
 
                     {% include 'menu.html' %}
                     <div id="border_container">
@@ -136,22 +146,25 @@
                             </div>
                         </div>
                     </div>
-                </div>
+
 
             <div id="overlay"></div>
 
             <div class="show">
-                <div id="ex_container">
-                    <div id="ex">
-                        X
-                    </div>
-                </div>
 
-                <div id="show_image"></div>
-                <div class="show_pic_container">
-                        <div class="show_pic_1"></div>
-                        <div class="show_pic_2"></div>
+                    <div id="ex_container">
+                        <div id="ex">
+                            X
+                        </div>
+                    </div>
+                <div id="show_image_container">
+                    <div id="show_image"></div>
                 </div>
+                    <div class="show_pic_container">
+                            <div class="show_pic_1"></div>
+                            <div class="show_pic_2"></div>
+                    </div>
+
             </div>
         </div>
     </div>

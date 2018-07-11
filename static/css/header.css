@@ -1,10 +1,13 @@
 #header{
 	background-color: #e2e2e2;
-	max-width: 1400px;
 	margin: auto;
 }
+	#top_header{
+		max-width: 1400px;
+		margin: auto;
+	}
 
-	.col-12{
+	.col-12, .col-6, .col-3{
 		background-color: #e2e2e2;
 	}
 
@@ -16,13 +19,44 @@
 		display: inline-block;
 	}
 
+	#paypal{
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		width: 300px;
+		height: 104px;
+	}
+
+	#mobilepay{
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		width: 300px;
+		height: 104px;
+	}
+
+		#paypal_logo{
+			margin-top: 10px;
+			background-image: url("../images/paypal_logo.png");
+			background-size: cover;
+			width: 285px;
+			height: 100px;
+		}
+
+		#mobilepay_logo{
+			margin-top: 10px;
+			background-image: url("../images/mobilepay_logo.png");
+			background-size: cover;
+			width: 285px;
+			height: 100px;
+		}
+
 		#logo{
 			margin-top: 10px;
 			background-image: url("../images/gellettlogo.png");
 			background-size: cover;
 			width: 285px;
 			height: 100px;
-
 		}
 
 
@@ -38,3 +72,48 @@
 		margin-top: 10 px;
 		margin-bottom: 0px;
 	}
+
+@media only screen and (max-width: 1000px){
+
+	#flex {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+		.flex1{
+			order: 1;
+			width: 100%;
+		}
+
+		.flex2{
+			order: 2;
+		}
+
+		#left{
+			float: left;
+		}
+
+		#right{
+			float: right;
+		}
+
+		#paypal{
+			width: 143px;
+			height: 50px;
+		}
+
+			#paypal_logo{
+				height: 50px;
+				width: 100%;
+			}
+
+		#mobilepay{
+			height: 50px;
+			width: 143px;
+		}
+
+			#mobilepay_logo{
+				height: 50px;
+				width: 100%;
+			}
+}

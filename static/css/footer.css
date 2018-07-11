@@ -6,11 +6,11 @@
 	padding-top: 0px;
 	max-width: 1400px;
 	height: 150px;
-	background-color: #bfbfbf;
+	background-color: #d1d1d1;
 	margin: auto;
 }
 		#footer_container{
-			max-width: 1200px;
+			max-width: 1400px;
 			margin: auto;
 		}
 
@@ -35,3 +35,9 @@
 			margin: 0px;
 			background-color: #bfbfbf;
 		}
+
+@media only screen and (max-width: 1000px){
+	#footer{
+		height: 330px;
+	}
+}

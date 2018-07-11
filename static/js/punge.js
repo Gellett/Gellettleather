@@ -23,7 +23,8 @@ $(function(){
                     "width": "112.5px",
                     "height": "75px",
                     "border": "0.5px solid #7f7f7f",
-                    "right": "343.75px"
+                    "right": "50%",
+					"transform": "translate(50%)"
                 });
             }
 		    else if (data == "2"){
@@ -34,7 +35,8 @@ $(function(){
                     "width": "112.5px",
                     "height": "75px",
                     "border": "0.5px solid #7f7f7f",
-                    "right": "50%"
+                    "right": "50%",
+					"transform": "translate(0%)"
                 });
 		        $(".show_pic_2").css({
                     "backgroundImage": "url("+image_2+")",
@@ -43,7 +45,7 @@ $(function(){
                     "width": "112.5px",
                     "height": "75px",
                     "border": "0.5px solid #7f7f7f",
-                    "right": "50%"
+                    "left": "50%"
                 });
             }
         });

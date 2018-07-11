@@ -1,12 +1,12 @@
 html, body{
-    position: relative;
+	position: relative;
 	width: 100%;
 	margin: 0;
 	min-height: 100%;
 }
 
 body{
-	background-color: #d1d1d1;
+	background-color: #e2e2e2;
 	overflow: auto;
 }
 
@@ -158,11 +158,31 @@ body{
 			transform: translate(-50%);
 		}
 
+@media only screen and (max-width: 1550px){
+	.center_pic{
+		margin-top: 8px;
+	}
+
+	#mand{
+		margin-bottom: 8px;
+	}
+}
+
 
 @media only screen and (max-width: 1000px){
 
+	#pic_container{
+		width: 100%;
+		max-width: 500px;
+	}
+
 	.center_pic{
 		width: 100%;
+		height: 100%;
+	}
+
+	#mand, #dame{
+		margin-bottom: 20px;
 	}
 
 	#product_left{

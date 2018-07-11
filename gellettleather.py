@@ -6,7 +6,7 @@ import sqlite3
 
 app = Flask(__name__)
 
-conn = sqlite3.connect('./gellettleather.db', check_same_thread=False)
+conn = sqlite3.connect('/Users/OliverElggardGellett/Desktop/Gellettleather/gellettleather.db', check_same_thread=False)
 c = conn.cursor()
 
 @app.route('/test')
@@ -591,6 +591,11 @@ def tilbehoer():
 def om_os():
     titel = "Om os"
     return render_template("om_os.html", titel=titel)
+
+@app.route('/handelsbetingelser')
+def handelsbetingelser():
+    titel = "Handelsbetingelser"
+    return render_template("handelsbetingelser.html", titel=titel)
 
 
 @app.route('/API/get_image', methods=['GET', 'POST'])
