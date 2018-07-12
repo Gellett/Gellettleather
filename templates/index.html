@@ -19,12 +19,14 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="/static/css/Index.css?v=1.14">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 	<title>Gellett Leather Denmark</title>
 </head>
 
 
 <body id="body">
+
+    {% include 'modal.html' %}
+
 	{% include 'header.html' %}
 
 	<div id="content">
@@ -57,8 +59,8 @@
 
                 <div class="col-4 col-m-4 col-s-12">
                     <div class="product_container" id="product_left">
-                        <div class="product_name" id="product_left_name"><h2>Bælte</h2></div>
-                        <div class="product_pic" id="pic_left"></div>
+                        <div class="product_name" id="product_left_name"><h2>Computertaske</h2></div>
+                        <a href="computertasker"><div class="product_pic" id="pic_left"></div></a>
                         <div class="product_text">
                             <p>Klassisk flot bælte, fremstillet i sort kerne læder med et kvalitets spænde.</p>
                         </div>
@@ -67,7 +69,7 @@
                 <div class="col-4 col-m-4 col-s-12">
                     <div class="product_container" id="product_mid">
                         <div class="product_name" id="product_mid_name"><h2>Skrivemappe</h2></div>
-                        <div class="product_pic" id="pic_mid"></div>
+                        <a href="skrivemapper"><div class="product_pic" id="pic_mid"></div></a>
                         <div class="product_text">
                             <p>Skrive mappe i A4 størrelse med lynlåslomme og regnmaskine.</p>
                         </div>
@@ -76,7 +78,7 @@
                 <div class="col-4 col-m-4 col-s-12">
                     <div class="product_container" id="product_right">
                         <div class="product_name" id="product_right_name"><h2>Rejsetaske</h2></div>
-                        <div class="product_pic" id="pic_right"></div>
+                        <a href="rejsetasker"><div class="product_pic" id="pic_right"></div></a>
                         <div class="product_text">
                             <p>Stor flot rejsetaske med meget plads indvendig og justérbar skulderrem.</p>
                         </div>

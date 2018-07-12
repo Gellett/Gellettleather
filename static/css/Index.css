@@ -108,7 +108,7 @@ body{
 			}
 
 			#product_left_name{
-				width: 60px;
+				width: 170px;
 			}
 
 			#product_mid_name{
@@ -121,17 +121,17 @@ body{
 
 			#pic_left{
 				position: relative;
-				background-image: url("../images/belt.png");
+				background-image: url("../images/varer/computertasker/6356.png");
 				background-size: cover;
-				height: 180px;
-				width: 200px;
+				height: 200px;
+				width: 300px;
 				left: 50%;
 				transform: translate(-50%);
 			}
 
 			#pic_mid{
 				position: relative;
-				background-image: url("../images/skrivemappe.png");
+				background-image: url("../images/varer/mapper/skrivemapper/5070.png");
 				background-size: cover;
 				height: 180px;
 				width: 260px;
@@ -139,7 +139,7 @@ body{
 
 			#pic_right{
 				position: relative;
-				background-image: url("../images/rejsetaske.png");
+				background-image: url("../images/varer/rejseserien/rejsetasker/4531.png");
 				background-size: cover;
 				height: 180px;
 				width: 270px;
