@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121222558-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121222558-1');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/vare_spec.css?">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/js/vare_spec.js?v=1.16"></script>
+    <title>{{ titel }}</title>
+
+    <style>
+        .box{
+            margin-top: 20px;
+            margin-right: 10px;
+            background-size: cover;
+            width: 270px;
+            height: 180px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body id="body">
+
+    {% include 'header.html' %}
+
+        <div id="content">
+
+            <div id="container">
+
+                {% include 'nav.html' %}
+
+                <div class="row">
+
+                    <div class="pic_container col-6 col-m-4 col-s-12">
+
+                        <div class="name_container">
+                            <div class="name">
+                                <h1> {{ varenavn }}</h1>
+                                <p> {{ vare_id }} </p>
+                            </div>
+                        </div>
+
+                        <div class="pic" id="{{ image_url }}" style="background-image: url('{{ image_url }}')">
+
+                        </div>
+                        <div class="image_container">
+                            <div class="image_1">
+
+                            </div>
+                            <div class="image_2">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="text_container col-6 col-m-4 col-s-12">
+
+                        <div class="pris_container">
+                            <div class="pris">
+                                {{ pris }} DKK,-
+                            </div>
+                        </div>
+
+                        <div class="status_container">
+                            <div class="status">
+                                <p>På lager</p>
+                            </div>
+                        </div>
+
+                        <div class="buy_container col-12">
+
+                            <div class="minus_container col-2 col-m-2">
+                                <div class="minus">
+                                    <p>-</p>
+                                </div>
+                            </div>
+
+                            <div class="antal_container col-2 col-m-2">
+                                <form>
+                                    <input type="text" id="antal" name="antal" value="1">
+                                </form>
+                            </div>
+
+                            <div class="plus_container col-2 col-m-2">
+                                <div class="plus">
+                                    <p>+</p>
+                                </div>
+                            </div>
+
+                            <div class="buy_btn_container col-6 col-m-6">
+                                <div class="buy_btn">
+                                    <p>LÆG I KURV</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="text col-12">
+                            <ul>
+                                {% for line in vare_beskrivelse %}
+                                    <li> {{ line }} </li>
+                                {% endfor %}
+                                <li>Mål: {{ cm }} cm</li>
+                                <li>Farve: {{ farve }}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="alt_container col-12 col-m-12 col-s-12">
+                        <div class="box_container">
+                            <div class="alt_text">
+                                <h1>Alternativer</h1>
+                            </div>
+
+                            {% for num in alternativer_list %}
+                                <div class="box" id="/{{ varetype }}/{{ varetype_1 }}/{{ num }}" style="background-image: url('/static/images/varer/{{ varetype }}/{{ varetype_1 }}/{{ num }}.png')"> </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    {% include 'footer.html' %}
+
+</body>
+</html>

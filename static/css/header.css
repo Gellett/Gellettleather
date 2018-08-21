@@ -1,14 +1,10 @@
 #header{
-	background-color: #e2e2e2;
+	background-color: white;
 	margin: auto;
 }
 	#top_header{
 		max-width: 1400px;
 		margin: auto;
-	}
-
-	.col-12, .col-6, .col-3{
-		background-color: #e2e2e2;
 	}
 
 	#logo_container{
@@ -63,12 +59,15 @@
 	#ombygning_container{
 		width: 100%;
 		min-height: 27px;
-		background-color: antiquewhite;
+		background-color: #3d3d3d;
 		text-align: center;
 		font-size: 18px;
 	}
 
-	p{
+	#ombygning_container p{
+		font-family: Verdana;
+		color: white;
+		font-size: 17px;
 		margin-top: 10 px;
 		margin-bottom: 0px;
 	}

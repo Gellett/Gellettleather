@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121222558-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121222558-1');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/indkoebsvogn.css?">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>{{ titel }}</title>
+</head>
+<body id="body">
+
+    {% include 'header.html' %}
+
+        <div id="content">
+
+            <div id="container">
+
+                {% include 'nav.html' %}
+
+                <div class="row">
+
+                </div>
+
+            </div>
+        </div>
+    {% include 'footer.html' %}
+
+</body>
+</html>

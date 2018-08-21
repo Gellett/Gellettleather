@@ -37,7 +37,7 @@ def skindtasker():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[2])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
@@ -61,7 +61,7 @@ def skindtasker():
     return render_template("skindtasker.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
-@app.route('/dametasker')
+@app.route('/skindtasker/dametasker')
 def dametasker():
     titel = "Dametasker"
     x = 1
@@ -80,7 +80,7 @@ def dametasker():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
@@ -127,13 +127,13 @@ def punge():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -153,7 +153,7 @@ def punge():
                            antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
-@app.route('/damepunge')
+@app.route('/punge/damepunge')
 def damepunge():
     titel = "Damepunge"
     x = 1
@@ -172,13 +172,13 @@ def damepunge():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -197,7 +197,7 @@ def damepunge():
                            product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
-@app.route('/herrepunge')
+@app.route('/punge/herrepunge')
 def herrepunge():
     titel = "Herrepunge"
     x = 1
@@ -216,13 +216,13 @@ def herrepunge():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -260,13 +260,13 @@ def mapper():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -303,13 +303,13 @@ def skrivemapper():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -346,13 +346,13 @@ def kreditogvisitkortmapper():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -389,13 +389,13 @@ def rejseserien():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -432,13 +432,13 @@ def rejsetasker():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -475,13 +475,13 @@ def valutamapper():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -499,7 +499,7 @@ def valutamapper():
     return render_template("valutamapper.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
-@app.route('/computertasker')
+@app.route('/skindtasker/computertasker')
 def computertasker():
     titel = "Computertasker"
     x = 1
@@ -518,13 +518,13 @@ def computertasker():
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -546,7 +546,7 @@ def computertasker():
 
 @app.route('/tilbehoer')
 def tilbehoer():
-    titel = "Tilbehør"
+    titel = "Tilbehoer"
     x = 1
     y = 0
     z = 0
@@ -559,17 +559,17 @@ def tilbehoer():
     antal = []
     c.execute('SELECT * FROM varer')
     for row in c.fetchall():
-        if row[3] == "tilbehør":
+        if row[3] == "tilbehoer":
             row_numm = c.rowcount + x
             image_number.append(row_numm)
             image_path.append(row[0])
-            product_text.append(row[1])
+            product_text.append(row[6])
             product_price.append(row[2])
             antal.append(row[4])
             buy_btn_value.append(row[5])
             p = p + 1
             height1 = p * 360
-            content_height1 = height1 +127+20
+            content_height1 = height1 + 127 + 20
             x = x + 1
             z = z + 1
             if z == 3:
@@ -587,15 +587,54 @@ def tilbehoer():
     return render_template("tilbehoer.html", image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value, height1=height1, content_height1=content_height1)
 
 
+@app.route('/<varetype>/<varetype_1>/<varenummer>', methods=['GET'])
+def vare_spec(varetype, varetype_1, varenummer):
+    titel = varetype_1.capitalize() +" "+varenummer
+    if varetype_1 == tilbehoer:
+        varenavn = titel
+    else:
+        varenavn = varetype_1.capitalize()[:-1]
+        vare_id = "Varenr.: " + varenummer
+
+    image_url = "/static/images/varer/"+varetype+"/"+varetype_1+"/"+varenummer+".png"
+
+    c.execute('SELECT * FROM varer WHERE varer_image_path = "%s"' % image_url)
+    x = c.fetchone()
+
+    if x[9] != "hej":
+        alternativer = x[9]
+        alternativer_list = alternativer.split("-")
+    else:
+        alternativer_list = "hej"
+
+    pris = x[2]
+    vare_beskrivelse = x[1].split("-")
+    cm = x[7]
+    farve = x[8]
+
+
+    return render_template("vare_spec.html", pris=pris, titel=titel, varetype=varetype, varetype_1=varetype_1, varenavn=varenavn, varenummer=varenummer, image_url=image_url, vare_id=vare_id, vare_beskrivelse=vare_beskrivelse, cm=cm, farve=farve, alternativer_list=alternativer_list)
+
 @app.route('/om_os')
 def om_os():
     titel = "Om os"
     return render_template("om_os.html", titel=titel)
 
+@app.route('/indkoebsvogn')
+def indkoebsvogn():
+    titel = "Indkoebsvogn"
+    return render_template("indkoebsvogn.html", titel=titel)
+
 @app.route('/handelsbetingelser')
 def handelsbetingelser():
     titel = "Handelsbetingelser"
     return render_template("handelsbetingelser.html", titel=titel)
+
+
+@app.route('/API/get_varenummer', methods=['POST'])
+def get_varenummer():
+    varenummer = request.args.get('varenummer')
+    return jsonify(varenummer)
 
 
 @app.route('/API/get_image', methods=['GET', 'POST'])
@@ -629,3 +668,6 @@ def get_image_antal():
     c.execute('SELECT Billeder FROM varer WHERE varer_image_path=?', (image_path,))
     antal = ''.join(c.fetchone())
     return jsonify(antal)
+
+
+

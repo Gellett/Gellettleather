@@ -6,12 +6,12 @@ html, body{
 }
 
 body{
-	background-color: #e2e2e2;
+	background-color: white;
 }
 
     #content{
             position: relative;
-            background-color: #e2e2e2;
+            background-color: white;
             max-width: 1400px;
             margin: auto;
             min-height: 1000px;

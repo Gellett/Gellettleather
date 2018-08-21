@@ -1,6 +1,6 @@
 $(function(){
 
-            $(window).on('load', function(){
+            /*$(window).on('load', function(){
                $("#modal").show();
                $("#overlay").show();
             });
@@ -10,7 +10,7 @@ $(function(){
                     $("#modal").hide();
                     $("#overlay").hide();
                 }
-            });
+            });*/
 
 
 });

@@ -1,12 +1,12 @@
 #footer_row{
-	background-color: #d1d1d1;
+	background-color: #3d3d3d;
 }
 
 #footer{
 	padding-top: 0px;
 	max-width: 1400px;
 	height: 150px;
-	background-color: #d1d1d1;
+	background-color: #3d3d3d;
 	margin: auto;
 }
 		#footer_container{
@@ -20,10 +20,11 @@
 			text-align: center;
 			left: 50%;
 			transform: translate(-50%);
+			color: #7c7c7c;
 		}
 
 		#gls_logo{
-			background-image: url("../images/gls.png");
+			background-image: url("../images/gls_1.png");
 			background-size: cover;
 			height: 50px;
 			width: 150px;

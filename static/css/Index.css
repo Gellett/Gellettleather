@@ -6,12 +6,12 @@ html, body{
 }
 
 body{
-	background-color: #e2e2e2;
+	background-color: white;
 	overflow: auto;
 }
 
 #content{
-	background-color: #e2e2e2;
+	background-color: white;
 	overflow: auto;
 	max-width: 1400px;
 	margin: auto;
@@ -74,7 +74,7 @@ body{
 		padding-top: 10px;
 		max-width: 1400px;
 		height: 450px;
-		background-color: #e2e2e2;
+		background-color: white;
 	}
 		#bestseller h1{
 			width: 100%;
@@ -97,7 +97,7 @@ body{
 			position: relative;
 			height: 350px;
 			display: inline-block;
-			background-color: #e2e2e2;
+			background-color: white;
 			width: 100%;
 		}
 
@@ -121,7 +121,7 @@ body{
 
 			#pic_left{
 				position: relative;
-				background-image: url("../images/varer/computertasker/6356.png");
+				background-image: url("../images/varer/skindtasker/computertasker/6356.png");
 				background-size: cover;
 				height: 200px;
 				width: 300px;

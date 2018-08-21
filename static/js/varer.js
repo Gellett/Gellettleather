@@ -1,11 +1,24 @@
 $(function(){
 
 	$(".billede").on('click',function(){
-		$("#overlay").show();
+
+		var txt = this.id;
+		var numb = txt.match(/\d/g);
+		numb = numb.join("");
+		varenummer = numb;
+
+		len = txt.length;
+		varetype = txt.slice(20,len-4);
+
+		window.location = varetype;
+
+
+		/*$("#overlay").show();
 		$(".show").show();
 		$("#show_image").show();
 		$(".show_pic_1").show();
 		$(".show_pic_2").show();
+
 
 		$.getJSON('/API/get_image', {image: this.id}, function(data) {
 			$("#show_image").css("backgroundImage", "url("+data+")");
@@ -48,7 +61,7 @@ $(function(){
                     "left": "50%"
                 });
             }
-        });
+        });*/
 	});
 
 	$(".show_pic_1").on('click',function(){
