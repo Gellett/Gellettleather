@@ -1,7 +1,12 @@
 $(function(){
 
+    antal = 1;
+
     $(window).on('load', function(){
-        x = document.getElementsByTagName("Div")[28];
+
+
+        x = document.getElementsByTagName("Div")[38];
+
 
         $.getJSON('/API/get_image', {image: x.id}, function(data) {
 			$("#show_image").css("backgroundImage", "url("+data+")");
@@ -66,4 +71,26 @@ $(function(){
 		window.location = this.id;
     });
 
+    $(".minus_container").on('click',function(){
+        if (antal > 0) {
+            antal = antal - 1;
+        }
+
+		document.getElementById("antal").value = antal;
+        console.log(antal)
+    });
+
+    $(".plus_container").on('click',function(){
+        if (antal < 100) {
+            antal = antal + 1;
+        }
+
+		document.getElementById("antal").value = antal;
+        console.log(antal)
+    });
+
+
+	$("#facebook_img").on('click',function(){
+		window.open("https://www.facebook.com/gellettleather/");
+    });
 });

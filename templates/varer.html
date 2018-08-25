@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/colums.css?v=1.01">
     <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.09">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/static/js/varer.js?v=1.10" ></script>
+    <script src="/static/js/varer.js?v=1.11" ></script>
     <title>{{ titel }}</title>
 
     <style>
@@ -89,17 +89,6 @@
                 max-width: 100%;
                 height: 330px;
             }
-
-            .show{
-                width: 80%;
-                height: 60%;
-                transform: translate3d(-50%,-50%);
-            }
-
-            #show_image{
-                width: 330px;
-                height: 220px;
-            }
 	    }
 
 
@@ -117,50 +106,36 @@
             {% include 'nav.html' %}
 
 
-                    {% include 'menu.html' %}
-                    <div id="border_container">
-                        <div class="products">
-                            <div class="row">
-                                {% for num in image_number %}
+                {% include 'menu.html' %}
+                <div id="border_container">
+                    <div class="path_container">
+                        <div class="path_text">
+                            <p><a href="/{{ path_go_1 }}">{{ path_1 }}</a> {{ arrow }} <a href="/{{ path_go_2 }}">{{ path_2 }}</a></p>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <div class="row">
+                            {% for num in image_number %}
 
-                                    <div class="col-4 col-m-4 col-s-12">
-                                        <div class="product_container">
-                                            <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
-                                            <div class="product_text">
-                                                <p>{{ product_price[num] }} DKK.- </p>
-                                            </div>
-                                            <div  id="buy" class="buy">
-                                                <div class="buy_btn"></div>
-                                                <div id="buy_text"><p>LÆG I KURV</p></div>
+                                <div class="col-4 col-m-4 col-s-12">
+                                    <div class="product_container">
+                                        <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
+                                        <div class="product_text">
+                                            <p>{{ product_price[num] }} DKK.- </p>
+                                        </div>
+                                        <div  id="buy" class="buy">
+                                            <div class="buy_btn"></div>
+                                            <div id="buy_text"><p>LÆG I KURV</p></div>
 
-                                            </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                {% endfor %}
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
-
-
-            <div id="overlay"></div>
-
-            <div class="show">
-
-                    <div id="ex_container">
-                        <div id="ex">
-                            X
-                        </div>
-                    </div>
-                <div id="show_image_container">
-                    <div id="show_image"></div>
                 </div>
-                    <div class="show_pic_container">
-                            <div class="show_pic_1"></div>
-                            <div class="show_pic_2"></div>
-                    </div>
 
-            </div>
         </div>
     </div>
 

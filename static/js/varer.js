@@ -12,7 +12,7 @@ $(function(){
 
 		window.location = varetype;
 
-
+		console.log("hej")
 		/*$("#overlay").show();
 		$(".show").show();
 		$("#show_image").show();
@@ -77,34 +77,5 @@ $(function(){
 			$("#show_image").css("backgroundImage", "url("+data+")");
 		});
 	});
-
-	$("#overlay").on('click',function(){
-	    $("#show_image").css("backgroundImage", "none");
-		$("#overlay").hide();
-		$(".show").hide();
-		$("#show_image_1").hide();
-		$(".show_pic_1").css("backgroundImage", "none");
-		$(".show_pic_2").css("backgroundImage", "none");
-	});
-
-	$("#ex_container").on('click',function(){
-	    $("#show_image").css("backgroundImage", "none");
-		$("#overlay").hide();
-		$(".show").hide();
-		$("#show_image_1").hide();
-		$(".show_pic_1").css("backgroundImage", "none");
-		$(".show_pic_2").css("backgroundImage", "none");
-	});
-
-	$(document).on('keyup',function(evt) {
-        if (evt.keyCode == 27) {
-           $("#show_image").css("backgroundImage", "none");
-           $("#overlay").hide();
-           $(".show").hide();
-           $("#show_image_1").hide();
-           $(".show_pic_1").css("backgroundImage", "none");
-           $(".show_pic_2").css("backgroundImage", "none");
-        }
-    });
 
 });

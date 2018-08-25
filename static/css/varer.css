@@ -42,6 +42,30 @@ body{
 					border-radius: 5px;
 				}
 
+				.path_container {
+					width: 100%;
+					text-align: center;
+					padding-top: 15px;
+					padding-bottom: 20px;
+				}
+
+					.path_text {
+						color: #969696;
+						font-family: Verdana;
+						font-size: 17px;
+					}
+
+					.path_text a{
+						color: #969696;
+						font-family: Verdana;
+						font-size: 17px;
+						text-decoration: None;
+					}
+
+					.path_text a:hover{
+						text-decoration: underline;
+					}
+
 				.pic{
 					position: absolute;
 					background-size: cover;

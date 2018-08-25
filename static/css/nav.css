@@ -1,9 +1,22 @@
 #nav{
+    position: relative;
+    z-index: 5;
     max-width: 1200px;
     margin: auto;
     padding-top: 50px;
 
 }
+
+    .kurv_img{
+        position: relative;
+        background-image: url("/static/images/trolly.png");
+        height: 75px;
+        width: 75px;
+        background-size: cover;
+        left: 100%;
+        transform: translate(-100%);
+    }
+
     #list{
         position: relative;
         width: 730px;
@@ -11,26 +24,76 @@
         transform: translate(-50%);
         padding-bottom: 10px;
     }
+
+        .dropdown_start{
+            position: relative;
+            display: inline-block;
+        }
+
         #nav li{
             list-style-type: none;
             display: inline;
             margin-right: 25px;
         }
-            #nav li a{
+            .list_text{
                 font-family: verdana;
-
                 color: black;
                 text-decoration: none;
                 font-size: 20px;
             }
 
-                #nav li a:hover{
+                .list_text:hover{
                     color: #5b5b5b;
                     border-bottom: 1px solid #5b5b5b;
                 }
 
 
-    .dropdown {
+
+
+    .dropdwn_content{
+        width: 175px;
+        left: 50%;
+        transform: translate(-87.5px);
+        display: none;
+        position: absolute;
+        background-color: white;
+        line-height: 2;
+        border: 1px solid #ccc;
+    }
+
+    .dropdwn_content a{
+        text-align: center;
+        display: block;
+    }
+
+
+    .drop_text{
+        font-family: verdana;
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 5px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .drop_text:hover{
+        color: #5b5b5b;
+    }
+
+    #list li:hover .dropdwn_content{
+        display: block;
+    }
+
+    .not_last{
+        border-bottom: 1px solid #ccc;
+    }
+
+
+
+
+
+        .dropdown {
         float: left;
         overflow: hidden;
         display: none;

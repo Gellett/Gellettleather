@@ -94,7 +94,7 @@
 
                             <div class="antal_container col-2 col-m-2">
                                 <form>
-                                    <input type="text" id="antal" name="antal" value="1">
+                                    <input id="antal" name="antal" type="text" value="1">
                                 </form>
                             </div>
 
@@ -121,6 +121,15 @@
                                 <li>Farve: {{ farve }}</li>
                             </ul>
                         </div>
+
+                        <div class="follow_container col-12">
+                            <div class="follow_text">
+                                <p>Følg os på facebook</p>
+                            </div>
+                            <div class="follow_img_container">
+                                <div id="facebook_img"></div>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -136,6 +145,7 @@
                             {% for num in alternativer_list %}
                                 <div class="box" id="/{{ varetype }}/{{ varetype_1 }}/{{ num }}" style="background-image: url('/static/images/varer/{{ varetype }}/{{ varetype_1 }}/{{ num }}.png')"> </div>
                             {% endfor %}
+
                         </div>
                     </div>
                 </div>
