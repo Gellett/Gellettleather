@@ -1,6 +1,7 @@
 $(function(){
 
     antal = 1;
+    vare_list = [];
 
     $(window).on('load', function(){
 
@@ -75,22 +76,57 @@ $(function(){
         if (antal > 0) {
             antal = antal - 1;
         }
-
 		document.getElementById("antal").value = antal;
-        console.log(antal)
     });
 
     $(".plus_container").on('click',function(){
         if (antal < 100) {
             antal = antal + 1;
         }
-
 		document.getElementById("antal").value = antal;
-        console.log(antal)
     });
 
 
 	$("#facebook_img").on('click',function(){
 		window.open("https://www.facebook.com/gellettleather/");
     });
+
+
+	$(".buy_btn_container").on('click',function(){
+
+        hej = parseInt(document.getElementById("antal").value);
+
+        for (var i = hej; i > 0; i = i-1)  {
+
+            var billede = $(".pic").attr("id");
+            var beskrivelse = $(".name").attr("id");
+            var pris = $(".pris").attr("id");
+
+            var newVareBillede = billede;
+            var newVareBeskrivelse = beskrivelse;
+            var newVarePris = pris;
+
+
+            vare_list_billede = [];
+            vare_list_pris = [];
+            vare_list_beskrivelse = [];
+            vare_list_billede.push(newVareBillede);
+            vare_list_beskrivelse.push(newVareBeskrivelse);
+            vare_list_pris.push(newVarePris);
+            var q = JSON.stringify(vare_list_billede);
+            var r = JSON.stringify(vare_list_beskrivelse);
+            var s = JSON.stringify(vare_list_pris);
+
+            $.getJSON('/API/vare', {data: q}, function(data) {});
+            $.getJSON('/API/vare', {data: r}, function(data) {});
+            $.getJSON('/API/vare', {data: s}, function(data) {});
+
+            $.getJSON('/API/varer', function(data) {
+                vare_list.push(data);
+                sessionStorage.varer = vare_list;
+                vare_list = [];
+            });
+        }
+    });
+
 });

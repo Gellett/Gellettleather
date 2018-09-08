@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
     <link rel="stylesheet" type="text/css" href="/static/css/vare_spec.css?">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="/static/js/vare_spec.js?v=1.16"></script>
     <title>{{ titel }}</title>
 
@@ -49,13 +50,13 @@
                     <div class="pic_container col-6 col-m-4 col-s-12">
 
                         <div class="name_container">
-                            <div class="name">
+                            <div class="name" id="{{ varenavn }} - {{ vare_id }}">
                                 <h1> {{ varenavn }}</h1>
                                 <p> {{ vare_id }} </p>
                             </div>
                         </div>
 
-                        <div class="pic" id="{{ image_url }}" style="background-image: url('{{ image_url }}')">
+                        <div class="pic" id={{ image_url }} style="background-image: url('{{ image_url }}')">
 
                         </div>
                         <div class="image_container">
@@ -73,7 +74,7 @@
                     <div class="text_container col-6 col-m-4 col-s-12">
 
                         <div class="pris_container">
-                            <div class="pris">
+                            <div class="pris" id="{{ pris }}">
                                 {{ pris }} DKK,-
                             </div>
                         </div>
@@ -93,9 +94,7 @@
                             </div>
 
                             <div class="antal_container col-2 col-m-2">
-                                <form>
-                                    <input id="antal" name="antal" type="text" value="1">
-                                </form>
+                                <input id="antal" name="antal" type="text" value="1">
                             </div>
 
                             <div class="plus_container col-2 col-m-2">

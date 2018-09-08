@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, json
 import sqlite3
 
 
@@ -6,12 +6,21 @@ import sqlite3
 
 app = Flask(__name__)
 
-conn = sqlite3.connect('./gellettleather.db', check_same_thread=False)
-c = conn.cursor()
+conn1 = sqlite3.connect('./gellettleather.db', check_same_thread=False)
+conn2 = sqlite3.connect('./gellettleather.db', check_same_thread=False)
+conn3 = sqlite3.connect('./gellettleather.db', check_same_thread=False)
+conn4 = sqlite3.connect('./gellettleather.db', check_same_thread=False)
 
-@app.route('/test')
-def test():
-    return render_template("test.html")
+c1 = conn1.cursor()
+c2 = conn2.cursor()
+c3 = conn3.cursor()
+c4 = conn4.cursor()
+
+
+vare_list = []
+billede_list = []
+text_list = []
+pris_list = []
 
 @app.route('/')
 def index():
@@ -20,6 +29,7 @@ def index():
 @app.route('/<varetype>/<varetype_1>')
 @app.route('/<varetype>', defaults={'varetype_1': ''})
 def varer(varetype, varetype_1):
+
 
     if varetype_1 != "":
         titel = varetype_1.capitalize()
@@ -39,18 +49,17 @@ def varer(varetype, varetype_1):
     x = 1
     y = 0
     z = 0
-    p = 0
     buy_btn_value = []
     image_number = []
     image_path = []
     product_text = []
     product_price = []
     antal = []
-    c.execute('SELECT * FROM varer')
-    for row in c.fetchall():
+    c1.execute('SELECT * FROM varer')
+    for row in c1.fetchall():
         if varetype_1 == "":
             if row[5] == varetype:
-                row_numm = c.rowcount + x
+                row_numm = c1.rowcount + x
                 image_number.append(row_numm)
                 image_path.append(row[0])
                 product_text.append(row[6])
@@ -64,7 +73,7 @@ def varer(varetype, varetype_1):
                     z = 0
         else:
             if row[3] == varetype_1[:-1]:
-                row_numm = c.rowcount + x
+                row_numm = c1.rowcount + x
                 image_number.append(row_numm)
                 image_path.append(row[0])
                 product_text.append(row[6])
@@ -78,6 +87,7 @@ def varer(varetype, varetype_1):
                     z = 0
 
 
+
     if z:
         height = (y + 1) * 360 + 127
         content_height = (y + 1) * 360 + 127 + 20 + 127
@@ -85,7 +95,10 @@ def varer(varetype, varetype_1):
         height = y * 360
         content_height = y * 360 + 127 + 20
 
-    return render_template("varer.html", arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1, path_2=path_2, image_path=image_path, image_number=image_number, product_text=product_text, product_price=product_price, height=height, titel=titel, content_height=content_height, antal=antal, buy_btn_value=buy_btn_value)
+    return render_template("varer.html", arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1,
+                           path_2=path_2, image_path=image_path, image_number=image_number, product_text=product_text,
+                           product_price=product_price, height=height, titel=titel, content_height=content_height,
+                           antal=antal, buy_btn_value=buy_btn_value)
 
 
 @app.route('/<varetype>/<varetype_1>/<varenummer>', methods=['GET'])
@@ -100,8 +113,8 @@ def vare_spec(varetype, varetype_1, varenummer):
 
     image_url = "/static/images/varer/"+varetype+"/"+varetype_1+"/"+varenummer+".png"
 
-    c.execute('SELECT * FROM varer WHERE varer_image_path = "%s"' % image_url)
-    x = c.fetchone()
+    c2.execute('SELECT * FROM varer WHERE varer_image_path = "%s"' % image_url)
+    x = c2.fetchone()
 
     if x[9] != "hej":
         alternativer = x[9]
@@ -114,8 +127,10 @@ def vare_spec(varetype, varetype_1, varenummer):
     cm = x[7]
     farve = x[8]
 
+    return render_template("vare_spec.html", pris=pris, titel=titel, varetype=varetype, varetype_1=varetype_1,
+                           varenavn=varenavn, varenummer=varenummer, image_url=image_url, vare_id=vare_id,
+                           vare_beskrivelse=vare_beskrivelse, cm=cm, farve=farve, alternativer_list=alternativer_list)
 
-    return render_template("vare_spec.html", pris=pris, titel=titel, varetype=varetype, varetype_1=varetype_1, varenavn=varenavn, varenummer=varenummer, image_url=image_url, vare_id=vare_id, vare_beskrivelse=vare_beskrivelse, cm=cm, farve=farve, alternativer_list=alternativer_list)
 
 @app.route('/om_os')
 def om_os():
@@ -125,6 +140,7 @@ def om_os():
 @app.route('/indkoebsvogn')
 def indkoebsvogn():
     titel = "Indkoebsvogn"
+
     return render_template("indkoebsvogn.html", titel=titel)
 
 @app.route('/handelsbetingelser')
@@ -145,14 +161,10 @@ def get_image():
     return jsonify(image_path)
 
 
-
-
 @app.route('/API/get_image_1', methods=['GET', 'POST'])
 def get_image_1():
     image_path = request.args.get('image', 0, type=str)
     return jsonify(image_path)
-
-
 
 
 @app.route('/API/get_image_2', methods=['GET', 'POST'])
@@ -161,12 +173,42 @@ def get_image_2():
     return jsonify(image_path)
 
 
-
-
 @app.route('/API/get_image_antal', methods=['GET', 'POST'])
 def get_image_antal():
     image_path = request.args.get('test', 0, type=str)
-
-    c.execute('SELECT Billeder FROM varer WHERE varer_image_path=?', (image_path,))
-    antal = ''.join(c.fetchone())
+    c3.execute('SELECT Billeder FROM varer WHERE varer_image_path=?', (image_path,))
+    antal = ''.join(c3.fetchone())
     return jsonify(antal)
+
+
+@app.route('/API/vare', methods=['GET', 'POST'])
+def vare():
+    x = request.args.get('data', 0, type=str)
+    vare_list.append(x)
+    return jsonify(x)
+
+
+@app.route('/API/varer', methods=['GET', 'POST'])
+def varerjs():
+    return jsonify(vare_list)
+
+
+@app.route('/API/billede', methods=['GET', 'POST'])
+def billede():
+    global billede_list
+    billede_list = request.args.get('data', "", type=str)
+    return ""
+
+
+@app.route('/API/text', methods=['GET', 'POST'])
+def text():
+    global text_list
+    text_list = request.args.get('data', "", type=str)
+    return ""
+
+
+@app.route('/API/pris', methods=['GET', 'POST'])
+def pris():
+    global pris_list
+    pris_list = request.args.get('data', "", type=str)
+    return ""

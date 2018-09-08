@@ -2,7 +2,7 @@ $(function(){
 
 	$(".billede").on('click',function(){
 
-		var txt = this.id;
+		txt = this.id;
 		var numb = txt.match(/\d/g);
 		numb = numb.join("");
 		varenummer = numb;
@@ -10,9 +10,9 @@ $(function(){
 		len = txt.length;
 		varetype = txt.slice(20,len-4);
 
+
 		window.location = varetype;
 
-		console.log("hej")
 		/*$("#overlay").show();
 		$(".show").show();
 		$("#show_image").show();
@@ -62,20 +62,6 @@ $(function(){
                 });
             }
         });*/
-	});
-
-	$(".show_pic_1").on('click',function(){
-
-		$.getJSON('/API/get_image_1', {image: image_1}, function(data) {
-			$("#show_image").css("backgroundImage", "url("+data+")");
-		});
-	});
-
-	$(".show_pic_2").on('click',function(){
-
-		$.getJSON('/API/get_image_2', {image: image_2}, function(data) {
-			$("#show_image").css("backgroundImage", "url("+data+")");
-		});
 	});
 
 });

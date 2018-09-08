@@ -22,3 +22,53 @@ body{
 		max-width: 1200px;
 		margin: auto;
 	}
+
+	.vare_div{
+		border-bottom: 1px solid darkgray;
+		position: relative;
+		width: 100%;
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+		.billede_div, .text_div, .pris_div{
+			width: 33%;
+			text-align: center;
+			display: inline-block;
+		}
+
+		.text_div, .pris_div{
+			position: relative;
+			bottom: 40px;
+			font-family: Helvetica;
+		}
+
+		#ialt{
+			width: 100%;
+			border-bottom: 2px solid black;
+		}
+
+			#ialt_vare, #ialt_pris, #ialt_space{
+				position: relative;
+				display: inline-block;
+				font-family: Helvetica;
+				font-weight: bold;
+				width: 33%;
+				text-align: center;
+			}
+
+		#buy_btn{
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			margin-top: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			float: right;
+		}

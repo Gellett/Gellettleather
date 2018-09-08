@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
     <link rel="stylesheet" type="text/css" href="/static/css/indkoebsvogn.css?">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="/static/js/indkoebsvogn.js"></script>
     <title>{{ titel }}</title>
 </head>
 <body id="body">
@@ -30,8 +32,12 @@
 
                 {% include 'nav.html' %}
 
-                <div class="row">
+                <div id="vare_container" class="row">
 
+                </div>
+
+                <div id="buy">
+                    <button type="button" id="buy_btn"> Gå til betaling</button>
                 </div>
 
             </div>
