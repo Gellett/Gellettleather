@@ -4,6 +4,21 @@ $(function(){
         $(".vare").remove();
     }
 
+    function get_billede(){
+        $("#billede_div_" + vare_nr).append(
+            $('<img src="'+billede_src+'" class="varebillede" id="vare_img_'+vare_nr+'" width="150" height="100"/>'));
+    }
+
+    function get_text(){
+        $("#text_div_" + vare_nr).append(
+            $('<p id="p_'+vare_nr+'"></p>').text(text_list[vare_nr]));
+    }
+
+    function get_pris(){
+        $("#pris_div_" + vare_nr).append(
+            $('<p></p>').text(pris_list[vare_nr] + " DKK,-"));
+    }
+
     function get_vare() {
         billede_src = billede_list[vare_nr];
 
@@ -13,14 +28,11 @@ $(function(){
         $("#vare_div_" + vare_nr).append(
             $('<div class="billede_div" id="billede_div_'+vare_nr+'"></div>'),$('<div class="text_div" id="text_div_'+vare_nr+'"></div>'),$('<div class="pris_div" id="pris_div_'+vare_nr+'"></div>'));
 
-        $("#billede_div_" + vare_nr).append(
-            $('<img src="'+billede_src+'" class="varebillede" id="vare_img_'+vare_nr+'" width="150" height="100"/>'));
+        get_billede();
 
-        $("#text_div_" + vare_nr).append(
-            $('<p id="p_'+vare_nr+'"></p>').text(text_list[vare_nr]));
+        get_text();
 
-        $("#pris_div_" + vare_nr).append(
-            $('<p></p>').text(pris_list[vare_nr] + " DKK,-"));
+        get_pris();
 
 
         var name = "vare_img_"+vare_nr;
@@ -31,7 +43,7 @@ $(function(){
     }
 
     $(window).on('load', function () {
-
+        console.trace();
         pris = 0;
         var a = 0;
         var b = 1;
@@ -42,7 +54,7 @@ $(function(){
         pris_list = [];
 
         var x = sessionStorage.varer;
-        var y = x.replace(/\["/g,"").replace(/"]/g,"");
+        var y = x.replace(/\["/g, "").replace(/"]/g, "");
         var z = y.split(',');
         var vare_antal = z.length / 3;
 
@@ -72,20 +84,20 @@ $(function(){
         $("#vare_container").append(
             $('<div id="ialt"></div>'));
 
-            $("#ialt").append(
-                $('<div id="ialt_vare"></div>'));
+        $("#ialt").append(
+            $('<div id="ialt_vare"></div>'));
 
-                $("#ialt_vare").append(
-                    $('<p id="ialt_vare_text"></p>').text("Varer: " + q));
+        $("#ialt_vare").append(
+            $('<p id="ialt_vare_text"></p>').text("Varer: " + q));
 
-            $("#ialt").append(
-                $('<div id="ialt_space"></div>'));
+        $("#ialt").append(
+            $('<div id="ialt_space"></div>'));
 
-            $("#ialt").append(
-                $('<div id="ialt_pris"></div>'));
+        $("#ialt").append(
+            $('<div id="ialt_pris"></div>'));
 
-                $("#ialt_pris").append(
-                    $('<p id="ialt_vare_pris"></p>').text("I alt: " + pris + " DKK.-"));
+        $("#ialt_pris").append(
+            $('<p id="ialt_vare_pris"></p>').text("I alt: " + pris + " DKK.-"));
 
     });
 
