@@ -99,20 +99,13 @@ body{
 				bottom: 10px;
 			}
 
-			#buy_text{
+			.buy_text{
 				position: relative;
 				bottom: 43px;
 				pointer-events: none;
 				color: white;
 				font-family: Verdana;
 				font-size: 11px;
-			}
-
-
-			#pris{
-				position: relative;
-				font-weight: bold;
-				bottom: 50px;
 			}
 
 		#overlay{

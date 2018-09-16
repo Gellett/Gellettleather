@@ -1,7 +1,8 @@
 $(function(){
 
     antal = 1;
-    vare_list = [];
+
+    p = 0;
 
     $(window).on('load', function(){
 
@@ -19,16 +20,6 @@ $(function(){
             if (data == "1"){
                 $(".image_1").hide();
                 $(".image_2").hide();
-                /*$(".image_2").css({
-                    "backgroundImage": "url("+image_1+")",
-                    "position": "absolute",
-                    "backgroundSize": "cover",
-                    "width": "240px",
-                    "height": "150px",
-                    "border": "0.5px solid #7f7f7f",
-                    "right": "50%",
-                    "transform": "translate(50%)"
-                });*/
             }
             else if (data == "2"){
                 $(".image_1").css({
@@ -98,35 +89,22 @@ $(function(){
 
         for (var i = hej; i > 0; i = i-1)  {
 
+
             var billede = $(".pic").attr("id");
             var beskrivelse = $(".name").attr("id");
             var pris = $(".pris").attr("id");
 
-            var newVareBillede = billede;
-            var newVareBeskrivelse = beskrivelse;
-            var newVarePris = pris;
+
+            sessionStorage.setItem('antal', antal);
+            sessionStorage.setItem('billede_'+ p.toString(), billede );
+            sessionStorage.setItem('beskrivelse_'+p.toString(), beskrivelse);
+            sessionStorage.setItem('pris_'+p.toString(), pris);
 
 
-            vare_list_billede = [];
-            vare_list_pris = [];
-            vare_list_beskrivelse = [];
-            vare_list_billede.push(newVareBillede);
-            vare_list_beskrivelse.push(newVareBeskrivelse);
-            vare_list_pris.push(newVarePris);
-            var q = JSON.stringify(vare_list_billede);
-            var r = JSON.stringify(vare_list_beskrivelse);
-            var s = JSON.stringify(vare_list_pris);
+            p++;
 
-            $.getJSON('/API/vare', {data: q}, function(data) {});
-            $.getJSON('/API/vare', {data: r}, function(data) {});
-            $.getJSON('/API/vare', {data: s}, function(data) {});
 
-            $.getJSON('/API/varer', function(data) {
-                vare_list.push(data);
-                sessionStorage.varer = vare_list;
-                vare_list = [];
-            });
+            sessionStorage.setItem('ialt_varer', p.toString())
         }
     });
-
 });

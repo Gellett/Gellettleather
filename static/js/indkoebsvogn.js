@@ -1,26 +1,25 @@
 $(function(){
 
-    function remove() {
-        $(".vare").remove();
-    }
+
+
+
 
     function get_billede(){
         $("#billede_div_" + vare_nr).append(
-            $('<img src="'+billede_src+'" class="varebillede" id="vare_img_'+vare_nr+'" width="150" height="100"/>'));
+            $('<img src="'+ billede +'" class="varebillede '+billede+'" id="vare_img_'+vare_nr+'" width="150" height="100"/>'));
     }
 
     function get_text(){
         $("#text_div_" + vare_nr).append(
-            $('<p id="p_'+vare_nr+'"></p>').text(text_list[vare_nr]));
+            $('<p id="p_'+ tekst +'"></p>').text(tekst));
     }
 
     function get_pris(){
         $("#pris_div_" + vare_nr).append(
-            $('<p></p>').text(pris_list[vare_nr] + " DKK,-"));
+            $('<p></p>').text(kroner + " DKK,-"));
     }
 
     function get_vare() {
-        billede_src = billede_list[vare_nr];
 
         $("#vare_container").append(
             $('<div class="vare_div" id="vare_div_'+vare_nr+'"></div>'));
@@ -34,51 +33,35 @@ $(function(){
 
         get_pris();
 
-
-        var name = "vare_img_"+vare_nr;
-
-        $("img[id="+name+"]").attr('src', billede_src);
-
-
     }
 
     $(window).on('load', function () {
-        console.trace();
         pris = 0;
-        var a = 0;
-        var b = 1;
-        var c = 2;
-        q = 0;
-        billede_list = [];
-        text_list = [];
-        pris_list = [];
 
-        var x = sessionStorage.varer;
-        var y = x.replace(/\["/g, "").replace(/"]/g, "");
-        var z = y.split(',');
-        var vare_antal = z.length / 3;
+        first = 0;
+        anden = 1;
+        tredje = 2;
 
-        remove();
+        ialt_vare = sessionStorage.getItem('ialt_varer');
 
-        for (var i = vare_antal; i > 0; i = i - 1) {
+        console.log(ialt_vare);
 
-            vare_nr = q;
 
-            billede_list.push(z[a]);
-            a = a + 3;
 
-            text_list.push(z[b]);
-            b = b + 3;
+        vare_antal = parseInt(sessionStorage.getItem('antal'));
 
-            pris_list.push(z[c]);
-            addPris = parseInt(z[c]);
-            c = c + 3;
+        for (var i = 0; i < vare_antal; i++) {
+
+            vare_nr = i;
+
+
+
+            billede = sessionStorage.getItem('billede_'+i.toString());
+            tekst = sessionStorage.getItem('beskrivelse_'+i.toString());
+            kroner = sessionStorage.getItem('pris_'+i.toString());
 
             get_vare();
 
-            q = q + 1;
-
-            pris = pris + addPris;
         }
 
         $("#vare_container").append(
@@ -88,7 +71,7 @@ $(function(){
             $('<div id="ialt_vare"></div>'));
 
         $("#ialt_vare").append(
-            $('<p id="ialt_vare_text"></p>').text("Varer: " + q));
+            $('<p id="ialt_vare_text"></p>').text("Varer: " + ialt_vare));
 
         $("#ialt").append(
             $('<div id="ialt_space"></div>'));

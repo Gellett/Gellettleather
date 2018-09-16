@@ -1,5 +1,8 @@
 $(function(){
 
+    antal = 1;
+    vare_list = [];
+
 	$(".billede").on('click',function(){
 
 		txt = this.id;
@@ -12,56 +15,37 @@ $(function(){
 
 
 		window.location = varetype;
-
-		/*$("#overlay").show();
-		$(".show").show();
-		$("#show_image").show();
-		$(".show_pic_1").show();
-		$(".show_pic_2").show();
-
-
-		$.getJSON('/API/get_image', {image: this.id}, function(data) {
-			$("#show_image").css("backgroundImage", "url("+data+")");
-			image_1 = data;
-			image_2 = image_1.replace(".", "-1.");
-		});
-
-		$.getJSON('/API/get_image_antal', {test: this.id}, function(data) {
-		    if (data == "1"){
-                $(".show_pic_2").hide();
-                $(".show_pic_1").css({
-                    "backgroundImage": "url("+image_1+")",
-                    "position": "absolute",
-                    "backgroundSize": "cover",
-                    "width": "112.5px",
-                    "height": "75px",
-                    "border": "0.5px solid #7f7f7f",
-                    "right": "50%",
-					"transform": "translate(50%)"
-                });
-            }
-		    else if (data == "2"){
-		        $(".show_pic_1").css({
-                    "backgroundImage": "url("+image_1+")",
-                    "position": "absolute",
-                    "backgroundSize": "cover",
-                    "width": "112.5px",
-                    "height": "75px",
-                    "border": "0.5px solid #7f7f7f",
-                    "right": "50%",
-					"transform": "translate(0%)"
-                });
-		        $(".show_pic_2").css({
-                    "backgroundImage": "url("+image_2+")",
-                    "position": "absolute",
-                    "backgroundSize": "cover",
-                    "width": "112.5px",
-                    "height": "75px",
-                    "border": "0.5px solid #7f7f7f",
-                    "left": "50%"
-                });
-            }
-        });*/
 	});
+
+	$(".buy").on('click', function () {
+		var billede = $(".billede").attr("id");
+		var beskrivelse = $(".name").attr("id");
+		var pris = $(".pris").attr("id");
+
+		var newVareBillede = billede;
+		var newVareBeskrivelse = beskrivelse;
+		var newVarePris = pris;
+
+
+		vare_list_billede = [];
+		vare_list_pris = [];
+		vare_list_beskrivelse = [];
+		vare_list_billede.push(newVareBillede);
+		vare_list_beskrivelse.push(newVareBeskrivelse);
+		vare_list_pris.push(newVarePris);
+		var q = JSON.stringify(vare_list_billede);
+		var r = JSON.stringify(vare_list_beskrivelse);
+		var s = JSON.stringify(vare_list_pris);
+
+		$.getJSON('/API/vare', {data: q}, function(data) {});
+		$.getJSON('/API/vare', {data: r}, function(data) {});
+		$.getJSON('/API/vare', {data: s}, function(data) {});
+
+		$.getJSON('/API/varer', function(data) {
+			vare_list.push(data);
+			sessionStorage.varer = vare_list;
+			vare_list = [];
+		});
+    });
 
 });

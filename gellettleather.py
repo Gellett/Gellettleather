@@ -183,9 +183,11 @@ def get_image_antal():
 
 @app.route('/API/vare', methods=['GET', 'POST'])
 def vare():
-    x = request.args.get('data', 0, type=str)
+    x = request.args.get('q_data', 0, type=str)
+    y = request.args.get('r_data', 0, type=str)
+    z = request.args.get('s_data', 0, type=str)
     vare_list.append(x)
-    return jsonify(x)
+    return jsonify(x, y, z)
 
 
 @app.route('/API/varer', methods=['GET', 'POST'])
@@ -196,19 +198,22 @@ def varerjs():
 @app.route('/API/billede', methods=['GET', 'POST'])
 def billede():
     global billede_list
-    billede_list = request.args.get('data', "", type=str)
-    return ""
+    x = request.args.get('data', "", type=str)
+    billede_list.append(x)
+    return jsonify(billede_list)
 
 
 @app.route('/API/text', methods=['GET', 'POST'])
 def text():
     global text_list
-    text_list = request.args.get('data', "", type=str)
-    return ""
+    x = request.args.get('data', "", type=str)
+    text_list.append(x)
+    return jsonify(text_list)
 
 
 @app.route('/API/pris', methods=['GET', 'POST'])
 def pris():
     global pris_list
-    pris_list = request.args.get('data', "", type=str)
-    return ""
+    x = request.args.get('data', "", type=str)
+    pris_list.append(x)
+    return jsonify(pris_list)
