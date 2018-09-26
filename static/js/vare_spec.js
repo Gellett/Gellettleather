@@ -1,11 +1,10 @@
 $(function(){
 
-    antal = 1;
-
-    p = 0;
-
     $(window).on('load', function(){
 
+        antal = 1;
+
+        p = 0;
 
         x = document.getElementsByTagName("Div")[38];
 
@@ -85,26 +84,55 @@ $(function(){
 
 	$(".buy_btn_container").on('click',function(){
 
-        hej = parseInt(document.getElementById("antal").value);
 
-        for (var i = hej; i > 0; i = i-1)  {
+            test = parseInt(document.getElementById("antal").value);
+
+            sessionStorage.setItem('antal', test);
+
+            if (sessionStorage.getItem('newAntal') == undefined) {
+                sessionStorage.setItem('newAntal', '0');
+                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + parseInt(sessionStorage.getItem('antal')));
+            }
+            else {
+                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + parseInt(sessionStorage.getItem('antal')));
+            }
 
 
             var billede = $(".pic").attr("id");
             var beskrivelse = $(".name").attr("id");
             var pris = $(".pris").attr("id");
 
+            if (sessionStorage.getItem('nummer') == undefined) {
+                sessionStorage.setItem('nummer', '0');
+                sessionStorage.setItem('nummer', parseInt(sessionStorage.getItem('nummer')) + 1);
+                hej = parseInt(sessionStorage.getItem('nummer'));
+            }
+            else {
+                sessionStorage.setItem('nummer', parseInt(sessionStorage.getItem('nummer')) + 1);
+                hej = parseInt(sessionStorage.getItem('nummer'));
+            }
 
-            sessionStorage.setItem('antal', antal);
-            sessionStorage.setItem('billede_'+ p.toString(), billede );
-            sessionStorage.setItem('beskrivelse_'+p.toString(), beskrivelse);
-            sessionStorage.setItem('pris_'+p.toString(), pris);
+            for (var i = hej; i > 0; i = i - 1) {
 
+                    sessionStorage.setItem('billede_' + sessionStorage.getItem('nummer'), billede);
 
-            p++;
+                    console.log('billede_' + sessionStorage.getItem('nummer'));
 
+                    sessionStorage.setItem('beskrivelse_' + sessionStorage.getItem('nummer'), beskrivelse);
+                    sessionStorage.setItem('pris_' + sessionStorage.getItem('nummer'), pris);
 
-            sessionStorage.setItem('ialt_varer', p.toString())
-        }
+                    p++;
+                }
+
+            if (sessionStorage.getItem('newPris') == undefined) {
+                sessionStorage.setItem('newPris', '0');
+                sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
+                console.log(sessionStorage.getItem('newPris'));
+            }
+            else {
+                sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
+                console.log(sessionStorage.getItem('newPris'));
+            }
+
     });
 });

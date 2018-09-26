@@ -36,32 +36,22 @@ $(function(){
     }
 
     $(window).on('load', function () {
-        pris = 0;
 
-        first = 0;
-        anden = 1;
-        tredje = 2;
-
-        ialt_vare = sessionStorage.getItem('ialt_varer');
-
-        console.log(ialt_vare);
+        ialt_vare = sessionStorage.getItem('newAntal');
 
 
+        vare_antal = parseInt(sessionStorage.getItem('newAntal'));
 
-        vare_antal = parseInt(sessionStorage.getItem('antal'));
-
-        for (var i = 0; i < vare_antal; i++) {
+        for (var i = vare_antal; i > 0; i--) {
 
             vare_nr = i;
-
-
-
-            billede = sessionStorage.getItem('billede_'+i.toString());
-            tekst = sessionStorage.getItem('beskrivelse_'+i.toString());
-            kroner = sessionStorage.getItem('pris_'+i.toString());
+            billede = sessionStorage.getItem('billede_' + vare_antal);
+            tekst = sessionStorage.getItem('beskrivelse_' + vare_antal);
+            kroner = sessionStorage.getItem('pris_' + vare_antal);
 
             get_vare();
 
+            vare_antal--;
         }
 
         $("#vare_container").append(
@@ -80,7 +70,7 @@ $(function(){
             $('<div id="ialt_pris"></div>'));
 
         $("#ialt_pris").append(
-            $('<p id="ialt_vare_pris"></p>').text("I alt: " + pris + " DKK.-"));
+            $('<p id="ialt_vare_pris"></p>').text("I alt: " + sessionStorage.getItem('newPris') + " DKK.-"));
 
     });
 
