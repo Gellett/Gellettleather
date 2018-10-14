@@ -3,7 +3,6 @@ import sqlite3
 
 
 
-
 app = Flask(__name__)
 
 conn1 = sqlite3.connect('./gellettleather.db', check_same_thread=False)
@@ -55,6 +54,8 @@ def varer(varetype, varetype_1):
     product_text = []
     product_price = []
     antal = []
+    kategori = []
+    varenummer = []
     c1.execute('SELECT * FROM varer')
     for row in c1.fetchall():
         if varetype_1 == "":
@@ -66,6 +67,8 @@ def varer(varetype, varetype_1):
                 product_price.append(row[2])
                 antal.append(row[4])
                 buy_btn_value.append(row[5])
+                kategori.append(row[3].capitalize())
+                varenummer.append(row[6])
                 x = x + 1
                 z = z + 1
                 if z == 3:
@@ -80,6 +83,8 @@ def varer(varetype, varetype_1):
                 product_price.append(row[2])
                 antal.append(row[4])
                 buy_btn_value.append(row[5])
+                kategori.append(row[3].capitalize())
+                varenummer.append(row[6])
                 x = x + 1
                 z = z + 1
                 if z == 3:
@@ -89,13 +94,13 @@ def varer(varetype, varetype_1):
 
 
     if z:
-        height = (y + 1) * 360 + 127
-        content_height = (y + 1) * 360 + 127 + 20 + 127
+        height = (y + 1) * 380 + 127 + 150
+        content_height = (y + 1) * 380 + 127 + 20 + 127 + 150
     else:
-        height = y * 360
-        content_height = y * 360 + 127 + 20
+        height = y * 380 + 150
+        content_height = y * 380 + 127 + 20 + 150
 
-    return render_template("varer.html", arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1,
+    return render_template("varer.html", varenummer=varenummer, kategori=kategori, arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1,
                            path_2=path_2, image_path=image_path, image_number=image_number, product_text=product_text,
                            product_price=product_price, height=height, titel=titel, content_height=content_height,
                            antal=antal, buy_btn_value=buy_btn_value)
@@ -137,8 +142,9 @@ def om_os():
     titel = "Om os"
     return render_template("om_os.html", titel=titel)
 
-@app.route('/indkoebsvogn')
+@app.route('/indkoebsvogn', methods=['GET', 'POST'])
 def indkoebsvogn():
+
     titel = "Indkoebsvogn"
 
     return render_template("indkoebsvogn.html", titel=titel)

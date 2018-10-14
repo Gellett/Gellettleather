@@ -10,12 +10,12 @@ body{
 }
 
     #content{
-            position: relative;
-            background-color: white;
-            max-width: 1400px;
-            margin: auto;
-            min-height: 1000px;
-        }
+		position: relative;
+		background-color: white;
+		max-width: 1400px;
+		margin: auto;
+		min-height: 1000px;
+	}
 
 	#container{
 		min-height: 100%;
@@ -61,7 +61,7 @@ body{
 			}
 
 		#buy_btn{
-			background-color: #4CAF50; /* Green */
+			background-color: #4CAF50;
 			border: none;
 			color: white;
 			padding: 15px 32px;
@@ -71,4 +71,24 @@ body{
 			display: inline-block;
 			font-size: 16px;
 			float: right;
+		}
+
+		#empty_btn{
+			background-color: red;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			margin-top: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			float: left;
+		}
+
+		form{
+			height: 50px;
+			width: 50px;
+			background-color: black;
+			cursor: pointer;
 		}

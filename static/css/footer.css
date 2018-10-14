@@ -24,10 +24,21 @@
 		}
 
 		#gls_logo{
-			background-image: url("../images/gls_1.png");
+			background-image: url("../images/gls_logo.png");
 			background-size: cover;
 			height: 50px;
-			width: 150px;
+			width: 190px;
+			position: relative;
+			bottom: 10px;
+			left: 25px;
+			margin-bottom: 20px;
+		}
+
+		#postnord_logo{
+			background-image: url("../images/postnord.png");
+			background-size: cover;
+			height: 50px;
+			width: 240px;
 			position: relative;
 			bottom: 10px;
 		}

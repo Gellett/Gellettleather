@@ -113,18 +113,50 @@
                             <p><a href="/{{ path_go_1 }}">{{ path_1 }}</a> {{ arrow }} <a href="/{{ path_go_2 }}">{{ path_2 }}</a></p>
                         </div>
                     </div>
+
+                    <section id="kategori_beskrivelse">
+                        <p>
+                            {% if path_1 == "Skindtasker"  %}
+                                En skindtaske er en fuldstændig uundværlig taske for kvinder. Den praktiske taske fåes i mange former og størrelser, der gør at du altid kan finde skuldertasken, der passer til netop dit behov. Skuldertasker kan være alt fra en lille smart håndtaske til damer, der kun har plads til de mest basale ting i hverdagen eller som er perfekt til en lille bytur, til store tasker der i størrelse mindre mere om en shoppertaske. Med andre ord kan du finde en skuldertaske tilehver lejlighed og aller her på siden er i den bedste kvalitet skind hvis ikke andet er skrevet ved produktet. Alle skind tasker bliver ekstremt lækre når de tages i brug, og bliver kun pænere med årene,
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if path_1 == "Punge"  %}
+                                Pungen er altid med i lommen eller i tasken. Vi fører et stort udvalg af damepunge, punge til mænd i alle størrelser. Hos Gellettleather.dk er vores udvalg fantastisk stort og vi leverer altid inden for 1-3 hverdage. Hvis du mangler noget at opbevare dine kort i, er Gellettleather.dk det rette sted at lede. Hos Gellettleather.dk er vi klar over, at en pung er en meget personlig ting. Derfor har vi et kæmpe udvalg i forskellige størrelser. Alle vores punge om det er til Damer eller Herrer er alle fremstillet i det bedste skind der findes på marked.
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if path_1 == "Mapper"  %}
+                                Vi fører et stort udvalg af skrivemapper og kreditkort etui i alle størrelser. Hos Gellettleather.dk er vores udvalg fantastisk stort og vi leverer altid inden for 1-3 hverdage. Hvis du mangler noget at opbevare dine dokumenter eller kort i, er Gellettleather.dk det rette sted at lede. Hos Gellettleather.dk er vi klar over, at en kreditkortpung eller en mappe er en meget personlig ting. Derfor har vi et kæmpe udvalg i forskellige størrelser. Alle vores mapper og kreditkort etui om det er alle fremstillet i det bedste skind der findes på marked.
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if path_1 == "Rejseserien"  %}
+                                Weekendtasken eller rejsetasken er en absolut "must have" til både damer og herrer.  Weekendtasken eller rejsetasken kan nemlig bruges til utrolig meget. Det oplagte er selvfølgelig weekendturen eller rejsen, men de kan bestemt også bruges i hverdagen til eksempelvis arbejde, studier eller som stilet sportstaske. Taskerne fås i næsten alle størrelse og prisklasser, og i materialer som skind, og PU. Hos Gellettleather.dk er der et godt udvalg, så der er næsten garanti for, at du kan finde en weekendtaske eller rejsetasker der passer netop til dine behov.
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if path_1 == "Tilbehoer"  %}
+                                Hos Gellettleather.dk har vi et bredt udvalg af diverse små produkter som Nøglevedhæng eller en lille møntpung med mere og alle produkter er fremstillet i Danmark af den bedste råvarer og er alle i skind hvis ikke andet er angivet. Skulle der være ting du søger som ikke kan findes på vores hjemmeside høre vi meget gerne fra dig på
+                                <a href="/index">gellett@gellettleather.dk </a>
+                            {% endif %}
+                        </p>
+                    </section>
+
                     <div class="products">
                         <div class="row">
                             {% for num in image_number %}
 
                                 <div class="col-4 col-m-4 col-s-12">
                                     <div class="product_container">
-                                        <div class="billede" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
+                                        <div class="vare_nr_{{ num }}" id="Varenr.: {{ varenummer[num] }}"></div>
+                                        <div class="kategori kategori_{{ num }}"> <h2>{{ kategori[num] }}</h2> </div>
+                                        <div class="billede billede_{{ num }}" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
                                         <div class="product_text">
-                                            <p>{{ product_price[num] }} DKK.- </p>
+                                            <p class="product_text_{{ num }}">{{ product_price[num] }}</p><p>DKK,-</p>
                                         </div>
                                         <div class="buy">
-                                            <div class="buy_btn"></div>
+                                            <div class="buy_btn" id="{{ num }}"></div>
                                             <div class="buy_text"><p>LÆG I KURV</p></div>
                                         </div>
                                     </div>

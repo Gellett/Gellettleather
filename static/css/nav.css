@@ -7,6 +7,10 @@
 
 }
 
+#nav_row{
+    background-color: white;
+}
+
     .kurv_img{
         position: relative;
         background-image: url("/static/images/trolly.png");
@@ -16,6 +20,27 @@
         left: 100%;
         transform: translate(-100%);
     }
+
+    .kurv_img:hover{
+        cursor: pointer;
+    }
+
+    #vare_antal{
+        position: absolute;
+        top: 23px;
+        left: -10px;
+        width: 20px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
 
     #list{
         position: relative;
@@ -90,10 +115,7 @@
     }
 
 
-
-
-
-        .dropdown {
+    .dropdown {
         float: left;
         overflow: hidden;
         display: none;

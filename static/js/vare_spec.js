@@ -4,8 +4,6 @@ $(function(){
 
         antal = 1;
 
-        p = 0;
-
         x = document.getElementsByTagName("Div")[38];
 
 
@@ -84,17 +82,19 @@ $(function(){
 
 	$(".buy_btn_container").on('click',function(){
 
+	    for (var q = 0; q < antal; q++) {
 
             test = parseInt(document.getElementById("antal").value);
 
             sessionStorage.setItem('antal', test);
 
+
             if (sessionStorage.getItem('newAntal') == undefined) {
                 sessionStorage.setItem('newAntal', '0');
-                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + parseInt(sessionStorage.getItem('antal')));
+                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + 1);
             }
             else {
-                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + parseInt(sessionStorage.getItem('antal')));
+                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + 1);
             }
 
 
@@ -112,27 +112,21 @@ $(function(){
                 hej = parseInt(sessionStorage.getItem('nummer'));
             }
 
-            for (var i = hej; i > 0; i = i - 1) {
 
-                    sessionStorage.setItem('billede_' + sessionStorage.getItem('nummer'), billede);
+            sessionStorage.setItem('billede_' + sessionStorage.getItem('nummer'), billede);
+            sessionStorage.setItem('beskrivelse_' + sessionStorage.getItem('nummer'), beskrivelse);
+            sessionStorage.setItem('pris_' + sessionStorage.getItem('nummer'), pris);
 
-                    console.log('billede_' + sessionStorage.getItem('nummer'));
 
-                    sessionStorage.setItem('beskrivelse_' + sessionStorage.getItem('nummer'), beskrivelse);
-                    sessionStorage.setItem('pris_' + sessionStorage.getItem('nummer'), pris);
-
-                    p++;
-                }
 
             if (sessionStorage.getItem('newPris') == undefined) {
                 sessionStorage.setItem('newPris', '0');
                 sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
-                console.log(sessionStorage.getItem('newPris'));
             }
             else {
                 sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
-                console.log(sessionStorage.getItem('newPris'));
             }
+        }
 
     });
 });
