@@ -20,13 +20,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" type="text/css" href="/static/css/Index.css?v=1.14">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/js/index.js"></script>
 	<title>Gellett Leather Denmark - kvalitetslæder til en god pris</title>
 </head>
 
 
 <body id="body">
-
-    {% include 'modal.html' %}
 
 	{% include 'header.html' %}
 
@@ -53,9 +52,9 @@
             </div>
         </div>
 
-    </div>
-    <div id="products">
-        <div id="bestseller"><h1>Best seller</h1></div>
+
+        <div id="products">
+            <div id="bestseller"><h1>Best seller</h1></div>
             <div class="row">
 
                 <div class="col-4 col-m-4 col-s-12">
@@ -88,7 +87,15 @@
             </div>
         </div>
     </div>
-</div>
+    <div id="cookies">
+        <div id="cookies_wrapper">
+            <h1>Velkommen til Gellett Leather Danmark</h1>
+            <p>Vi bruger cookies, hvilket vi bruger til analysere hjemmesiden, og finde ud af hvad kunderne gerne vil se på,
+                og hvad der fungerer, sådan at kunderne får den mest behagelige oplevelse hos os.</p>
+            <div id="okay"><p>Okay</p></div>
+        </div>
+    </div>
+
 
 	{% include 'footer.html' %}
 

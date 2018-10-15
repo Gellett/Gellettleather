@@ -91,8 +91,6 @@ def varer(varetype, varetype_1):
                     y = y + 1
                     z = 0
 
-
-
     if z:
         height = (y + 1) * 450 + 127 + 150
         content_height = (y + 1) * 450 + 127 + 20 + 127 + 150

@@ -13,7 +13,7 @@ $(function(){
 
     function get_pris(){
         $("#pris_div_" + vare_nr).append(
-            $('<p></p>').text(kroner + " DKK,-"));
+            $('<p></p>').text(kroner));
     }
 
     function get_vare() {
@@ -75,8 +75,19 @@ $(function(){
     $("#empty_btn").on('click', function() {
         sessionStorage.clear();
         location.reload();
-    })
+    });
 
+    $("#buy_btn").on('click', function() {
+        if (sessionStorage.getItem('newAntal') == null){
+            alert("Du har ingen varer i kurven!")
+        }
+        else {
+            $("#handelsbetingelser_container").show();
+        }
+    });
 
+    $("#fortryd_btn").on('click', function() {
+        $("#handelsbetingelser_container").hide();
+    });
 
 });

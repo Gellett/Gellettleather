@@ -15,6 +15,7 @@ body{
 		max-width: 1400px;
 		margin: auto;
 		min-height: 1000px;
+		margin-bottom: 100px;
 	}
 
 	#container{
@@ -86,9 +87,41 @@ body{
 			float: left;
 		}
 
-		form{
-			height: 50px;
-			width: 50px;
-			background-color: black;
-			cursor: pointer;
+	#handelsbetingelser_container{
+		display: none;
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%);
+		height: 35%;
+		width: 25%;
+		background-color: white;
+		z-index: 6;
+		border: 3px solid darkslategray;
+	}
+
+		#handelsbetingelser_container article{
+			overflow: scroll;
+			position: relative;
+			width: 80%;
+			left: 50%;
+			transform: translate(-50%);
+			height: 85%;
+			padding-bottom: 20px;
 		}
+
+		#article_footer{
+			border-top: 2px solid darkslategray;
+			padding-top: 15px;
+			position: absolute;
+			bottom: 0;
+			height: 15%;
+			width: 80%;
+			left: 50%;
+			transform: translate(-50%);
+			background-color: white;
+		}
+
+			.article_btn{
+				height: 40%;
+			}
