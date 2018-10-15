@@ -34,17 +34,9 @@
         text-align: center;
     }
 
-
-
-
-
-
-
-
-
     #list{
         position: relative;
-        width: 730px;
+        width: 745px;
         left: 50%;
         transform: translate(-50%);
         padding-bottom: 10px;
@@ -186,6 +178,11 @@
 
     #nav hr {
         display: none;
+    }
+
+    .kurv_img{
+        position: absolute;
+        left: 0;
     }
 }
 

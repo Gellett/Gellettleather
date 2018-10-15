@@ -58,18 +58,18 @@
 
 	#ombygning_container{
 		width: 100%;
-		min-height: 27px;
-		background-color: #000;
+		height: 35px;
+		background-color: red;
 		text-align: center;
 		font-size: 18px;
 	}
 
 	#ombygning_container p{
-		font-family: Verdana;
+		font-family: Helvetica;
 		color: white;
-		font-size: 17px;
-		margin-top: 10 px;
-		margin-bottom: 0px;
+		font-size: 22px;
+		padding-top: 4px;
+		margin-bottom: 0;
 	}
 
 @media only screen and (max-width: 1000px){

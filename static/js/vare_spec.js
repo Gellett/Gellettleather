@@ -97,6 +97,8 @@ $(function(){
                 sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + 1);
             }
 
+            sessionStorage.setItem('antal_kurv', parseInt(sessionStorage.getItem("antal_kurv"))+1);
+		    document.getElementById("vare_antal").value = parseInt(sessionStorage.getItem(("antal_kurv")));
 
             var billede = $(".pic").attr("id");
             var beskrivelse = $(".name").attr("id");
