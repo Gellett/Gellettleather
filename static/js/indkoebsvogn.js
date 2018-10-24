@@ -38,7 +38,6 @@ $(function(){
 
         vare_antal = parseInt(ialt_vare);
 
-        console.log(vare_antal);
         for (var i = vare_antal; i > 0; i--) {
 
             vare_nr = i;
@@ -79,10 +78,19 @@ $(function(){
 
     $("#buy_btn").on('click', function() {
         if (sessionStorage.getItem('newAntal') == null){
-            alert("Du har ingen varer i kurven!")
+            alert("Du har ingen varer i kurven!");
         }
         else {
+            $.getJSON('/API/orderID', function(data) {
+                buy_id = parseInt(data);
+                console.log(buy_id);
+                $("#form").append(
+                    $('<input type="hidden" name="amount" value="'+sessionStorage.getItem('newPris')+'00" />'),
+                    $('<input type="hidden" name="orderid" value="'+buy_id+'" />'),
+                    $('<input type="hidden" name="ordertext" value="'+sessionStorage.getItem('ordertext')+'" />'));
+            });
             $("#handelsbetingelser_container").show();
+            
         }
     });
 
@@ -90,4 +98,5 @@ $(function(){
         $("#handelsbetingelser_container").hide();
     });
 
+    $.getJSON('/API/kost', {pris: sessionStorage.getItem('newPris')}, function(data) {});
 });

@@ -21,6 +21,8 @@ billede_list = []
 text_list = []
 pris_list = []
 
+orderID = 0
+
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -221,3 +223,9 @@ def pris():
     x = request.args.get('data', "", type=str)
     pris_list.append(x)
     return jsonify(pris_list)
+
+@app.route('/API/orderID', methods=['GET', 'POST'])
+def order_id():
+    global orderID
+    orderID = orderID + 1
+    return jsonify(orderID)

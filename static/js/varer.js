@@ -38,8 +38,6 @@ $(function(){
 		var beskrivelse = $(".kategori_"+nummer).text() +" - "+ $(".vare_nr_"+nummer).attr("id");
 		var pris = $(".product_text_"+nummer).text();
 
-		console.log(billede);
-
 		if (sessionStorage.getItem('nummer') == undefined) {
 			sessionStorage.setItem('nummer', '0');
 			sessionStorage.setItem('nummer', parseInt(sessionStorage.getItem('nummer')) + 1);
@@ -64,6 +62,18 @@ $(function(){
 		else {
 			sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
 		}
+
+		var nummer1 = billede.slice(-8).slice(0,-4)+" ";
+
+
+		if (sessionStorage.getItem('ordertext') == undefined) {
+			sessionStorage.setItem('ordertext', '');
+			sessionStorage.setItem('ordertext', sessionStorage.getItem('ordertext') + nummer1);
+		}
+		else {
+			sessionStorage.setItem('ordertext', sessionStorage.getItem('ordertext') + nummer1);
+		}
+		console.log(sessionStorage.getItem('ordertext'));
     });
 
 });

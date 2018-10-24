@@ -128,6 +128,17 @@ $(function(){
             else {
                 sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
             }
+
+            var nummer = $("#vare_id").text().slice(-5);
+
+            if (sessionStorage.getItem('ordertext') == undefined) {
+			sessionStorage.setItem('ordertext', '');
+			sessionStorage.setItem('ordertext', sessionStorage.getItem('ordertext')+nummer);
+            }
+            else {
+                sessionStorage.setItem('ordertext',''+ sessionStorage.getItem('ordertext')+nummer);
+            }
+
         }
 
     });

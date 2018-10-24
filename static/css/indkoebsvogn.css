@@ -89,11 +89,11 @@ body{
 
 	#handelsbetingelser_container{
 		display: none;
-		position: absolute;
+		position: fixed;
 		top: 10%;
 		left: 50%;
 		transform: translate(-50%);
-		height: 35%;
+		height: 55%;
 		width: 25%;
 		background-color: white;
 		z-index: 6;
@@ -123,5 +123,12 @@ body{
 		}
 
 			.article_btn{
-				height: 40%;
+				height: 30px;
+			}
+
+			form{
+				display: inline-block;
+			}
+			form #accept_btn{
+				height: 30px;
 			}

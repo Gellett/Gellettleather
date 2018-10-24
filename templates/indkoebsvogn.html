@@ -43,6 +43,7 @@
                 <div id="empty">
                     <button type="button" id="empty_btn">Tøm kurv</button>
                 </div>
+
             </div>
         </div>
 
@@ -150,8 +151,22 @@
             </article>
 
             <div id="article_footer">
+
                 <button id="fortryd_btn" class="article_btn">Fortryd</button>
-                <button id="accept_btn" class="article_btn">Accepter og fortsæt til betaling</button>
+
+
+                <FORM id="form" ACTION="https://payment.architrade.com/paymentweb/start.action" METHOD="POST" accept-charset="UTF-8">
+
+                    <INPUT TYPE="hidden" NAME="accepturl" VALUE="https://www.gellettleather.dk">
+
+                    <INPUT TYPE="hidden" NAME="currency" VALUE="DKK">
+                    <INPUT TYPE="hidden" NAME="merchant" VALUE="90246044">
+
+                    <INPUT TYPE="hidden" NAME="decorator" VALUE="responsive">
+
+                    <button id="accept_btn" class="article_btn">Accepter og fortsæt til betaling</button>
+                </FORM>
+
             </div>
         </div>
 
