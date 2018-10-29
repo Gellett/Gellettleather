@@ -45,8 +45,9 @@ body{
 			}
 
 				.product_container:hover{
-					border: 1px #7f7f7f solid;
-					box-shadow: 5px 5px;
+					-webkit-box-shadow: 0 0 32px 0 rgba(0,0,0,0.35);
+					-moz-box-shadow: 0 0 32px 0 rgba(0,0,0,0.35);
+					box-shadow: 0 0 32px 0 rgba(0,0,0,0.35);
 					z-index: 1;
 				}
 
