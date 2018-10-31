@@ -81,11 +81,22 @@
 		margin-top: 10px;
 	}
 
+	.right_header img{
+		float: right;
+	}
+
 	.dropdown {
         overflow: hidden;
         display: none;
 		height: 40px;
+		width: 34px;
+		float: right;
     }
+
+	.dropbtn{
+		width: 34px;
+		display: inline-block;
+	}
 
     /*.dropdown .dropbtn {
 		font-size: 24px;
@@ -201,7 +212,7 @@
 		#logo{
 			background-size: contain;
 			background-repeat: no-repeat;
-			width: 30%;
+			height: 34px;
 		}
 
 		.flex2{
