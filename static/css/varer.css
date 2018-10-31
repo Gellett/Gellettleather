@@ -32,6 +32,11 @@ body{
 				color: #969696;
 			}
 
+			#kategori_beskrivelse a{
+				color: #969696;
+				text-decoration: none;
+			}
+
 			.product_container{
 				padding-top: 30px;
 				position: relative;
@@ -135,11 +140,18 @@ body{
 				font-size: 11px;
 			}
 
-}
 
 @media only screen and (max-width: 1000px){
 
 	#kategori_beskrivelse {
 		display: none;
+	}
+
+	.path_container .path_text  a{
+		font-size: 25px;
+	}
+
+	.path_container {
+		padding-bottom: 0;
 	}
 }

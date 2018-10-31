@@ -28,19 +28,27 @@
                                 <img src="/static/images/icons8-menu-32.png" alt="burgermenu" style="height: 32px; width: 32px">
                             </div>
                             <div class="dropdown-content">
-                                <p id="produkter" class="dropdown_content_1">Produkter</p>
-                                <a class="dropdown_content_2" href="/tasker">- Tasker</a>
-                                <a class="dropdown_content_2" href="/punge">- Punge</a>
-                                <a class="dropdown_content_2" href="/mapper">- Mapper</a>
-                                <a class="dropdown_content_2" href="/rejseserien">- Rejseserien</a>
-                                <a class="dropdown_content_2" href="/tilbehoer">- Tilbehør</a>
-                                <a class="dropdown_content_1" href="/om_os">Om os</a>
+                                <!--<p id="produkter" class="dropdown_content_1">Produkter</p>-->
+                                <p><a href="/tasker">Tasker</a> <img class="dropdown_content_tasker" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                    <a class="dropdown_content_2 dropdown_content_2_tasker" href="/tasker/dametasker">- Dametasker</a>
+                                    <a class="dropdown_content_2 dropdown_content_2_tasker" href="/tasker/kunstlaeder">- Kunstlæder</a>
+                                    <a class="dropdown_content_2 dropdown_content_2_tasker" href="/tasker/computertasker">- Computertasker</a>
+                                <p><a href="/punge">Punge</a> <img class="dropdown_content_punge" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                    <a class="dropdown_content_2 dropdown_content_2_punge" href="/punge/damepunge">- Damepunge</a>
+                                    <a class="dropdown_content_2 dropdown_content_2_punge" href="/punge/herrepunge">- Herrepunge</a>
+                                <p><a href="/mapper">Mapper</a><img class="dropdown_content_mapper" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                    <a class="dropdown_content_2 dropdown_content_2_mapper" href="/mapper/skrivemapper">- Skrivemapper</a>
+                                    <a class="dropdown_content_2 dropdown_content_2_mapper" href="/mapper/kredit&visitkortmapper">- Kredit- & visitkortmapper</a>
+                                <p><a href="/rejseserien">Rejseserien</a> <img class="dropdown_content_rejseserien" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                    <a class="dropdown_content_2 dropdown_content_2_rejseserien" href="/rejseserien/rejsetasker">- Rejsetasker</a>
+                                    <a class="dropdown_content_2 dropdown_content_2_rejseserien" href="/rejseserien/valutamapper">- Valutamapper</a>
+                                <a href="/accessories">Accecories</a>
+                                <a href="/om_os">Om os</a>
                             </div>
                         </div>
 
 
                         <a href="indkoebsvogn"> <img src="/static/images/icons8-shopping-bag.png" alt="shopping-bag" style="height: 32px; width: 32px"></a>
-
 
                         <img src="/static/images/icons8-search-32.png" alt="search" style="height: 32px; width: 32px">
 
@@ -61,13 +69,16 @@
             <div class="row" id="bot_header">
                 <div class="col-12">
                     <div id="ombygning_container">
-                        <!--<p>Vores hjemmeside er igang med at få et nyt lækkert og moderne re-design, og er klar til
-                        julekøb den 16. november.</p> -->
-                        <p>Fri fragt ved køb over 300 DKK.-</p>
+                        <p>Vores hjemmeside er igang med at få et nyt lækkert og moderne re-design, og er klar til
+                        julekøb den 16. november.</p>
+                        <!-- <p>Fri fragt ved køb over 300 DKK.-</p>-->
                     </div>
                 </div>
             </div>
         </div>
+
+        <div id="overlay"></div>
 </div>
 
 <link rel="stylesheet" type="text/css" href="/static/css/header.css?v=3.01">
+<script src="/static/js/header.js"></script>

@@ -1,3 +1,7 @@
+body {
+    overflow-x:hidden;
+}
+
 #header{
 	background-color: white;
 	margin: auto;
@@ -69,10 +73,9 @@
 
 	#ombygning_container{
 		width: 100%;
-		height: 35px;
+		min-height: 35px;
 		background-color: black;
 		text-align: center;
-		font-size: 18px;
 	}
 
 	#ombygning_container p{
@@ -84,6 +87,22 @@
 	}
 
 @media only screen and (max-width: 1000px){
+
+	#overlay{
+		position: fixed;
+		display: none;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.8);
+	}
+
+	#ombygning_container p{
+		font-size: 14px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
 	.header_row{
 		position: sticky;
@@ -101,7 +120,7 @@
 	}
 
 	.dropdown {
-        overflow: hidden;
+        overflow: auto;
         display: none;
 		height: 40px;
 		width: 34px;
@@ -114,11 +133,12 @@
 	}
 
     .dropdown-content {
+		display: block;
+		overflow: scroll;
+		top: 54px;
+		right: -200px;
 		position: absolute;
-		right: 5px;
-		border-radius: 10px;
 		border: 1px solid #3f3f3f;
-        display: none;
         background-color: rgba(0,0,0,0.9);
         width: 200px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -130,7 +150,13 @@
 		padding-left: 15px;
 	}
 
-    .dropdown-content a, #produkter {
+	.dropdown-content img{
+		position: relative;
+		right: 30px;
+		bottom: 30px;
+	}
+
+    .dropdown-content a {
 		position: relative;
 		left: 50%;
 		transform: translate(-50%);
@@ -145,27 +171,32 @@
         text-align: left;
         font-size: 16px;
 		font-family: 'Roboto';
+		margin: 0;
     }
 
-	.dropdown-content .dropdown_content_2{
+	.dropdown-content p{
+		margin: 0;
+	}
+
+	.dropdown .dropdown_content_2{
 		display: none;
 	}
 
-	#produkter:hover ~ .dropdown_content_2, .dropdown-content:hover .dropdown_content_2{
+	/*#produkter:hover ~ .dropdown_content_2, .dropdown-content:hover .dropdown_content_2{
 		display: block;
-	}
+	}*/
 
 	#produkter{
 		margin: 0;
 	}
 
-    .dropdown-content a:hover, #produkter:hover {
+    .dropdown-content a:hover, .dropdown-content p:hover {
 		cursor: pointer;
     }
-
+/*
     .dropdown:hover .dropdown-content {
         display: block;
-    }
+    }*/
 
 	#mobilepay_logo, #paypal_logo{
 		display: none;
