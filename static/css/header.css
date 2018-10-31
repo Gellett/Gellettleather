@@ -85,7 +85,6 @@
         overflow: hidden;
         display: none;
 		height: 40px;
-		width: 35px;
     }
 
     /*.dropdown .dropbtn {
@@ -105,9 +104,8 @@
 		border-radius: 10px;
 		border: 1px solid #3f3f3f;
         display: none;
-        position: absolute;
         background-color: rgba(0,0,0,0.9);
-        min-width: 160px;
+        width: 200px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         z-index: 1;
 		padding-bottom: 20px;
