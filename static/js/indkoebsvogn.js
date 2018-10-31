@@ -3,7 +3,7 @@ $(function(){
 
     function get_billede(){
         $("#billede_div_" + vare_nr).append(
-            $('<img src="'+ billede +'" onclick="image()" class="image" id="'+billede+'" width="150" height="100"/>'));
+            $('<img src="'+ billede +'" onclick="image()" class="image" id="'+billede+'" style="max-width: 120px; width: 80%; max-height: 100px"/>'));
     }
 
     function get_text(){

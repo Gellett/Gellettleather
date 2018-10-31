@@ -136,3 +136,10 @@ body{
 			}
 
 }
+
+@media only screen and (max-width: 1000px){
+
+	#kategori_beskrivelse {
+		display: none;
+	}
+}

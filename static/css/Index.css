@@ -243,6 +243,7 @@ body{
 	}
 
 	#pic_container{
+		margin: 0;
 		width: 100%;
 		max-width: 500px;
 	}
@@ -250,10 +251,11 @@ body{
 	.center_pic{
 		width: 100%;
 		height: 100%;
+		margin: 0;
 	}
 
 	#mand, #dame{
-		margin-bottom: 20px;
+		margin-bottom: 0px;
 	}
 
 	#product_left{

@@ -132,3 +132,11 @@ body{
 			form #accept_btn{
 				height: 30px;
 			}
+
+@media only screen and (max-width: 1000px){
+
+	#handelsbetingelser_container{
+		width: 80%;
+	}
+
+}

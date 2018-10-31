@@ -58,6 +58,14 @@
 			height: 100px;
 		}
 
+		.right_header{
+			display: none;
+		}
+
+		.dropdown{
+			display: none;
+		}
+
 
 	#ombygning_container{
 		width: 100%;
@@ -76,6 +84,12 @@
 	}
 
 @media only screen and (max-width: 1000px){
+
+	.header_row{
+		position: sticky;
+		top: 0;
+		z-index: 2;
+	}
 
 	.right_header{
 		margin-top: 10px;
@@ -97,17 +111,6 @@
 		width: 34px;
 		display: inline-block;
 	}
-
-    /*.dropdown .dropbtn {
-		font-size: 24px;
-		font-family: Arial;
-		border: none;
-		outline: none;
-		color: black;
-		padding: 14px 16px;
-		margin: 0;
-		width: 100px;
-	}*/
 
     .dropdown-content {
 		position: absolute;

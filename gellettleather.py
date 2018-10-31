@@ -100,10 +100,13 @@ def varer(varetype, varetype_1):
         height = y * 450 + 150
         content_height = y * 450 + 127 + 20 + 150
 
+    mobile_content_height = x * 410
+    mobile_height = x * 410
+
     return render_template("varer.html", varenummer=varenummer, kategori=kategori, arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1,
                            path_2=path_2, image_path=image_path, image_number=image_number, product_text=product_text,
                            product_price=product_price, height=height, titel=titel, content_height=content_height,
-                           antal=antal, buy_btn_value=buy_btn_value)
+                           antal=antal, buy_btn_value=buy_btn_value, mobile_height = mobile_height, mobile_content_height=mobile_content_height)
 
 
 @app.route('/<varetype>/<varetype_1>/<varenummer>', methods=['GET'])
