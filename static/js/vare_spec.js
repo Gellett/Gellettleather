@@ -4,7 +4,8 @@ $(function(){
 
         antal = 1;
 
-        x = document.getElementsByTagName("Div")[38];
+        x = document.getElementsByTagName("Div")[42];
+        console.log(x);
 
 
         $.getJSON('/API/get_image', {image: x.id}, function(data) {
@@ -22,9 +23,6 @@ $(function(){
                 $(".image_1").css({
                     "backgroundImage": "url("+image_1+")",
                     "position": "absolute",
-                    "backgroundSize": "cover",
-                    "width": "240px",
-                    "height": "150px",
                     "border": "0.5px solid #7f7f7f",
                     "right": "50%",
                     "transform": "translate(0%)"
@@ -32,9 +30,6 @@ $(function(){
                 $(".image_2").css({
                     "backgroundImage": "url("+image_2+")",
                     "position": "absolute",
-                    "backgroundSize": "cover",
-                    "width": "240px",
-                    "height": "150px",
                     "border": "0.5px solid #7f7f7f",
                     "left": "50%"
                 });

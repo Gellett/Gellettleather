@@ -31,9 +31,6 @@ body{
 		font-size: 20px;
 	}
 
-	.pic_container{
-
-	}
 		.pic_container:after{
 			content:"";
 			background: darkgray;
@@ -58,8 +55,10 @@ body{
 
 		}
 
-			.image_1{
-
+			.image_1, .image_2{
+				width: 240px;
+				height: 150px;
+				background-size: cover;
 			}
 
 	.text_container{
@@ -190,8 +189,88 @@ body{
 		border-bottom: 1px solid black;
 	}
 
+	.box{
+		margin-top: 20px;
+		margin-right: 10px;
+		background-size: cover;
+		width: 270px;
+		height: 180px;
+		display: inline-block;
+		border: 1px solid black;
+	}
+
 	.alt_text{
 		border-top: 1px solid black;
 		border-bottom: 1px solid black;
 	}
+
+
+@media only screen and (max-width: 1000px){
+	.pic{
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 80%;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		max-width: 375px;
+		max-height: 250px;
+	}
+
+	.pic_container:after{
+		display: none;
+	}
+
+	.image_container{
+		width: 80%;
+		position: relative;
+		left: 50%;
+		transform: translate(-50%);
+		margin-top: 0;
+		height: 100px;
+	}
+
+	.image_1, .image_2{
+		background-size: contain;
+		width: 50%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.text_container{
+		width: 80%;
+		margin: 0;
+		left: 50%;
+		transform: translate(-50%);
+		top: 50px;
+	}
+
+	.buy_container{
+		width: 100%;
+	}
+
+	.text{
+		margin-top: 10px;
+	}
+
+	.follow_container{
+		top: 50px;
+	}
+
+	.alt_container{
+		margin-bottom: 100px;
+	}
+
+	.box_container, .alt_text{
+		border: none;
+	}
+
+	.box{
+		width: 40%;
+		height: 100px;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+	}
+}
 
