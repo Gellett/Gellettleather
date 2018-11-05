@@ -23,14 +23,14 @@ $(function(){
                 $(".image_1").css({
                     "backgroundImage": "url("+image_1+")",
                     "position": "absolute",
-                    "border": "0.5px solid #7f7f7f",
+                    "backgroundSize": "cover",
                     "right": "50%",
                     "transform": "translate(0%)"
                 });
                 $(".image_2").css({
                     "backgroundImage": "url("+image_2+")",
                     "position": "absolute",
-                    "border": "0.5px solid #7f7f7f",
+                    "backgroundSize": "cover",
                     "left": "50%"
                 });
             }

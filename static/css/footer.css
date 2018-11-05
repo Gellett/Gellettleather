@@ -26,8 +26,8 @@
 		#gls_logo{
 			background-image: url("../images/gls_logo.png");
 			background-size: cover;
-			height: 50px;
-			width: 190px;
+			height: 30px;
+			width: 114px;
 			position: relative;
 			bottom: 10px;
 			left: 25px;
@@ -37,19 +37,18 @@
 		#postnord_logo{
 			background-image: url("../images/postnord.png");
 			background-size: cover;
-			height: 50px;
-			width: 240px;
+			height: 30px;
+			width: 144px;
 			position: relative;
 			bottom: 10px;
 		}
 
 		#footer hr{
-			margin: 0px;
+			margin: 0;
 			background-color: #bfbfbf;
 		}
 
 @media only screen and (max-width: 1000px){
-	#footer{
-		height: 330px;
-	}
+
+
 }

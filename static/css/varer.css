@@ -80,6 +80,13 @@ body{
 						text-decoration: underline;
 					}
 
+				        .billede{
+							background-size: cover;
+							width: 320px;
+							height: 210px;
+							display: inline-block;
+						}
+
 				.pic{
 					position: absolute;
 					background-size: contain;
@@ -90,6 +97,7 @@ body{
 			.kategori, .kategori h2{
 				margin: 0;
 				padding-bottom: 10px;
+				display: none;
 			}
 
 			.billede:hover {
@@ -154,4 +162,24 @@ body{
 	.path_container {
 		padding-bottom: 0;
 	}
+
+	.product_container{
+		width: 100%;
+		height: 273px;
+	}
+
+		.billede{
+			width: 100%;
+			height: 120px;
+		}
+
+		.product_text{
+			position: relative;
+			top: -10px;
+		}
+
+		.buy{
+			top: 0;
+			height: 10px;
+		}
 }
