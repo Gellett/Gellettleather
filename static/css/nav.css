@@ -195,7 +195,7 @@
         transform: translate3d(0px,0px,0px);
         position: sticky;
         position: -webkit-sticky;
-        top: -50px;
+        top: -26px;
         width: 100%;
         z-index: 1;
     }

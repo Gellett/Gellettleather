@@ -10,19 +10,26 @@ body{
 	overflow: auto;
 }
 
-.center_pic button{
+button{
 	position: absolute;
-	top: 60%;
 	left: 50%;
-	transform: translate(-50%);
+	transform: translate(-50%, -50%);
 	height: 40px;
 	width: 80px;
 	color: white;
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(0,0,0,0.5);
 	border: 1px solid white;
 	font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 3px;
 	font-size: 20px;
+}
+
+.center_pic button{
+	top: 50%;
+}
+
+.product_pic button{
+	top: 50%;
 }
 
 #content{
@@ -89,83 +96,81 @@ body{
 	#products{
 		position: relative;
 		margin: auto;
-		padding-top: 10px;
+		padding-top: 60px;
 		max-width: 1400px;
-		height: 450px;
+		height: 600px;
 		background-color: white;
+		width: 1200px;
 	}
 		#bestseller h1{
 			width: 100%;
 			text-align: center;
-		}
-
-		#product_left{
-			border-right: 0.5px solid #b7b7b7;
-		}
-
-		#product_mid{
-
-		}
-
-		#product_right{
-			border-left: 0.5px solid #b7b7b7;
+			font-family: Roboto;
 		}
 
 		.product_container{
 			position: relative;
-			height: 350px;
+			height: 450px;
 			display: inline-block;
 			background-color: white;
 			width: 100%;
 		}
 
 			.product_name{
-				position: relative;
-				left: 50%;
-				transform: translate(-50%);
+				position: absolute;
+				background-color: rgba(0,0,0,0.5);
+				color: white;
+				width: 350px;
+				font-family: sans-serif;
+				z-index: 1;
+				text-align: center;
+				height: 37px;
+			}
+
+			.product_name h2{
+				margin-top: 5px;
 			}
 
 			#product_left_name{
-				width: 170px;
+
 			}
 
 			#product_mid_name{
-				width: 135px;
+				left: 50%;
+				transform: translate(-50%);
 			}
 
 			#product_right_name{
-				width: 115px;
+				right: 0;
 			}
+
+
 
 			#pic_left{
 				position: relative;
-				background-image: url("../images/varer/tasker/computertasker/5886.png");
+				background-image: url("../images/bromance.jpg");
 				background-size: cover;
-				height: 200px;
-				width: 300px;
-				left: 50%;
-				transform: translate(-50%);
+				height: 400px;
+				width: 350px;
 			}
 
 			#pic_mid{
 				position: relative;
-				background-image: url("../images/varer/mapper/skrivemapper/5070.png");
+				background-image: url("../images/taskepic.jpg");
 				background-size: cover;
-				height: 180px;
-				width: 260px;
+				height: 400px;
+				width: 350px;
+				left: 50%;
+				transform: translate(-50%);
 			}
 
 			#pic_right{
 				position: relative;
-				background-image: url("../images/varer/rejseserien/rejsetasker/4531.png");
+				background-image: url("../images/armbånd1.png");
 				background-size: cover;
-				height: 180px;
-				width: 270px;
-			}
-
-			.product_pic{
-				left: 50%;
-				transform: translate(-50%);
+				height: 400px;
+				width: 350px;
+				left: 50px;
 			}
 
 		.product_text {
