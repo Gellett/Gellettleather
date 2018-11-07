@@ -1,4 +1,4 @@
-html, body{
+html, body {
 	position: relative;
 	width: 100%;
 	margin: 0;
@@ -8,6 +8,21 @@ html, body{
 body{
 	background-color: white;
 	overflow: auto;
+}
+
+.center_pic button{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%);
+	height: 40px;
+	width: 80px;
+	color: white;
+	background-color: rgba(0,0,0,0);
+	border: 1px solid white;
+	font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	letter-spacing: 3px;
+	font-size: 20px;
 }
 
 #content{
@@ -25,24 +40,25 @@ body{
 		z-index: 0;
 	}
 		#dame{
-			height: 360px;
+			height: 600px;
+			width: 1200px;
 		}
 
 		#mand{
 			height: 360px;
 		}
 
-
 		#center_pic_left{
 			z-index: 0;
 			position: relative;
-			background-image: url("../images/dame2.jpg");
-			width: 100%;
-			height: 360px;
+			background-image: url("../images/Forside-billede1.jpg");
+			width: 1200px;
+			height: 600px;
 			background-size: cover;
 			background-repeat: no-repeat;
 		}
 
+	/*
 		#center_pic_right{
 			position: relative;
 			background-image: url("../images/mand1.jpg");
@@ -50,8 +66,9 @@ body{
 			height: 360px;
 			background-size: cover;
 			background-repeat: no-repeat;
-		}
+		} */
 
+		/*
 		.center_pic{
 			position: relative;
 			width: 400px;
@@ -59,7 +76,7 @@ body{
 			left: 50%;
 			transform: translate(-50%);
 
-		}
+		} */
 
 
 		#pic_container hr{
@@ -225,7 +242,24 @@ body{
 }
 
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 767px){
+
+	body{
+		overflow-y: hidden;
+	}
+
+
+
+	#center_pic_left{
+		z-index: 0;
+		position: relative;
+		right: 11%;
+		background-image: url("../images/Forside-billede.jpg");
+		width: 200%;
+		height: 87vh;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 
 	#cookies{
 		font-size: 12px;
@@ -254,8 +288,10 @@ body{
 		margin: 0;
 	}
 
-	#mand, #dame{
+	#dame{
 		margin-bottom: 0px;
+		height: 85vh;
+		width: 100%;
 	}
 
 	#product_left{

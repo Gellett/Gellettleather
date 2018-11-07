@@ -14,8 +14,8 @@
     .kurv_img{
         position: relative;
         background-image: url("/static/images/trolly.png");
-        height: 75px;
-        width: 75px;
+        height: 65px;
+        width: 65px;
         background-size: cover;
         left: 100%;
         transform: translate(-100%);
@@ -27,7 +27,7 @@
 
     #vare_antal{
         position: absolute;
-        top: 23px;
+        top: 20px;
         left: -20px;
         width: 30px;
         font-size: 20px;
