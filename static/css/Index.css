@@ -13,15 +13,42 @@ body{
 button{
 	position: absolute;
 	left: 50%;
+	top: 50%;
 	transform: translate(-50%, -50%);
-	height: 40px;
-	width: 80px;
+	text-align: center;
 	color: white;
 	background-color: rgba(0,0,0,0.5);
 	border: 1px solid white;
 	font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: 3px;
 	font-size: 20px;
+}
+
+button:hover {
+	background-color: #9e9e9e;
+	cursor: pointer;
+}
+
+#buy_btn1{
+	height: 40px;
+	width: 83px;
+}
+
+#buy_btn2{
+	height: 54px;
+	width: 98px;
+	left: 175px;
+}
+
+#buy_btn3{
+	height: 54px;
+	width: 112px;
+}
+
+#buy_btn4{
+	height: 54px;
+	width: 190px;
+	left: 225px;
 }
 
 .center_pic button{
@@ -42,23 +69,18 @@ button{
 	#pic_container{
 		position: relative;
 		max-width: 1200px;
-		height: 400px;
+		height: 600px;
 		margin: auto;
 		z-index: 0;
 	}
-		#dame{
+		#front_pic{
 			height: 600px;
 			width: 1200px;
-		}
-
-		#mand{
-			height: 360px;
 		}
 
 		#center_pic_left{
 			z-index: 0;
 			position: relative;
-			background-image: url("../images/Forside-billede1.jpg");
 			width: 1200px;
 			height: 600px;
 			background-size: cover;
@@ -148,7 +170,6 @@ button{
 
 			#pic_left{
 				position: relative;
-				background-image: url("../images/bromance.jpg");
 				background-size: cover;
 				height: 400px;
 				width: 350px;
@@ -156,7 +177,6 @@ button{
 
 			#pic_mid{
 				position: relative;
-				background-image: url("../images/taskepic.jpg");
 				background-size: cover;
 				height: 400px;
 				width: 350px;
@@ -166,7 +186,6 @@ button{
 
 			#pic_right{
 				position: relative;
-				background-image: url("../images/armbånd1.png");
 				background-size: cover;
 				height: 400px;
 				width: 350px;
@@ -247,21 +266,23 @@ button{
 }
 
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 1000px){
 
 	body{
 		overflow-y: hidden;
 	}
 
-
+	#buy_btn1{
+		left: 51vw;
+		transform: translate(0,-50%);
+	}
 
 	#center_pic_left{
 		z-index: 0;
 		position: relative;
-		right: 11%;
-		background-image: url("../images/Forside-billede.jpg");
-		width: 200%;
-		height: 87vh;
+		right: 9%;
+		background-image: url("../images/Forside-billede1-min.jpg");
+		height: 85vh;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}

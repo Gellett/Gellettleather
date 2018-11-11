@@ -81,18 +81,14 @@ body{
 					}
 
 				        .billede{
-							background-size: cover;
+							background-size: contain;
+							background-repeat: no-repeat;
 							width: 320px;
 							height: 210px;
 							display: inline-block;
 						}
 
-				.pic{
-					position: absolute;
-					background-size: contain;
-					height: 300px;
-					width: 330px;
-				}
+
 
 			.kategori, .kategori h2{
 				margin: 0;
@@ -127,8 +123,10 @@ body{
 			.buy_btn{
 				height: 30px;
 				width: 90px;
-				background-color: #4CAF50;
-				border-radius: 20px;
+				/*background-color: #4CAF50;*/
+				background-color: black;
+				border: 1px solid black;
+				/*border-radius: 20px; */
 				position: relative;
 				left: 50%;
 				transform: translate(-50%);
