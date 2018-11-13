@@ -283,8 +283,10 @@ button:hover {
 		display: none;
 	}
 
-	#buy_btn1{
-
+	#buy_btn1 span{
+		position: relative;
+		margin: 0;
+		left: -12px;
 	}
 
 	#center_pic{
