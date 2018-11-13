@@ -35,7 +35,7 @@
 
                 <div class="row">
 
-                    <div class="pic_container col-6 col-m-4 col-s-12">
+                    <div class="pic_container col-6 col-m-6 col-s-12">
 
                         <div class="name_container">
                             <div class="name" id="{{ varenavn }} - {{ vare_id }}">
@@ -44,22 +44,20 @@
                             </div>
                         </div>
 
-                        <div class="pic" id={{ image_url }} style="background-image: url('{{ image_url }}')">
+                        <div class="pic" id={{ image_url }}></div>
+                        <img id="main_pic" src="{{ image_url }}" alt="vare_billede">
 
                     </div>
-                        <div class="image_container">
-                            <div class="image_1">
+                    <div class="image_container col-6 col-6 col-12">
+                        <div class="image_1">
 
-                            </div>
-                            <div class="image_2">
+                        </div>
+                        <div class="image_2">
 
-                            </div>
                         </div>
                     </div>
 
-
-
-                    <div class="text_container col-6 col-m-4 col-s-12">
+                    <div class="text_container col-6 col-m-6 col-s-12">
 
                         <div class="pris_container">
                             <div class="pris" id="{{ pris }} DKK.-">
@@ -118,6 +116,7 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
 
                 </div>

@@ -4,7 +4,7 @@ $(function(){
 
         antal = 1;
 
-        x = document.getElementsByTagName("Div")[41];
+        x = document.getElementsByTagName("Div")[35];
         console.log(x);
 
 
@@ -40,14 +40,16 @@ $(function(){
     $(".image_1").on('click',function(){
 
 		$.getJSON('/API/get_image_1', {image: image_1}, function(data) {
-			$(".pic").css("backgroundImage", "url("+data+")");
+			$("#main_pic").attr("src", ""+data+"");
+			console.log(data);
 		});
 	});
 
 	$(".image_2").on('click',function(){
 
 		$.getJSON('/API/get_image_2', {image: image_2}, function(data) {
-			$(".pic").css("backgroundImage", "url("+data+")");
+			$("#main_pic").attr("src", ""+data+"");
+			console.log(data);
 		});
 	});
 

@@ -41,17 +41,25 @@ body{
 			width: 1px;
 		}
 
-		.pic{
+		.pic_container img{
+			position: relative;
+			max-height: 375px;
+			display: inline-block;
+			left: 50%;
+			transform: translate(-50%);
+		}
+
+		/*.pic{
 			position: relative;
 			background-size: cover;
 			height: 375px;
 			width: 600px;
-		}
+		}*/
 
 		.image_container{
-			margin-top: 100px;
 			position: relative;
 			height: 150px;
+			right: 300px;
 
 		}
 
@@ -63,7 +71,6 @@ body{
 
 	.text_container{
 		position: relative;
-		top: 200px;
 		margin-right: 70px;
 		width: 400px;
 		float: right;
@@ -187,7 +194,6 @@ body{
 	.box_container{
 		text-align: center;
 		padding-bottom: 20px;
-		border-bottom: 1px solid black;
 	}
 
 	.box{
@@ -202,20 +208,19 @@ body{
 
 	.alt_text{
 		border-top: 1px solid black;
-		border-bottom: 1px solid black;
 	}
 
 
 @media only screen and (max-width: 767px){
-	.pic{
+	.pic_container img{
 		background-size: contain;
 		background-repeat: no-repeat;
-		width: 80%;
 		position: relative;
 		left: 50%;
 		transform: translate(-50%);
-		max-width: 375px;
-		max-height: 250px;
+		width: auto;
+		height: auto;
+		max-height: 150px;
 	}
 
 	.pic_container:after{
@@ -229,7 +234,7 @@ body{
 		transform: translate(-50%);
 		margin-top: 0;
 		height: 100px;
-		top: 0;
+		z-index: 1;
 	}
 
 	.image_1, .image_2{
@@ -240,11 +245,15 @@ body{
 	}
 
 	.text_container{
+		float: none;
 		width: 80%;
 		margin: 0;
 		left: 50%;
 		transform: translate(-50%);
-		top: 80px;
+		top: 30px;
+	}
+
+	.pris{
 	}
 
 	.buy_container{

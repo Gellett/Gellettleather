@@ -179,6 +179,10 @@ body{
 			height: 120px;
 		}
 
+		.billede img{
+			height: 120px;
+		}
+
 		.product_text{
 			position: relative;
 			top: -10px;
