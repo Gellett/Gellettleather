@@ -15,7 +15,7 @@ $(function() {
             }
         else {
             $("#overlay").css({display: "none"});
-            $(".dropdown-content").animate({right: "-200px"});
+            $(".dropdown-content").animate({right: "-220px"});
             $(".dropdown-content").css({overflow: "no-content"});
             menu_clicked = false;
         }

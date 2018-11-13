@@ -10,11 +10,12 @@ body{
 }
 
     #content{
-            position: relative;
-            background-color: white;
-            max-width: 1400px;
-            margin: auto;
-            min-height: 1000px;
+        position: relative;
+        background-color: white;
+        max-width: 1400px;
+        margin: auto;
+        min-height: 1000px;
+        font-family: "Trebuchet MS";
         }
 
 	#container{
@@ -26,13 +27,11 @@ body{
         #projekter{
             text-align: justify;
             line-height: 1.5;
-            font-size: 20px;
-            width: 80%;
+            width: 90%;
         }
         
         #støtter{
             line-height: 1.5;
-            font-size: 20px;
         }
 
 
@@ -78,6 +77,25 @@ body{
             transform: translate(-50%);
 
         }
+
+        #logo-container1{
+            background-image: url("../images/postnord.png");
+            height: 30px;
+            width: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+
+        #logo-container2{
+            background-image: url("../images/gls_logo.png");
+            height: 30px;
+            width: 200px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+
 
 @media only screen and (max-width: 1550px) {
     #projekter{

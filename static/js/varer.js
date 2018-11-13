@@ -74,6 +74,8 @@ $(function(){
 			sessionStorage.setItem('ordertext', sessionStorage.getItem('ordertext') + nummer1);
 		}
 		console.log(sessionStorage.getItem('ordertext'));
+
+
     });
 
 });

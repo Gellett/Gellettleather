@@ -88,6 +88,10 @@ body{
 							display: inline-block;
 						}
 
+						.billede img{
+							height: 210px;
+						}
+
 
 
 			.kategori, .kategori h2{
@@ -135,6 +139,10 @@ body{
 
 			.buy_btn:hover{
 				cursor: pointer;
+			}
+
+			.buy_btn:active{
+				transform: scale(1.5) translate(-35%);
 			}
 
 			.buy_text{

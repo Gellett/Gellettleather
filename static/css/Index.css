@@ -270,11 +270,11 @@ button:hover {
 
 	body{
 		overflow-y: hidden;
+		overflow-x: hidden;
 	}
 
 	#buy_btn1{
 		left: 51vw;
-		transform: translate(0,-50%);
 	}
 
 	#center_pic_left{

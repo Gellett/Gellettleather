@@ -116,8 +116,15 @@
 
                     <section id="kategori_beskrivelse">
                         <p>
-                            {% if path_1 == "Tasker"  %}
-                                En skindtaske er en fuldstændig uundværlig taske for kvinder. Den praktiske taske fåes i mange former og størrelser, der gør at du altid kan finde skuldertasken, der passer til netop dit behov. Skuldertasker kan være alt fra en lille smart håndtaske til damer, der kun har plads til de mest basale ting i hverdagen eller som er perfekt til en lille bytur, til store tasker der i størrelse mindre mere om en shoppertaske. Med andre ord kan du finde en skuldertaske tilehver lejlighed og aller her på siden er i den bedste kvalitet skind hvis ikke andet er skrevet ved produktet. Alle skind tasker bliver ekstremt lækre når de tages i brug, og bliver kun pænere med årene,
+                            {% if path_2 == "Kunstlaeder"  %}
+                                En kunstlæder taske er en fuldstændig uundværlig taske for kvinder. Den praktiske taske findes i mange former og størrelser, der gør at du altid kan finde skuldertasken, der passer til netop dit behov. Skuldertasker kan være alt fra en lille smart håndtaske til damer, der kun har plads til de mest basale ting i hverdagen eller som er perfekt til en lille bytur, til store tasker der i størrelse minder mere om en shopper taske. Med andre ord kan du finde en skuldertaske til enhver lejlighed. Alle produkter her på siden er i den bedste kvalitet kunstlæder.
+                            {% elif path_1 == "Tasker"%}
+                                 En skindtaske er en fuldstændig uundværlig taske for kvinder. Den praktiske taske fåes i mange former og størrelser, der gør at du altid kan finde skuldertasken, der passer til netop dit behov. Skuldertasker kan være alt fra en lille smart håndtaske til damer, der kun har plads til de mest basale ting i hverdagen eller som er perfekt til en lille bytur, til store tasker der i størrelse mindre mere om en shoppertaske. Med andre ord kan du finde en skuldertaske tilehver lejlighed og aller her på siden er i den bedste kvalitet skind hvis ikke andet er skrevet ved produktet. Alle skind tasker bliver ekstremt lækre når de tages i brug, og bliver kun pænere med årene,
+                            {% endif %}
+                        </p>
+                        <p>
+                            {% if path_1 == "Tasker > Kunstlaeder"  %}
+                                En kunstlæder taske er en fuldstændig uundværlig taske for kvinder. Den praktiske taske findes i mange former og størrelser, der gør at du altid kan finde skuldertasken, der passer til netop dit behov. Skuldertasker kan være alt fra en lille smart håndtaske til damer, der kun har plads til de mest basale ting i hverdagen eller som er perfekt til en lille bytur, til store tasker der i størrelse minder mere om en shopper taske. Med andre ord kan du finde en skuldertaske til enhver lejlighed. Alle produkter her på siden er i den bedste kvalitet kunstlæder.
                             {% endif %}
                         </p>
                         <p>
@@ -151,7 +158,8 @@
                                     <div class="product_container">
                                         <div class="vare_nr_{{ num }}" id="Varenr.: {{ varenummer[num] }}"></div>
                                         <div class="kategori kategori_{{ num }}"> <h2>{{ kategori[num] }}</h2> </div>
-                                        <div class="billede billede_{{ num }}" id="{{ image_path[num] }}" style="background-image: url('{{ image_path[num] }}')"></div>
+                                        <div class="billede billede_{{ num }}" id="{{ image_path[num] }}"><img src="{{ image_path[num] }}"
+                                                                                                               alt="vare_billede"> </div>
                                         <div class="product_text">
                                             <p class="product_text_{{ num }}">{{ product_price[num] }} DKK.-</p>
                                         </div>

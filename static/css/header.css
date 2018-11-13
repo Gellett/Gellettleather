@@ -28,41 +28,6 @@ body {
 		display: inline-block;
 	}
 
-	#paypal{
-		position: relative;
-		left: 50%;
-		transform: translate(-50%);
-		width: 300px;
-		height: 104px;
-	}
-
-	#mobilepay{
-		position: relative;
-		left: 50%;
-		transform: translate(-50%);
-		width: 300px;
-		height: 104px;
-	}
-
-		#paypal_logo{
-			margin-top: 10px;
-			background-image: url("../images/gls_logo.png");
-			background-size: contain;
-			background-repeat: no-repeat;
-			width: 142.5px;
-			height: 100px;
-		}
-
-		#mobilepay_logo{
-			margin-top: 10px;
-			float: right;
-			background-image: url("../images/postnord.png");
-			background-size: contain;
-			background-repeat: no-repeat;
-			width: 142.5px;
-			height: 100px;
-		}
-
 		#logo{
 			margin-top: 10px;
 			background-image: url("../images/gellettlogo.png");
@@ -117,7 +82,7 @@ body {
 	.header_row{
 		position: sticky;
 		position: -webkit-sticky;
-		top: 0;
+		top: 34px;
 		z-index: 2;
 	}
 
@@ -147,14 +112,16 @@ body {
 		display: block;
 		overflow: scroll;
 		top: 87px;
-		right: -200px;
+		right: -220px;
 		position: fixed;
 		border: 1px solid #3f3f3f;
         background-color: rgba(0,0,0,0.9);
-        width: 200px;
+        width: 220px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         z-index: 3;
 		padding-bottom: 20px;
+		max-height: 400px;
+		overflow: scroll;
     }
 
 	.dropdown_content_2{
