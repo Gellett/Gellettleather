@@ -4,7 +4,7 @@ $(function(){
 
         antal = 1;
 
-        x = document.getElementsByTagName("Div")[42];
+        x = document.getElementsByTagName("Div")[41];
         console.log(x);
 
 
