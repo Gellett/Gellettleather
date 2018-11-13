@@ -78,7 +78,7 @@ button:hover {
 			width: 1200px;
 		}
 
-		#center_pic_left{
+		#center_pic{
 			z-index: 0;
 			position: relative;
 			width: 1200px;
@@ -275,34 +275,37 @@ button:hover {
 		position: fixed;
 	}
 
-
+	hr{
+		display: none;
+	}
 
 	#products{
 		display: none;
 	}
 
 	#buy_btn1{
-		left: 51vw;
+
 	}
 
-	#center_pic_left{
+	#center_pic{
 		z-index: 0;
 		position: relative;
-		right: 9%;
-		background-image: url("../images/Forside-billede1-min.jpg");
-		height: 85vh;
-		background-size: cover;
+		content: url("../images/punge1-min.jpg");
+		background-size: contain;
+		width: 100vw;
+		height: 80vh;
 		background-repeat: no-repeat;
 	}
 
 	#cookies{
 		font-size: 12px;
-		padding-bottom: 20px;
+		padding-bottom: 40px;
 	}
 
 	#okay{
 		font-size: 14px;
-		bottom: 50px;
+		bottom: 70px;
+		left: 220px;
 		height: 30px;
 	}
 
