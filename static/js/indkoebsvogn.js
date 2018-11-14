@@ -36,6 +36,10 @@ $(function(){
 
         ialt_vare = sessionStorage.getItem('newAntal');
 
+        if (ialt_vare == undefined){
+            ialt_vare = "0";
+        }
+
         vare_antal = parseInt(ialt_vare);
 
         for (var i = vare_antal; i > 0; i--) {
@@ -99,4 +103,8 @@ $(function(){
     });
 
     $.getJSON('/API/kost', {pris: sessionStorage.getItem('newPris')}, function(data) {});
+
+    if (sessionStorage.getItem('newPris') == null){
+        sessionStorage.setItem('newPris', parseInt('0'));
+    }
 });

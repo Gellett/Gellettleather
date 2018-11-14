@@ -49,33 +49,26 @@ body{
         #logo1{
             background-image: url("../images/Kræft.png");
 			background-size: cover;
-			width: 185px;
-			height: 100px;
+			width: 92px;
+			height: 50px;
             position: relative;
-            left: 50%;
-            transform: translate(-50%);
         }
 
         #logo2{
             background-image: url("../images/WSPA_logo.png");
 			background-size: cover;
-			width: 350px;
-			height: 90px;
+			width: 175px;
+			height: 45px;
             position: relative;
-            left: 50%;
-            transform: translate(-50%);
-
         }
 
         #logo3{
             background-image: url("../images/red_barnet.png");
 			background-size: cover;
-			width: 100px;
-			height: 100px;
+			width: 50px;
+			height: 50px;
+            left: 100px;
             position: relative;
-            left: 50%;
-            transform: translate(-50%);
-
         }
 
         #logo-container1{
@@ -113,7 +106,7 @@ body{
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 700px) {
     #projekter{
         text-align: justify;
         position: relative;

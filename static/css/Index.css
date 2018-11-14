@@ -87,33 +87,10 @@ button:hover {
 			background-repeat: no-repeat;
 		}
 
-	/*
-		#center_pic_right{
-			position: relative;
-			background-image: url("../images/mand1.jpg");
-			width: 100%;
-			height: 360px;
-			background-size: cover;
-			background-repeat: no-repeat;
-		} */
-
-		/*
-		.center_pic{
-			position: relative;
-			width: 400px;
-			height: 360px;
-			left: 50%;
-			transform: translate(-50%);
-
-		} */
-
-
 		#pic_container hr{
 			position: relative;
 			top: 10px;
 		}
-
-
 
 	#products{
 		position: relative;
@@ -124,6 +101,7 @@ button:hover {
 		background-color: white;
 		width: 1200px;
 	}
+
 		#bestseller h1{
 			width: 100%;
 			text-align: center;
@@ -166,8 +144,6 @@ button:hover {
 				right: 0;
 			}
 
-
-
 			#pic_left{
 				position: relative;
 				background-size: cover;
@@ -202,20 +178,12 @@ button:hover {
 
 #cookies{
 	position: fixed;
-	/*animation-name: fly-in;
-	animation-duration: 1s;*/
 	bottom: -171px;
 	background-color: #bababa;
 	font-family: Helvetica;
-
 	z-index: 2;
 	width: 100%;
 }
-/*
-@keyframes fly-in {
-	from {bottom: -171px;}
-	to {bottom: 0;}
-}*/
 
 	#cookies_wrapper{
 		position: relative;
@@ -262,21 +230,65 @@ button:hover {
 		margin-top: 8px;
 	}
 
+	#pic_left{
+		width: 90%;
+		height: 300px;
+	}
+
+	#pic_mid{
+		width: 90%;
+		height: 300px;
+	}
+
+	#pic_right{
+		width: 90%;
+		height: 300px;
+		left: 35px;
+	}
+
+	#buy_btn2{
+		left: 110px;
+	}
+
+	#buy_btn4{
+		left: 145px;
+	}
+
+	#products{
+		width: 100vw;
+	}
+
 	#mand{
 		margin-bottom: 8px;
 	}
-}
 
-
-@media only screen and (max-width: 1000px){
-
-	body{
-		overflow: hidden;
-		position: fixed;
+	#center_pic{
+		width: 100vw;
+		height: auto;
 	}
 
 	hr{
 		display: none;
+	}
+
+	#pic_container{
+		height: 450px;
+	}
+
+	#front_pic{
+		height: 450px;
+	}
+
+	#products{
+		padding-top: 20px;
+	}
+}
+
+
+@media only screen and (max-width: 700px){
+
+	body{
+
 	}
 
 	#products{
@@ -319,6 +331,7 @@ button:hover {
 		margin: 0;
 		width: 100%;
 		max-width: 500px;
+		height: 79vh;
 	}
 
 	.center_pic{

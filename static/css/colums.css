@@ -24,7 +24,7 @@
     .col-s-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 700px) {
     /* For tablets: */
     .col-m-1 {width: 8.33%;}
     .col-m-2 {width: 16.66%;}

@@ -118,7 +118,6 @@ def varer(varetype, varetype_1):
         mobile_height = h * 273
         mobile_content_height = h * 273 + 100
 
-
     return render_template("varer.html", varenummer=varenummer, kategori=kategori, arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1,
                            path_2=path_2, image_path=image_path, image_number=image_number, product_text=product_text,
                            product_price=product_price, height=height, titel=titel, content_height=content_height,
