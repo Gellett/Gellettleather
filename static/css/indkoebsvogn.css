@@ -129,6 +129,7 @@ body{
 			form{
 				display: inline-block;
 			}
+
 			form #accept_btn{
 				height: 30px;
 			}

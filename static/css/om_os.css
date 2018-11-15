@@ -90,7 +90,7 @@ body{
         }
 
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1200px) {
     #projekter{
         position: relative;
         width: 90%;

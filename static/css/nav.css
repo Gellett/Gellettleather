@@ -149,7 +149,7 @@
     }
 }
 
-@media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1200px) {
     #nav_row{
         transform: translate3d(0px,0px,0px);
         position: sticky;

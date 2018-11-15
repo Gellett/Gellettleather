@@ -119,25 +119,24 @@
                 </div>
 
 
-                </div>
+            </div>
 
-                <div class="row">
-                    <div class="alt_container col-12 col-m-12 col-s-12">
-                        <div class="box_container">
-                            <div class="alt_text">
-                                <h1>Alternativer</h1>
-                            </div>
-
-                            {% for num in alternativer_list %}
-                                <div class="box" id="/{{ varetype }}/{{ varetype_1 }}/{{ num }}" style="background-image: url('/static/images/varer/{{ varetype }}/{{ varetype_1 }}/{{ num }}.png')"> </div>
-                            {% endfor %}
-
+            <div class="row">
+                <div class="alt_container col-12 col-m-12 col-s-12">
+                    <div class="box_container">
+                        <div class="alt_text">
+                            <h1>Alternativer</h1>
                         </div>
+
+                        {% for num in alternativer_list %}
+                            <div class="box" id="/{{ varetype }}/{{ varetype_1 }}/{{ num }}" style="background-image: url('/static/images/varer/{{ varetype }}/{{ varetype_1 }}/{{ num }}.png')"> </div>
+                        {% endfor %}
+
                     </div>
                 </div>
-
-
             </div>
+
+
         </div>
     {% include 'footer.html' %}
 

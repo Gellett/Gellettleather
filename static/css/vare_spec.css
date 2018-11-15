@@ -10,12 +10,12 @@ body{
 }
 
     #content{
-            position: relative;
-            background-color: white;
-            max-width: 1400px;
-            margin: auto;
-            min-height: 1000px;
-        }
+		position: relative;
+		background-color: white;
+		max-width: 1400px;
+		margin: auto;
+		min-height: 1000px;
+	}
 
 	#container{
 		min-height: 100%;
@@ -49,18 +49,11 @@ body{
 			transform: translate(-50%);
 		}
 
-		/*.pic{
-			position: relative;
-			background-size: cover;
-			height: 375px;
-			width: 600px;
-		}*/
-
 		.image_container{
 			position: relative;
 			height: 150px;
-			right: 300px;
-
+			right: 600px;
+			top: 550px;
 		}
 
 			.image_1, .image_2{
@@ -210,6 +203,73 @@ body{
 		border-top: 1px solid black;
 	}
 
+@media only screen and (max-width: 1200px) {
+
+	.follow_container{
+		top: 50px;
+		left: 26px;
+	}
+
+	.pic_container:after{
+		content:"";
+		background: darkgray;
+		position: absolute;
+		bottom: 45%;
+		right: 50%;
+		height: 40%;
+		width: 1px;
+	}
+
+	.pic_container img{
+		max-height: 250px;
+	}
+
+	.image_container{
+		right: 400px;
+		top: 450px;
+	}
+
+	.image_1, .image_2{
+		width: 163px;
+		height: 100px;
+		background-size: cover;
+	}
+
+	.buy_container{
+		width: unset;
+	}
+
+	.text_container{
+		margin-right: 0;
+		width: 370px;
+	}
+
+	.text{
+		text-align: unset;
+	}
+
+	.alt_container{
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	.box_container, .alt_text{
+		border: none;
+	}
+
+	.box{
+		width: 24%;
+		height: 120px;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+	}
+
+	.alt_container{
+		margin-bottom: 0;
+		margin-top: 80px;
+	}
+}
 
 @media only screen and (max-width: 700px){
 	.pic_container img{
@@ -235,6 +295,7 @@ body{
 		margin-top: 0;
 		height: 100px;
 		z-index: 1;
+		top: 0;
 	}
 
 	.image_1, .image_2{
