@@ -87,6 +87,10 @@ body{
 			float: left;
 		}
 
+		#buy_btn:hover, #empty_btn:hover{
+			cursor: pointer;
+		}
+
 	#handelsbetingelser_container{
 		display: none;
 		position: fixed;

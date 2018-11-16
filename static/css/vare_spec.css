@@ -57,9 +57,9 @@ body{
 		}
 
 			.image_1, .image_2{
-				width: 240px;
+				max-width: 240px;
 				height: 150px;
-				background-size: cover;
+				background-size: contain;
 			}
 
 	.text_container{
@@ -232,7 +232,7 @@ body{
 	.image_1, .image_2{
 		width: 163px;
 		height: 100px;
-		background-size: cover;
+		background-size: contain;
 	}
 
 	.buy_container{
