@@ -57,7 +57,7 @@ body{
 		}
 
 			.image_1, .image_2{
-				max-width: 240px;
+				width: 240px;
 				height: 150px;
 				background-size: contain;
 			}

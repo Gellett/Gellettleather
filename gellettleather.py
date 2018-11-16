@@ -15,7 +15,6 @@ c2 = conn2.cursor()
 c3 = conn3.cursor()
 c4 = conn4.cursor()
 
-
 vare_list = []
 billede_list = []
 text_list = []
@@ -34,7 +33,6 @@ def info():
 @app.route('/<varetype>/<varetype_1>')
 @app.route('/<varetype>', defaults={'varetype_1': ''})
 def varer(varetype, varetype_1):
-
 
     if varetype_1 != "":
         titel = varetype_1.capitalize()
