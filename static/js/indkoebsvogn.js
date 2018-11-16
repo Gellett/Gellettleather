@@ -85,17 +85,10 @@ $(function(){
             alert("Du har ingen varer i kurven!");
         }
         else {
-            $.getJSON('/API/orderID', function(data) {
-                buy_id = parseInt(data);
-                console.log(buy_id);
-                $("#form").append(
-                    $('<input type="hidden" name="amount" value="'+sessionStorage.getItem('newPris')+'00" />'),
-                    $('<input type="hidden" name="orderid" value="'+buy_id+'" />'),
-                    $('<input type="hidden" name="ordertext" value="'+sessionStorage.getItem('ordertext')+'" />'));
-            });
-            $("#handelsbetingelser_container").show();
-            
+            window.location = "/info"
         }
+
+        /*$("#handelsbetingelser_container").show();*/
     });
 
     $("#fortryd_btn").on('click', function() {

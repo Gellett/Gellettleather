@@ -14,8 +14,12 @@ $(function(){
 		varenummer = numb;
 
 		len = txt.length;
+
 		varetype = txt.slice(20,len-4);
 
+		if (txt.slice(20,len-9) == "/tilbehoer") {
+			varetype = "ekstra"+varetype;
+		}
 
 		window.location = varetype;
 	});

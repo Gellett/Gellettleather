@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/js/info.js"></script>
+    <title>Info</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/info.css?v=0.01">
+</head>
+<body>
+    {% include "header.html" %}
+    {% include "nav.html" %}
+
+    <div id="wrapper">
+        <section id="section1">
+
+
+            <div id="section_header"> Leveringsoplysninger </div>
+            <input id="fornavn" class="target" type="text" name="fornavn" placeholder="FORNAVN">
+            <input id="efternavn" class="target" type="text" name="efternavn" placeholder="EFTERNAVN">
+            <input id="adresse" class="target" type="text" name="adresse" placeholder="ADRESSE">
+            <input id="postnummer" class="target" type="text" name="postnummer" placeholder="POSTNUMMER">
+            <input id="by" class="target" type="text" name="by" placeholder="BY">
+            <div id="handel">
+                <input id="check" type="checkbox" name="accept_handelsbetingelser">
+                <p>Jeg accepterer <a href="handelsbetingelser.html">handelsbetingelserne</a></p>
+            </div>
+
+            <FORM id="form" ACTION="https://payment.architrade.com/paymentweb/start.action" METHOD="POST" accept-charset="UTF-8">
+                <div id="over"></div>
+
+                <INPUT TYPE="hidden" NAME="accepturl" VALUE="https://www.gellettleather.dk">
+                <INPUT TYPE="hidden" NAME="currency" VALUE="DKK">
+                <INPUT TYPE="hidden" NAME="merchant" VALUE="90246044">
+                <INPUT TYPE="hidden" NAME="decorator" VALUE="responsive">
+                <button id="betaling_btn" >GÅ TIL BETALING</button>
+
+
+            </FORM>
+        </section>
+
+        <section id="section2">
+            <h4>Levering</h4>
+            <p>
+                Vi tilbyder på nuværende tidspunkt kun levering til kunder i Danmark. Ved bestilling afsendes ordren indenfor 24 timer. Normal leveringstid til adresser i Danmark er 1-2 hverdage efter ordreafsendelse. Alle varer sendes med GLS eller Postnord.
+                <br>
+                Alle varer leveres så længe lager haves.
+            </p>
+
+            <div id="logo-container1"></div>
+            <div id="logo-container2"></div>
+        </section>
+    </div>
+
+    {% include "footer.html" %}
+</body>
+</html>

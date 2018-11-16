@@ -27,6 +27,10 @@ orderID = 0
 def index():
     return render_template("index.html")
 
+@app.route('/info')
+def info():
+    return render_template("info.html")
+
 @app.route('/<varetype>/<varetype_1>')
 @app.route('/<varetype>', defaults={'varetype_1': ''})
 def varer(varetype, varetype_1):
@@ -129,22 +133,22 @@ def varer(varetype, varetype_1):
 def vare_spec(varetype, varetype_1, varenummer):
     titel = varetype_1.capitalize() +" "+varenummer
     if varetype_1 == "tilbehoer":
-        varenavn = titel
+        varenavn = "Accessory"
+        vare_id = "Varenr.: " + varenummer
+        image_url = "/static/images/varer/" + varetype + "/" + varetype_1 + "/" + varenummer + ".png"
+
     else:
         varenavn = varetype_1.capitalize()[:-1]
         vare_id = "Varenr.: " + varenummer
+        image_url = "/static/images/varer/" + varetype + "/" + varetype_1 + "/" + varenummer + ".png"
 
-    image_url = "/static/images/varer/"+varetype+"/"+varetype_1+"/"+varenummer+".png"
+
+    print image_url
 
     c2.execute('SELECT * FROM varer WHERE varer_image_path = "%s"' % image_url)
     x = c2.fetchone()
-
-    if x[9] != "hej":
-        alternativer = x[9]
-        alternativer_list = alternativer.split("-")
-    else:
-        alternativer_list = "hej"
-
+    alternativer = x[9]
+    alternativer_list = alternativer.split("-")
     pris = x[2]
     vare_beskrivelse = x[1].split("-")
     cm = x[7]
