@@ -142,10 +142,6 @@ def vare_spec(varetype, varetype_1, varenummer):
         vare_id = "Varenr.: " + varenummer
         image_url = "/static/images/varer/" + varetype + "/" + varetype_1 + "/" + varenummer + ".png"
 
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/master
     c2.execute('SELECT * FROM varer WHERE varer_image_path = "%s"' % image_url)
     x = c2.fetchone()
     alternativer = x[9]
