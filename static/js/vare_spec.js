@@ -25,7 +25,7 @@ $(function(){
                 $(".image_1").css({
                     "backgroundImage": "url("+image_1+")",
                     "position": "absolute",
-                    "backgroundSize": "cover",
+                    "backgroundSize": "contain",
                     "right": "50%",
                     "transform": "translate(0%)"
                 });
@@ -33,7 +33,7 @@ $(function(){
                 $(".image_2").css({
                     "backgroundImage": "url("+image_2+")",
                     "position": "absolute",
-                    "backgroundSize": "cover",
+                    "backgroundSize": "contain",
                     "left": "50%"
                 });
             }
@@ -99,6 +99,7 @@ $(function(){
 
             localStorage.setItem('antal_kurv', parseInt(localStorage.getItem("antal_kurv"))+1);
 		    document.getElementById("vare_antal").value = parseInt(localStorage.getItem(("antal_kurv")));
+		    document.getElementById("vare_antal_header").value = parseInt(localStorage.getItem(("antal_kurv")));
 
             var billede = $(".pic").attr("id");
             var beskrivelse = $(".name").attr("id");

@@ -6,6 +6,12 @@ $(function() {
     mapper_clicked = false;
     rejseserien_clicked = false;
 
+    if (localStorage.getItem('antal_kurv') == undefined) {
+            localStorage.setItem('antal_kurv', '0');
+            document.getElementById("vare_antal_header").value = parseInt(localStorage.getItem(("antal_kurv")));
+        }
+        document.getElementById("vare_antal_header").value = parseInt(localStorage.getItem('antal_kurv'));
+
     $(".dropbtn").on('click', function () {
         if (menu_clicked == false) {
             $("#overlay").css({display: "block"});

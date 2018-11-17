@@ -36,6 +36,7 @@ $(function(){
 
 		localStorage.setItem('antal_kurv', parseInt(localStorage.getItem("antal_kurv"))+1);
 		document.getElementById("vare_antal").value = parseInt(localStorage.getItem(("antal_kurv")));
+		document.getElementById("vare_antal_header").value = parseInt(localStorage.getItem(("antal_kurv")));
 
 		var nummer = this.id;
 		var billede = $(".billede_"+nummer).attr("id");
