@@ -1,5 +1,4 @@
-$(function(){
-
+$(function () {
 
     function get_billede(){
         $("#billede_div_" + vare_nr).append(
@@ -32,29 +31,7 @@ $(function(){
 
     }
 
-    $(window).on('load', function () {
-
-        ialt_vare = sessionStorage.getItem('newAntal');
-
-        if (ialt_vare == undefined){
-            ialt_vare = "0";
-        }
-
-        vare_antal = parseInt(ialt_vare);
-
-        for (var i = vare_antal; i > 0; i--) {
-
-            vare_nr = i;
-            billede = sessionStorage.getItem('billede_' + vare_antal);
-            tekst = sessionStorage.getItem('beskrivelse_' + vare_antal);
-            kroner = sessionStorage.getItem('pris_' + vare_antal);
-
-
-            get_vare();
-
-            vare_antal--;
-        }
-
+    function load_items(){
         $("#vare_container").append(
             $('<div id="ialt"></div>'));
 
@@ -71,33 +48,60 @@ $(function(){
             $('<div id="ialt_pris"></div>'));
 
         $("#ialt_pris").append(
-            $('<p id="ialt_vare_pris"></p>').text("I alt: " + sessionStorage.getItem('newPris') + " DKK.-"));
+            $('<p id="ialt_vare_pris"></p>').text("I alt: " + localStorage.getItem('newPris') + " DKK.-"));
 
-    });
+    }
+
+
+
+    ialt_vare = localStorage.getItem('newAntal');
+
+    if (ialt_vare == undefined){
+        ialt_vare = "0";
+    }
+
+    vare_antal = parseInt(ialt_vare);
+
+    for (var i = vare_antal; i > 0; i--) {
+
+        vare_nr = i;
+        billede = localStorage.getItem('billede_' + vare_antal);
+        tekst = localStorage.getItem('beskrivelse_' + vare_antal);
+        kroner = localStorage.getItem('pris_' + vare_antal);
+
+        get_vare();
+
+        vare_antal--;
+        console.log("test");
+    }
+
+    load_items();
+
+
 
     $("#empty_btn").on('click', function() {
-        sessionStorage.clear();
+        localStorage.clear();
         location.reload();
     });
 
     $("#buy_btn").on('click', function() {
-        if (sessionStorage.getItem('newAntal') == null){
+        if (localStorage.getItem('newAntal') == null){
             alert("Du har ingen varer i kurven!");
         }
         else {
             window.location = "/info"
         }
-
-        /*$("#handelsbetingelser_container").show();*/
     });
 
     $("#fortryd_btn").on('click', function() {
         $("#handelsbetingelser_container").hide();
     });
 
-    $.getJSON('/API/kost', {pris: sessionStorage.getItem('newPris')}, function(data) {});
+    $.getJSON('/API/kost', {pris: localStorage.getItem('newPris')}, function(data) {});
 
-    if (sessionStorage.getItem('newPris') == null){
-        sessionStorage.setItem('newPris', parseInt('0'));
+    if (localStorage.getItem('newPris') == null){
+        localStorage.setItem('newPris', parseInt('0'));
     }
+
+
 });

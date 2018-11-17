@@ -15,10 +15,12 @@ $(function(){
 		});
 
         $.getJSON('/API/get_image_antal', {test: x.id}, function(data) {
+
             if (data == "1"){
                 $(".image_1").hide();
                 $(".image_2").hide();
             }
+
             else if (data == "2"){
                 $(".image_1").css({
                     "backgroundImage": "url("+image_1+")",
@@ -27,6 +29,7 @@ $(function(){
                     "right": "50%",
                     "transform": "translate(0%)"
                 });
+
                 $(".image_2").css({
                     "backgroundImage": "url("+image_2+")",
                     "position": "absolute",
@@ -83,57 +86,57 @@ $(function(){
 
             test = parseInt(document.getElementById("antal").value);
 
-            sessionStorage.setItem('antal', test);
+            localStorage.setItem('antal', test);
 
 
-            if (sessionStorage.getItem('newAntal') == undefined) {
-                sessionStorage.setItem('newAntal', '0');
-                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + 1);
+            if (localStorage.getItem('newAntal') == undefined) {
+                localStorage.setItem('newAntal', '0');
+                localStorage.setItem('newAntal', parseInt(localStorage.getItem('newAntal')) + 1);
             }
             else {
-                sessionStorage.setItem('newAntal', parseInt(sessionStorage.getItem('newAntal')) + 1);
+                localStorage.setItem('newAntal', parseInt(localStorage.getItem('newAntal')) + 1);
             }
 
-            sessionStorage.setItem('antal_kurv', parseInt(sessionStorage.getItem("antal_kurv"))+1);
-		    document.getElementById("vare_antal").value = parseInt(sessionStorage.getItem(("antal_kurv")));
+            localStorage.setItem('antal_kurv', parseInt(localStorage.getItem("antal_kurv"))+1);
+		    document.getElementById("vare_antal").value = parseInt(localStorage.getItem(("antal_kurv")));
 
             var billede = $(".pic").attr("id");
             var beskrivelse = $(".name").attr("id");
             var pris = $(".pris").attr("id");
 
-            if (sessionStorage.getItem('nummer') == undefined) {
-                sessionStorage.setItem('nummer', '0');
-                sessionStorage.setItem('nummer', parseInt(sessionStorage.getItem('nummer')) + 1);
-                hej = parseInt(sessionStorage.getItem('nummer'));
+            if (localStorage.getItem('nummer') == undefined) {
+                localStorage.setItem('nummer', '0');
+                localStorage.setItem('nummer', parseInt(localStorage.getItem('nummer')) + 1);
+                hej = parseInt(localStorage.getItem('nummer'));
             }
             else {
-                sessionStorage.setItem('nummer', parseInt(sessionStorage.getItem('nummer')) + 1);
-                hej = parseInt(sessionStorage.getItem('nummer'));
+                localStorage.setItem('nummer', parseInt(localStorage.getItem('nummer')) + 1);
+                hej = parseInt(localStorage.getItem('nummer'));
             }
 
 
-            sessionStorage.setItem('billede_' + sessionStorage.getItem('nummer'), billede);
-            sessionStorage.setItem('beskrivelse_' + sessionStorage.getItem('nummer'), beskrivelse);
-            sessionStorage.setItem('pris_' + sessionStorage.getItem('nummer'), pris);
+            localStorage.setItem('billede_' + localStorage.getItem('nummer'), billede);
+            localStorage.setItem('beskrivelse_' + localStorage.getItem('nummer'), beskrivelse);
+            localStorage.setItem('pris_' + localStorage.getItem('nummer'), pris);
 
 
 
-            if (sessionStorage.getItem('newPris') == undefined) {
-                sessionStorage.setItem('newPris', '0');
-                sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
+            if (localStorage.getItem('newPris') == undefined) {
+                localStorage.setItem('newPris', '0');
+                localStorage.setItem('newPris', parseInt(localStorage.getItem('newPris')) + parseInt(pris));
             }
             else {
-                sessionStorage.setItem('newPris', parseInt(sessionStorage.getItem('newPris')) + parseInt(pris));
+                localStorage.setItem('newPris', parseInt(localStorage.getItem('newPris')) + parseInt(pris));
             }
 
             var nummer = $("#vare_id").text().slice(-5);
 
-            if (sessionStorage.getItem('ordertext') == undefined) {
-			sessionStorage.setItem('ordertext', '');
-			sessionStorage.setItem('ordertext', sessionStorage.getItem('ordertext')+nummer);
+            if (localStorage.getItem('ordertext') == undefined) {
+			localStorage.setItem('ordertext', '');
+			localStorage.setItem('ordertext', localStorage.getItem('ordertext')+nummer);
             }
             else {
-                sessionStorage.setItem('ordertext',''+ sessionStorage.getItem('ordertext')+nummer);
+                localStorage.setItem('ordertext',''+ localStorage.getItem('ordertext')+nummer);
             }
 
         }
