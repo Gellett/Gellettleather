@@ -116,6 +116,26 @@
         border-bottom: 1px solid #ccc;
     }
 
+@media only screen and (max-width: 1200px) {
+    #vare_antal {
+        position: absolute;
+        height: 35px;
+        right: 50px;
+        width: 35px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .kurv_img{
+        height: 45px;
+    }
+
+    .kurv_container{
+        float: right;
+        right: 10px;
+        width: 50px;
+    }
+}
 @media only screen and (max-width: 700px) {
     #nav_row{
         display: none;

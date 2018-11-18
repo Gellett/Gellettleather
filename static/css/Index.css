@@ -230,6 +230,10 @@ button:hover {
 		margin-top: 8px;
 	}
 
+	.product_container{
+		height: 350px;
+	}
+
 	#pic_left{
 		width: 90%;
 		height: 300px;
@@ -246,16 +250,31 @@ button:hover {
 		left: 35px;
 	}
 
+	button{
+		font-size: 16px;
+	}
+
+	#buy_btn1{
+		width: 100px;
+	}
+
 	#buy_btn2{
+		width: 120px;
 		left: 110px;
+	}
+
+	#buy_btn3{
+		width: 120px;
 	}
 
 	#buy_btn4{
 		left: 145px;
+		width: 180px;
 	}
 
 	#products{
 		width: 100vw;
+		height: 300px;
 	}
 
 	#mand{
@@ -281,6 +300,16 @@ button:hover {
 
 	#products{
 		padding-top: 20px;
+	}
+
+	#cookies{
+		position: fixed;
+		bottom: -150px;
+		height: 150px;
+		background-color: #bababa;
+		font-family: Helvetica;
+		z-index: 2;
+		width: 100%;
 	}
 }
 

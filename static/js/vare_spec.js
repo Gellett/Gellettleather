@@ -1,11 +1,8 @@
 $(function(){
 
-    $(window).on('load', function(){
-
         antal = 1;
 
         x = document.getElementsByTagName("Div")[35];
-        console.log(x);
 
 
         $.getJSON('/API/get_image', {image: x.id}, function(data) {
@@ -38,7 +35,6 @@ $(function(){
                 });
             }
         });
-    });
 
     $(".image_1").on('click',function(){
 
