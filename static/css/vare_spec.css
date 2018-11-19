@@ -60,7 +60,7 @@ body{
 			.image_1,.image_2{
 				width: 240px;
 				height: 150px;
-				background-position: center;
+				background: center no-repeat;
 			}
 
 	.text_container{

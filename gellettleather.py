@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, jsonify, json
 import sqlite3
 
-
-
 app = Flask(__name__)
 
 conn1 = sqlite3.connect('./gellettleather.db', check_same_thread=False)
