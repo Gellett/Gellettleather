@@ -103,12 +103,12 @@ body {
 	}
 
 	.dropdown {
-        overflow: auto;
-        display: none;
+        	overflow: auto;
+        	display: none;
 		height: 40px;
 		width: 34px;
 		float: right;
-    }
+    	}
 
 	.dropbtn{
 		width: 34px;
