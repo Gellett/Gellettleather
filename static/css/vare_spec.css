@@ -45,6 +45,7 @@ body{
 		.pic_container img{
 			position: relative;
 			max-height: 375px;
+			max-width: 600px;
 			display: inline-block;
 			left: 50%;
 			transform: translate(-50%);
@@ -193,7 +194,8 @@ body{
 	.box{
 		margin-top: 20px;
 		margin-right: 10px;
-		background-size: cover;
+		background-size: contain;
+		background-repeat: no-repeat;
 		width: 270px;
 		height: 180px;
 		display: inline-block;

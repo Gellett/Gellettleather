@@ -104,12 +104,12 @@ def varer(varetype, varetype_1):
                     w = 0
 
     if z:
-        height = (y + 1) * 370 + 127 + 150
-        content_height = (y + 1) * 370 + 127 + 20 + 127 + 150
+        height = (y + 1) * 380 + 127 + 150
+        content_height = (y + 1) * 380 + 127 + 20 + 127 + 150
 
     else:
-        height = y * 370 + 150
-        content_height = y * 370 + 127 + 20 + 150
+        height = y * 380 + 150
+        content_height = y * 380 + 127 + 20 + 150
 
     if w:
         mobile_height = (h + 1) * 293
@@ -159,7 +159,6 @@ def om_os():
 
 @app.route('/indkoebsvogn', methods=['GET', 'POST'])
 def indkoebsvogn():
-
     titel = "Indkoebsvogn"
 
     return render_template("indkoebsvogn.html", titel=titel)

@@ -52,11 +52,11 @@
 			width: 120px;
 			position: relative;
 			bottom: 10px;
-			margin-bottom: 0px;
+			margin-bottom: 0;
 		}
 
 		#mp_logo{
-			top: 0px;
+			top: 0;
 			background-image: url("../images/mobilepay.png");
 			background-size: cover;
 			height: 64px;
@@ -70,6 +70,10 @@
 			margin: 0;
 			background-color: #bfbfbf;
 		}
+
+	span a:hover{
+		color: #d1d1d1;
+	}
 
 @media only screen and (max-width: 700px){
 
