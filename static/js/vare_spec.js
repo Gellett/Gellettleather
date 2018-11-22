@@ -117,7 +117,6 @@ $(function(){
             localStorage.setItem('pris_' + localStorage.getItem('nummer'), pris);
 
 
-
             if (localStorage.getItem('newPris') == undefined) {
                 localStorage.setItem('newPris', '0');
                 localStorage.setItem('newPris', parseInt(localStorage.getItem('newPris')) + parseInt(pris));

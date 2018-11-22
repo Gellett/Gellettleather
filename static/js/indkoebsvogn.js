@@ -52,13 +52,7 @@ $(function () {
 
     }
 
-
-
     ialt_vare = localStorage.getItem('newAntal');
-
-    if (ialt_vare == undefined){
-        ialt_vare = "0";
-    }
 
     vare_antal = parseInt(ialt_vare);
 
@@ -76,8 +70,6 @@ $(function () {
     }
 
     load_items();
-
-
 
     $("#empty_btn").on('click', function() {
         localStorage.clear();
@@ -100,7 +92,11 @@ $(function () {
     $.getJSON('/API/kost', {pris: localStorage.getItem('newPris')}, function(data) {});
 
     if (localStorage.getItem('newPris') == null){
-        localStorage.setItem('newPris', parseInt('0'));
+        localStorage.setItem('newPris', '0');
+    }
+
+    if (localStorage.getItem('newAntal') == null){
+        localStorage.setItem('newAntal', '0');
     }
 
 

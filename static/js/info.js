@@ -8,9 +8,9 @@ $(function() {
     $.getJSON('/API/orderID', function(data) {
         buy_id = parseInt(data);
         $("#form").append(
-            $('<input type="hidden" name="amount" value="'+sessionStorage.getItem('newPris')+'00" />'),
+            $('<input type="hidden" name="amount" value="'+localStorage.getItem('newPris')+'00" />'),
             $('<input type="hidden" name="orderid" value="'+buy_id+'" />'),
-            $('<input id="ordertext" type="hidden" name="ordertext" value="'+sessionStorage.getItem('ordertext')+ '" />'));
+            $('<input id="ordertext" type="hidden" name="ordertext" value="'+localStorage.getItem('ordertext')+ '" />'));
     });
 
     $("#over").on('click', function () {
@@ -20,13 +20,13 @@ $(function() {
         }
         else if ($("#check").prop('checked')) {
 
-            sessionStorage.setItem('fornavn', $("#fornavn").val());
-            sessionStorage.setItem('efternavn', $("#efternavn").val());
-            sessionStorage.setItem('adresse', $("#adresse").val());
-            sessionStorage.setItem('postnummer', $("#postnummer").val());
-            sessionStorage.setItem('by', $("#by").val());
+            localStorage.setItem('fornavn', $("#fornavn").val());
+            localStorage.setItem('efternavn', $("#efternavn").val());
+            localStorage.setItem('adresse', $("#adresse").val());
+            localStorage.setItem('postnummer', $("#postnummer").val());
+            localStorage.setItem('by', $("#by").val());
 
-            $("#ordertext").val(sessionStorage.getItem('ordertext') + "- " + sessionStorage.getItem('fornavn') + " " + sessionStorage.getItem('efternavn') + " - " + sessionStorage.getItem('adresse') + " - " + sessionStorage.getItem('postnummer') + " " + sessionStorage.getItem('by'));
+            $("#ordertext").val(localStorage.getItem('ordertext') + "- " + localStorage.getItem('fornavn') + " " + localStorage.getItem('efternavn') + " - " + localStorage.getItem('adresse') + " - " + localStorage.getItem('postnummer') + " " + localStorage.getItem('by'));
 
             $("#over").hide();
             $("#betaling_btn").css('bottom', '0');
