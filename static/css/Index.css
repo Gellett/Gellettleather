@@ -324,6 +324,10 @@ button:hover {
 		display: none;
 	}
 
+	#buy_btn1{
+		width: 65px;
+	}
+
 	#buy_btn1 span{
 		position: relative;
 		margin: 0;

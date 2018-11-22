@@ -63,10 +63,11 @@ body {
 @media only screen and (max-width: 700px){
 
 	#vare_antal_header{
-        width: 30px;
+        width: 32px;
         font-size: 20px;
         text-align: center;
 		float: right;
+		border: none;
     }
 
 	#overlay{
