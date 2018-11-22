@@ -25,8 +25,10 @@ $(function() {
             localStorage.setItem('adresse', $("#adresse").val());
             localStorage.setItem('postnummer', $("#postnummer").val());
             localStorage.setItem('by', $("#by").val());
+            localStorage.setItem('nummer', $("#nummer").val());
+            localStorage.setItem('e-mail', $("#e-mail").val());
 
-            $("#ordertext").val(localStorage.getItem('ordertext') + "- " + localStorage.getItem('fornavn') + " " + localStorage.getItem('efternavn') + " - " + localStorage.getItem('adresse') + " - " + localStorage.getItem('postnummer') + " " + localStorage.getItem('by'));
+            $("#ordertext").val(localStorage.getItem('ordertext') + "- " + localStorage.getItem('fornavn') + " " + localStorage.getItem('efternavn') + " - " + localStorage.getItem('adresse') + " - " + localStorage.getItem('postnummer') + " " + localStorage.getItem('by') + localStorage.getItem('nummer') + localStorage.getItem('e-mail'));
 
             $("#over").hide();
             $("#betaling_btn").css('bottom', '0');
