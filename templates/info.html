@@ -17,13 +17,13 @@
         <section id="section1">
 
             <div id="section_header"> Leveringsoplysninger </div>
-            <input id="fornavn" class="target" type="text" name="fornavn" placeholder="FORNAVN">
-            <input id="efternavn" class="target" type="text" name="efternavn" placeholder="EFTERNAVN">
-            <input id="adresse" class="target" type="text" name="adresse" placeholder="ADRESSE">
-            <input id="postnummer" class="target" type="text" name="postnummer" placeholder="POSTNUMMER">
-            <input id="by" class="target" type="text" name="by" placeholder="BY">
-            <input id="nummer" class="target" type="text" name="nummer" placeholder="MOBIL NR.">
-            <input id="e-mail" class="target" type="text" name="e-mail" placeholder="E-MAIL">
+            <input id="fornavn" class="target target1" type="text" name="fornavn" placeholder="FORNAVN">
+            <input id="efternavn" class="target target2" type="text" name="efternavn" placeholder="EFTERNAVN">
+            <input id="adresse" class="target target3" type="text" name="adresse" placeholder="ADRESSE">
+            <input id="postnummer" class="target target4" type="text" name="postnummer" placeholder="POSTNUMMER">
+            <input id="by" class="target target5" type="text" name="by" placeholder="BY">
+            <input id="nummer" class="target target6" type="text" name="nummer" placeholder="MOBIL NR.">
+            <input id="e-mail" class="target target7" type="text" name="e-mail" placeholder="E-MAIL">
             <div id="handel">
                 <input id="check" type="checkbox" name="accept_handelsbetingelser">
                 <p>Jeg accepterer <a href="handelsbetingelser.html">handelsbetingelserne</a></p>
@@ -31,15 +31,14 @@
 
             <FORM id="form" ACTION="https://payment.architrade.com/paymentweb/start.action" METHOD="POST" accept-charset="UTF-8">
                 <div id="over"></div>
-
-                <INPUT TYPE="hidden" NAME="accepturl" VALUE="https://www.gellettleather.dk">
+                <INPUT TYPE="hidden" NAME="accepturl" VALUE="https://gellettleather.dk/confirmed">
+                <INPUT TYPE="hidden" NAME="acceptReturnUrl" VALUE="https://gellettleather.dk/confirmed">
                 <INPUT TYPE="hidden" NAME="currency" VALUE="DKK">
                 <INPUT TYPE="hidden" NAME="merchant" VALUE="90246044">
                 <INPUT TYPE="hidden" NAME="decorator" VALUE="responsive">
                 <button id="betaling_btn" >GÅ TIL BETALING</button>
-
-
             </FORM>
+
         </section>
 
         <section id="section2">

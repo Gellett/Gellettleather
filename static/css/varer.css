@@ -130,6 +130,7 @@ body{
 			}
 
 			.buy_btn{
+				color: whitesmoke;
 				height: 30px;
 				width: 90px;
 				/*background-color: #4CAF50;*/
@@ -147,9 +148,7 @@ body{
 			.buy_btn:hover{
 				background-color: rgba(0, 0, 0, 0.2);
 				border: 1px solid rgba(0, 0, 0, 0.2);
-				color: black;
 				transition: background-color 0.15s ease-out;
-
 			}
 
 			.buy_btn:active{
@@ -157,12 +156,16 @@ body{
 			}
 
 			.buy_text{
+				color: whitesmoke;
 				position: relative;
 				bottom: 48px;
 				pointer-events: none;
-				color: white;
 				font-family: Verdana;
 				font-size: 11px;
+			}
+
+			.buy_btn:hover + .buy_text{
+				color: black;
 			}
 
 

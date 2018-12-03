@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/confirmed.css?v=0.01">
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css">
+    <script src="/static/js/confirmed.js?v=0.2"></script>
+
+    <title>Order Confirmed</title>
+</head>
+<body>
+    {% include "header.html" %}
+    {% include "nav.html" %}
+
+    <div id="wrapper">
+
+        <section id="confirmed">
+            <h1>Bekræftet</h1> <img src="/static/images/icons8-checked-80.png" alt="checkmark">
+            <p>Tak for dit køb! Vi håber du bliver glad for din vare. <br>
+            Du vil nu modtage en ordrebekræftelse via mail.</p>
+
+            <button onclick="window.location.href='/'" id="afslut_btn">Afslut</button>
+        </section>
+
+    </div>
+
+    {% include "footer.html" %}
+</body>
+</html>

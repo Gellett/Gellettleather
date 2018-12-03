@@ -43,14 +43,13 @@ $(function(){
 		var beskrivelse = $(".kategori_"+nummer).text() +" - "+ $(".vare_nr_"+nummer).attr("id");
 		var pris = $(".product_text_"+nummer).text();
 
+
 		if (localStorage.getItem('nummer') == undefined) {
 			localStorage.setItem('nummer', '0');
 			localStorage.setItem('nummer', parseInt(localStorage.getItem('nummer')) + 1);
-			hej = parseInt(localStorage.getItem('nummer'));
 		}
 		else {
 			localStorage.setItem('nummer', parseInt(localStorage.getItem('nummer')) + 1);
-			hej = parseInt(localStorage.getItem('nummer'));
 		}
 
 
@@ -78,7 +77,6 @@ $(function(){
 		else {
 			localStorage.setItem('ordertext', localStorage.getItem('ordertext') + nummer1);
 		}
-		console.log(localStorage.getItem('ordertext'));
 
 
     });

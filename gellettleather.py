@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, jsonify, json
 import sqlite3
 
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
 app = Flask(__name__)
 
 conn1 = sqlite3.connect('./gellettleather.db', check_same_thread=False)
@@ -18,7 +22,7 @@ billede_list = []
 text_list = []
 pris_list = []
 
-orderID = 0
+orderID = 225
 
 @app.route('/')
 def index():
@@ -27,6 +31,10 @@ def index():
 @app.route('/info')
 def info():
     return render_template("info.html")
+
+@app.route('/confirmed', methods=['GET', 'POST'])
+def confirmed():
+    return render_template("confirmed.html")
 
 @app.route('/<varetype>/<varetype_1>')
 @app.route('/<varetype>', defaults={'varetype_1': ''})
@@ -160,7 +168,6 @@ def om_os():
 @app.route('/indkoebsvogn', methods=['GET', 'POST'])
 def indkoebsvogn():
     titel = "Indkoebsvogn"
-
     return render_template("indkoebsvogn.html", titel=titel)
 
 @app.route('/handelsbetingelser')
@@ -168,30 +175,25 @@ def handelsbetingelser():
     titel = "Handelsbetingelser"
     return render_template("handelsbetingelser.html", titel=titel)
 
-
 @app.route('/API/get_varenummer', methods=['POST'])
 def get_varenummer():
     varenummer = request.args.get('varenummer')
     return jsonify(varenummer)
-
 
 @app.route('/API/get_image', methods=['GET', 'POST'])
 def get_image():
     image_path = request.args.get('image', 0, type=str)
     return jsonify(image_path)
 
-
 @app.route('/API/get_image_1', methods=['GET', 'POST'])
 def get_image_1():
     image_path = request.args.get('image', 0, type=str)
     return jsonify(image_path)
 
-
 @app.route('/API/get_image_2', methods=['GET', 'POST'])
 def get_image_2():
     image_path = request.args.get('image', 0, type=str)
     return jsonify(image_path)
-
 
 @app.route('/API/get_image_antal', methods=['GET', 'POST'])
 def get_image_antal():
@@ -199,7 +201,6 @@ def get_image_antal():
     c3.execute('SELECT Billeder FROM varer WHERE varer_image_path=?', (image_path,))
     antal = ''.join(c3.fetchone())
     return jsonify(antal)
-
 
 @app.route('/API/vare', methods=['GET', 'POST'])
 def vare():
@@ -209,11 +210,9 @@ def vare():
     vare_list.append(x)
     return jsonify(x, y, z)
 
-
 @app.route('/API/varer', methods=['GET', 'POST'])
 def varerjs():
     return jsonify(vare_list)
-
 
 @app.route('/API/billede', methods=['GET', 'POST'])
 def billede():
@@ -222,14 +221,12 @@ def billede():
     billede_list.append(x)
     return jsonify(billede_list)
 
-
 @app.route('/API/text', methods=['GET', 'POST'])
 def text():
     global text_list
     x = request.args.get('data', "", type=str)
     text_list.append(x)
     return jsonify(text_list)
-
 
 @app.route('/API/pris', methods=['GET', 'POST'])
 def pris():
@@ -243,3 +240,28 @@ def order_id():
     global orderID
     orderID = orderID + 1
     return jsonify(orderID)
+
+@app.route('/API/send_conf_email', methods=['GET', 'POST'])
+def send_conf_email():
+
+    ordrenummer = str(orderID)
+
+    print(request.args.get('data', "", type=str))
+
+    fromaddr = "kundeservice@gellettleather.dk"
+    toaddr = request.args.get('data', "", type=str)
+    msg = MIMEMultipart()
+    msg['From'] = fromaddr
+    msg['To'] = toaddr
+    msg['Subject'] = "Order confirmation"
+
+    message = "Tak for din ordre! Den er nu registreret og vil blive afsendt indenfor 24 timer. \nOrdrenr.:"+ordrenummer
+
+    msg.attach(MIMEText(message, 'plain'))
+
+    server = smtplib.SMTP('send.one.com:587')
+    server.starttls()
+    server.login(fromaddr, "gellett13")
+    server.sendmail(fromaddr, toaddr, msg.as_string())
+    server.quit()
+    return ""

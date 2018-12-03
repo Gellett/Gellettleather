@@ -4,6 +4,8 @@ $(function() {
     adresse = $("#adresse").val();
     postnummer = $("#postnummer").val();
     by = $("#by").val();
+    mobil = $("#nummer").val();
+    email = $("#e-mail").val();
 
     $.getJSON('/API/orderID', function(data) {
         buy_id = parseInt(data);
@@ -15,11 +17,10 @@ $(function() {
 
     $("#over").on('click', function () {
 
-        if (fornavn.val() == ""){
-            alert("Udfyld alle felter for at gå videre til betaling")
+        if ($("#e-mail").val() == ""){
+            alert("Udfyld alle felter for at gå videre til betaling");
         }
         else if ($("#check").prop('checked')) {
-
             localStorage.setItem('fornavn', $("#fornavn").val());
             localStorage.setItem('efternavn', $("#efternavn").val());
             localStorage.setItem('adresse', $("#adresse").val());
@@ -28,7 +29,7 @@ $(function() {
             localStorage.setItem('nummer', $("#nummer").val());
             localStorage.setItem('e-mail', $("#e-mail").val());
 
-            $("#ordertext").val(localStorage.getItem('ordertext') + "- " + localStorage.getItem('fornavn') + " " + localStorage.getItem('efternavn') + " - " + localStorage.getItem('adresse') + " - " + localStorage.getItem('postnummer') + " " + localStorage.getItem('by') + localStorage.getItem('nummer') + localStorage.getItem('e-mail'));
+            $("#ordertext").val(localStorage.getItem('ordertext') + "- " + localStorage.getItem('fornavn') + " " + localStorage.getItem('efternavn') + " - " + localStorage.getItem('adresse') + " - " + localStorage.getItem('postnummer') + " " + localStorage.getItem('by') + " - " + localStorage.getItem('nummer') + " - " + localStorage.getItem('e-mail'));
 
             $("#over").hide();
             $("#betaling_btn").css('bottom', '0');
@@ -37,12 +38,6 @@ $(function() {
         else {
             alert("Accepter betingelser for at gå videre til betaling")
              }
-
-
-    });
-
-    $(".target").on('keypress', function () {
-
     });
 
 });

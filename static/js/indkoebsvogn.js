@@ -49,7 +49,6 @@ $(function () {
 
         $("#ialt_pris").append(
             $('<p id="ialt_vare_pris"></p>').text("I alt: " + localStorage.getItem('newPris') + " DKK.-"));
-
     }
 
     ialt_vare = localStorage.getItem('newAntal');
