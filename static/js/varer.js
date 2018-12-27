@@ -25,6 +25,11 @@ $(function(){
 	});
 
 	$(".buy_btn").on('click', function () {
+
+		if (parseInt(localStorage.getItem('newAntal')) > 1){
+			localStorage.setItem('fragt_pris', '59');
+		}
+
 		if (localStorage.getItem('newAntal') == undefined) {
 			localStorage.setItem('newAntal', '0');
 			localStorage.setItem('newAntal', parseInt(localStorage.getItem('newAntal')) + 1);
@@ -44,6 +49,21 @@ $(function(){
 		var pris = $(".product_text_"+nummer).text();
 
 
+		slags = $(".billede").attr('id');
+		slags = slags.split('/');
+		slags = slags[4];
+
+		if (slags == "tasker"){
+			localStorage.setItem('fragt_pris', '59');
+		}
+		else if (slags == "rejseserien"){
+			localStorage.setItem('fragt_pris', '59');
+		}
+		else {
+			localStorage.setItem('fragt_pris', '29');
+		}
+
+
 		if (localStorage.getItem('nummer') == undefined) {
 			localStorage.setItem('nummer', '0');
 			localStorage.setItem('nummer', parseInt(localStorage.getItem('nummer')) + 1);
@@ -52,6 +72,9 @@ $(function(){
 			localStorage.setItem('nummer', parseInt(localStorage.getItem('nummer')) + 1);
 		}
 
+		if (parseInt(localStorage.getItem('newAntal')) > 1){
+			localStorage.setItem('fragt_pris', '59');
+		}
 
 		localStorage.setItem('billede_' + localStorage.getItem('nummer'), billede);
 		localStorage.setItem('beskrivelse_' + localStorage.getItem('nummer'), beskrivelse);

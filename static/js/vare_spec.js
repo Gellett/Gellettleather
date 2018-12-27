@@ -121,12 +121,15 @@ $(function(){
             if (slags == "tasker"){
                 localStorage.setItem('fragt_pris', '59');
             }
+            else if (slags == "rejseserien"){
+                localStorage.setItem('fragt_pris', '59');
+            }
             else {
                 localStorage.setItem('fragt_pris', '29');
             }
 
             if (parseInt(localStorage.getItem('newAntal')) > 1){
-                localStorage.setItem('fragt_pris', '59')
+                localStorage.setItem('fragt_pris', '59');
             }
 
 
