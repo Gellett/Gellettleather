@@ -15,14 +15,14 @@
 
 		#menu li{
 			list-style-type: none;
-			margin-bottom: 10px;
+			margin-bottom: 30px;
 		}
 			#menu p{
 				font-size: 16px;
 				margin-bottom: 0;
-				font-family: verdana;
-				color: #2d2d2d;
-				font-weight: bold;
+				font-family: Verdana;
+
+				color: black;
 			}
 
 			#menu p:hover{
@@ -42,6 +42,10 @@
 				#menu ul ul{
 					text-indent: 0;
 					margin-top: 10px;
+				}
+
+				#menu ul li ul li{
+					margin-bottom: 15px;
 				}
 
 	.tekst{

@@ -48,12 +48,29 @@ $(function () {
             $('<div id="ialt_pris"></div>'));
 
         $("#ialt_pris").append(
-            $('<p id="ialt_vare_pris"></p>').text("I alt: " + localStorage.getItem('newPris') + " DKK.-"));
+            $('<p id="ialt_fragt_pris"></p>').text("Fragt: "+fragt_pris + " DKK.-"),$('<p id="ialt_vare_pris"></p>').text("I alt: " + localStorage.getItem('final_pris') + " DKK.-"));
     }
+
+    if (localStorage.getItem('newPris') == null){
+        localStorage.setItem('newPris', '0');
+    }
+
+    if (localStorage.getItem('newAntal') == null){
+        localStorage.setItem('newAntal', '0');
+    }
+
+    if (localStorage.getItem('fragt_pris') == null){
+        localStorage.setItem('fragt_pris', '0');
+    }
+
+    localStorage.setItem('final_pris', parseInt(localStorage.getItem('newPris')) + parseInt(localStorage.getItem('fragt_pris')));
 
     ialt_vare = localStorage.getItem('newAntal');
 
     vare_antal = parseInt(ialt_vare);
+
+    fragt_pris = localStorage.getItem('fragt_pris');
+    console.log(fragt_pris);
 
     for (var i = vare_antal; i > 0; i--) {
 
@@ -89,14 +106,6 @@ $(function () {
     });
 
     $.getJSON('/API/kost', {pris: localStorage.getItem('newPris')}, function(data) {});
-
-    if (localStorage.getItem('newPris') == null){
-        localStorage.setItem('newPris', '0');
-    }
-
-    if (localStorage.getItem('newAntal') == null){
-        localStorage.setItem('newAntal', '0');
-    }
 
 
 });

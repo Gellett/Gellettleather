@@ -4,7 +4,6 @@ $(function(){
 
         x = document.getElementsByTagName("Div")[35];
 
-
         $.getJSON('/API/get_image', {image: x.id}, function(data) {
 			$("#show_image").css("backgroundImage", "url("+data+")");
 			image_1 = data;
@@ -40,7 +39,6 @@ $(function(){
 
 		$.getJSON('/API/get_image_1', {image: image_1}, function(data) {
 			$("#main_pic").attr("src", ""+data+"");
-			console.log(data);
 		});
 	});
 
@@ -48,7 +46,6 @@ $(function(){
 
 		$.getJSON('/API/get_image_2', {image: image_2}, function(data) {
 			$("#main_pic").attr("src", ""+data+"");
-			console.log(data);
 		});
 	});
 
@@ -112,9 +109,25 @@ $(function(){
             }
 
 
+
             localStorage.setItem('billede_' + localStorage.getItem('nummer'), billede);
             localStorage.setItem('beskrivelse_' + localStorage.getItem('nummer'), beskrivelse);
             localStorage.setItem('pris_' + localStorage.getItem('nummer'), pris);
+
+            slags = $(".pic").attr('id');
+            slags = slags.split('/');
+            slags = slags[4];
+
+            if (slags == "tasker"){
+                localStorage.setItem('fragt_pris', '59');
+            }
+            else {
+                localStorage.setItem('fragt_pris', '29');
+            }
+
+            if (parseInt(localStorage.getItem('newAntal')) > 1){
+                localStorage.setItem('fragt_pris', '59')
+            }
 
 
             if (localStorage.getItem('newPris') == undefined) {

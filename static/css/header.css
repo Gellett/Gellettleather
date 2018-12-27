@@ -22,18 +22,19 @@ body {
 
 	#logo_container{
 		position: relative;
-		width: 200px;
+		width: 300px;
 		left: 50%;
 		transform: translate(-50%);
 		display: inline-block;
 	}
 
 		#logo{
-			margin-top: 10px;
+			margin-top: 40px;
+			margin-bottom: 30px;
 			background-image: url("../images/gellettlogo.png");
 			background-size: cover;
-			width: 200px;
-			height: 70px;
+			width: 300px;
+			height: 105px;
 		}
 
 		.right_header{
@@ -44,20 +45,36 @@ body {
 			display: none;
 		}
 
-	#ombygning_container{
+	#info_container{
 		width: 100%;
-		min-height: 24px;
+		min-height: 30px;
 		background-color: black;
 		text-align: center;
 	}
 
-	#ombygning_container p{
-		font-family: 'Roboto';
+	.info_arrow{
+		position: relative;
+		top: 5px;
+		height: 20px;
+		width: 20px;
+		display: inline-block;
+	}
+
+	#info_container p{
+		display: inline-block;
+		font-family: Helvetica;
 		color: white;
+		vertical-align: middle;
+		line-height: 30px;
 		font-size: 16px;
-		padding-top: 2px;
+		padding-top: 0;
 		margin-top: 0;
 		margin-bottom: 0;
+		padding-right: 40px;
+	}
+
+	#info_p_last{
+		padding-right: 0;
 	}
 
 @media only screen and (max-width: 700px){
@@ -81,7 +98,7 @@ body {
 		z-index: 1;
 	}
 
-	#ombygning_container p{
+	#info_container p{
 		font-size: 14px;
 		padding-left: 10px;
 		padding-right: 10px;
@@ -232,6 +249,8 @@ body {
 		}
 
 		#logo{
+			margin-top: 10px;
+			margin-bottom: 0;
 			background-size: contain;
 			background-repeat: no-repeat;
 			height: 34px;

@@ -36,9 +36,9 @@ body{
 			content:"";
 			background: darkgray;
 			position: absolute;
-			bottom: 32%;
+			bottom: 45%;
 			right: 50%;
-			height: 47%;
+			height: 40%;
 			width: 1px;
 		}
 
@@ -99,6 +99,10 @@ body{
 			text-align: justify;
 			font-size: 17px;
 			font-family: Helvetica;
+		}
+
+		.text ul{
+			padding-left: 18px;
 		}
 
 		.buy_container{
@@ -181,9 +185,9 @@ body{
 		}
 
 	.alt_container{
-		margin-top: 150px;
+		margin-top: 300px;
 		margin-bottom: 20px;
-		height: 300px;
+		height: 400px;
 	}
 
 	.box_container{

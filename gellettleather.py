@@ -151,7 +151,8 @@ def vare_spec(varetype, varetype_1, varenummer):
     alternativer = x[9]
     alternativer_list = alternativer.split("-")
     pris = x[2]
-    vare_beskrivelse = x[1].split("-")
+    vare_beskrivelse_1 = x[1].replace(".", "")
+    vare_beskrivelse = vare_beskrivelse_1.split("-")
     cm = x[7]
     farve = x[8]
 

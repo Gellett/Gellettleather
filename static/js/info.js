@@ -17,7 +17,25 @@ $(function() {
 
     $("#over").on('click', function () {
 
-        if ($("#e-mail").val() == ""){
+        if ($("#fornavn").val() == ""){
+            alert("Udfyld alle felter for at gå videre til betaling");
+        }
+        else if ($("#efternavn").val() == ""){
+            alert("Udfyld alle felter for at gå videre til betaling");
+        }
+        else if ($("#adresse").val() == ""){
+            alert("Udfyld alle felter for at gå videre til betaling");
+        }
+        else if ($("#postnummer").val() == ""){
+            alert("Udfyld alle felter for at gå videre til betaling");
+        }
+        else if ($("#by").val() == ""){
+            alert("Udfyld alle felter for at gå videre til betaling");
+        }
+        else if ($("#nummer").val() == ""){
+            alert("Udfyld alle felter for at gå videre til betaling");
+        }
+        else if ($("#e-mail").val() == ""){
             alert("Udfyld alle felter for at gå videre til betaling");
         }
         else if ($("#check").prop('checked')) {
