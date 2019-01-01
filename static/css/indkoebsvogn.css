@@ -87,32 +87,81 @@ body{
 			float: left;
 		}
 
-		#buy_btn:hover, #empty_btn:hover{
+		#rabat_btn{
+			background-color: black;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			margin-top: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin-right: 10px;
+			float: right;
+		}
+
+		button:hover{
 			cursor: pointer;
 		}
 
-	#handelsbetingelser_container{
-		display: none;
-		position: fixed;
-		top: 10%;
-		left: 50%;
-		transform: translate(-50%);
-		height: 55%;
-		width: 25%;
-		background-color: white;
-		z-index: 6;
-		border: 3px solid darkslategray;
-	}
-
-		#handelsbetingelser_container article{
-			overflow: scroll;
-			position: relative;
-			width: 80%;
+		#rabatkode{
+			display: none;
+			position: fixed;
 			left: 50%;
+			top: 33%;
 			transform: translate(-50%);
-			height: 85%;
-			padding-bottom: 20px;
+			z-index: 1;
+			border: 1px solid black;
+			box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+			width: 400px;
+			height: 180px;
+			background-color: white;
 		}
+
+			#rabat_x{
+				margin: 0;
+				position: absolute;
+				top: 0;
+				left: 5px;
+				font-size: 16px;
+				font-family: Verdana;
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			#rabatkode h1{
+				text-align: center;
+				font-family: Verdana;
+				letter-spacing: 1px;
+			}
+
+			#rabatkode #rabatkode_input{
+				text-align: center;
+				font-size: 16px;
+				height: 40px;
+				width: 80%;
+				position: relative;
+				left: 50%;
+				transform: translate(-50%);
+				border: 1px solid black;
+				text-transform: uppercase;
+			}
+
+			#redeem_rabatkode_btn{
+				background-color: black;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				margin-top: 10px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				position: relative;
+				left: 50%;
+				transform: translate(-50%);
+			}
 
 		#article_footer{
 			border-top: 2px solid darkslategray;

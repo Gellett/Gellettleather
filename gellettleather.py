@@ -266,3 +266,12 @@ def send_conf_email():
     server.sendmail(fromaddr, toaddr, msg.as_string())
     server.quit()
     return ""
+
+@app.route('/API/rabat', methods=['GET', 'POST'])
+def rabatkode():
+    x = request.args.get('rabatkode', "", type=str)
+    if x == "rabatkode":
+        rabat = "0"
+    else:
+        rabat = "0"
+    return jsonify(rabat)

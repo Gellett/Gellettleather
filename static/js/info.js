@@ -9,10 +9,19 @@ $(function() {
 
     $.getJSON('/API/orderID', function(data) {
         buy_id = parseInt(data);
-        $("#form").append(
-            $('<input type="hidden" name="amount" value="'+localStorage.getItem('newPris')+'00" />'),
-            $('<input type="hidden" name="orderid" value="'+buy_id+'" />'),
-            $('<input id="ordertext" type="hidden" name="ordertext" value="'+localStorage.getItem('ordertext')+ '" />'));
+        if (localStorage.getItem('final_pris').includes(".")){
+            localStorage.setItem('final_pris',localStorage.getItem('final_pris').replace(".",""));
+            $("#form").append(
+                $('<input type="hidden" name="amount" value="'+localStorage.getItem('final_pris')+'" />'),
+                $('<input type="hidden" name="orderid" value="'+buy_id+'" />'),
+                $('<input id="ordertext" type="hidden" name="ordertext" value="'+localStorage.getItem('ordertext')+ '" />'));
+            }
+        else {
+            $("#form").append(
+                $('<input type="hidden" name="amount" value="'+localStorage.getItem('final_pris')+'00" />'),
+                $('<input type="hidden" name="orderid" value="'+buy_id+'" />'),
+                $('<input id="ordertext" type="hidden" name="ordertext" value="'+localStorage.getItem('ordertext')+ '" />'));
+            }
     });
 
     $("#over").on('click', function () {
