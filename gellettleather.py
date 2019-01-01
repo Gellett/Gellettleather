@@ -22,7 +22,7 @@ billede_list = []
 text_list = []
 pris_list = []
 
-orderID = 1279
+orderID = 1281
 
 @app.route('/')
 def index():
