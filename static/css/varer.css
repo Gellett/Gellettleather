@@ -29,11 +29,11 @@ body{
 				transform: translate(-45%);
 				text-align: justify;
 				font-family: Helvetica;
-				color: #969696;
+				color: #474747;
 			}
 
 			#kategori_beskrivelse a{
-				color: #969696;
+				color: #474747;
 				text-decoration: none;
 			}
 
@@ -48,8 +48,8 @@ body{
 				text-align: center;
 				left: 50%;
 				transform: translate(-50%);
-				box-shadow: 0 1px 2px rgba(0,0,0,0.0);
   				transition: box-shadow 0.4s ease-in-out;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 			}
 
 				.product_container:hover{
@@ -68,13 +68,13 @@ body{
 				}
 
 					.path_text {
-						color: #969696;
+						color: #474747;
 						font-family: Verdana;
 						font-size: 17px;
 					}
 
 					.path_text a{
-						color: #969696;
+						color: #474747;
 						font-family: Verdana;
 						font-size: 17px;
 						text-decoration: None;
@@ -121,12 +121,62 @@ body{
 			}
 
 			.product_text p{
-			display: inline-block;
+				display: inline-block;
 			}
+
 
 			.buy{
 				position: relative;
 				top: 60px;
+			}
+
+			#info_button, #buy_button{
+				height: 30px;
+				width: 49%;
+				display: inline-block;
+			}
+
+			.info_btn{
+				color: whitesmoke;
+				height: 30px;
+				width: 90px;
+				/*background-color: #4CAF50;*/
+				background-color: white;
+				border: 1px solid black;
+				border-right: none;
+				/*border-radius: 20px; */
+				position: absolute;
+				left: 50%;
+				transform: translate(-100%);
+				top: -15px;
+				cursor: pointer;
+				transition: background-color 0.15s ease-out;
+			}
+
+			.info_btn:hover{
+				background-color: rgba(0, 0, 0, 0.2);
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				transition: background-color 0.15s ease-out;
+			}
+
+			.info_btn:active{
+				transform: scale(1.5) translate(-65%);
+			}
+
+			.info_text{
+				color: black;
+				width: 90px;
+				position: absolute;
+				left: 50%;
+				transform: translate(-100%);
+				top: -18px;
+				pointer-events: none;
+				font-family: Verdana;
+				font-size: 11px;
+			}
+
+			.info_btn:hover + .info_text{
+				color: black;
 			}
 
 			.buy_btn{
@@ -136,11 +186,11 @@ body{
 				/*background-color: #4CAF50;*/
 				background-color: black;
 				border: 1px solid black;
+				border-left: none;
 				/*border-radius: 20px; */
-				position: relative;
+				position: absolute;
 				left: 50%;
-				transform: translate(-50%);
-				bottom: 15px;
+				top: -15px;
 				cursor: pointer;
 				transition: background-color 0.15s ease-out;
 			}
@@ -152,13 +202,15 @@ body{
 			}
 
 			.buy_btn:active{
-				transform: scale(1.5) translate(-35%);
+				transform: scale(1.5) translate(0%);
 			}
 
 			.buy_text{
 				color: whitesmoke;
-				position: relative;
-				bottom: 48px;
+				width: 90px;
+				position: absolute;
+				left: 50%;
+				top: -18px;
 				pointer-events: none;
 				font-family: Verdana;
 				font-size: 11px;

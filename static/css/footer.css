@@ -1,5 +1,5 @@
 #footer_row{
-	background-color: #3d3d3d;
+	background-color: #353535;
 	font-family: "Trebuchet MS";
 }
 
@@ -7,7 +7,7 @@
 	padding-top: 0px;
 	max-width: 1400px;
 	height: 150px;
-	background-color: #3d3d3d;
+	background-color: #353535;
 	margin: auto;
 }
 		#footer_container{
@@ -20,7 +20,7 @@
 			display: inline-block;
 			left: 50%;
 			transform: translate(-50%);
-			color: #7c7c7c;
+			color: #9c9c9c;
 		}
 
 		.footer_text li:before {
@@ -41,7 +41,7 @@
 
 		.footer_text a{
 			text-decoration: none;
-			color: #7c7c7c;
+			color: #9c9c9c;
 		}
 
 		#pp_logo{

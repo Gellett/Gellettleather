@@ -92,7 +92,6 @@ $(function(){
 
 		var nummer1 = billede.slice(-8).slice(0,-4)+" ";
 
-
 		if (localStorage.getItem('ordertext') == undefined) {
 			localStorage.setItem('ordertext', '');
 			localStorage.setItem('ordertext', localStorage.getItem('ordertext') + nummer1);
@@ -100,8 +99,10 @@ $(function(){
 		else {
 			localStorage.setItem('ordertext', localStorage.getItem('ordertext') + nummer1);
 		}
-
-
     });
+
+	$(".info_btn").on('click', function () {
+		$(this).parents($("#info_button")).parents($(".buy")).siblings($(".billede")).click();
+	});
 
 });

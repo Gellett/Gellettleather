@@ -15,10 +15,10 @@
     <meta charset="UTF-8">
     <meta name="description" content="Punge, tasker og andet, lavet i kvalitetslæder">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/css/colums.css?v=1.03">
-    <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.12">
+    <link rel="stylesheet" type="text/css" href="/static/css/colums.css?v=1.04">
+    <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.14">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/static/js/varer.js?v=1.13"></script>
+    <script src="/static/js/varer.js?v=1.14"></script>
     <title>{{ titel }}</title>
 
     <style>
@@ -176,9 +176,16 @@
                                         <div class="product_text">
                                             <p class="product_text_{{ num }}">{{ product_price[num] }} DKK.-</p>
                                         </div>
+
                                         <div class="buy">
-                                            <div class="buy_btn" id="{{ num }}"></div>
-                                            <div class="buy_text"><p>LÆG I KURV</p></div>
+                                            <div id="info_button">
+                                                <div class="info_btn" id="hej{{ num }}"></div>
+                                                <div class="info_text"><p>INFO</p></div>
+                                            </div>
+                                            <div id="buy_button">
+                                                <div class="buy_btn" id="{{ num }}"></div>
+                                                <div class="buy_text"><p>LÆG I KURV</p></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
