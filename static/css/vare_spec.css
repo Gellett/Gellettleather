@@ -32,15 +32,7 @@ body{
 		font-family: Roboto;
 	}
 
-		.pic_container:after{
-			content:"";
-			background: darkgray;
-			position: absolute;
-			bottom: 45%;
-			right: 50%;
-			height: 40%;
-			width: 1px;
-		}
+
 
 		.pic_container img{
 			position: relative;
@@ -79,7 +71,7 @@ body{
 				font-family: Verdana;
 				font-size: 28px;
 				text-align: center;
-				color: #969696;
+				color: #000;
 				margin-bottom: 30px;
 			}
 
@@ -94,7 +86,7 @@ body{
 			}
 
 		.text{
-			color: #515151;
+			color: #000;
 			margin-top: 50px;
 			text-align: justify;
 			font-size: 17px;
@@ -125,7 +117,7 @@ body{
 			font-weight: bold;
 			position: relative;
 			text-align: center;
-			color: #969696;
+			color: #000;
 			font-size: 17px;
 			border-radius: 15px;
 			width: 100%;
@@ -141,7 +133,7 @@ body{
 				width: 100%;
 				height: 35px;
 				text-align: center;
-				color: #969696;
+				color: #000;
 				background-color: #ededed;
 				font-size: 17px;
 				border: none;
@@ -208,7 +200,7 @@ body{
 	}
 
 	.alt_text{
-		border-top: 1px solid black;
+		border-top: 2px solid black;
 	}
 
 @media only screen and (max-width: 1200px) {
@@ -218,22 +210,12 @@ body{
 		left: 26px;
 	}
 
-	.pic_container:after{
-		content:"";
-		background: darkgray;
-		position: absolute;
-		bottom: 45%;
-		right: 50%;
-		height: 40%;
-		width: 1px;
-	}
-
 	.pic_container img{
 		max-height: 250px;
 	}
 
 	.image_container{
-		right: 400px;
+		right: 50%;
 		top: 450px;
 	}
 
@@ -288,10 +270,6 @@ body{
 		width: auto;
 		height: auto;
 		max-height: 150px;
-	}
-
-	.pic_container:after{
-		display: none;
 	}
 
 	.image_container{

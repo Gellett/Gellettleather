@@ -5,22 +5,47 @@
 	float: left;
 }
 	#menu_list{
+		border: 1px solid black;
 		width: 160px;
-		margin-top: 50px;
+		position: relative;
+		top: 55px;
+		min-height: 680px;
 	}
 
+	#kategorier{
+		position: absolute;
+		top: 0;
+		background-color: #212121;
+		width: 100%;
+	}
+
+		#menu_list #kategorier p{
+			position: relative;
+			letter-spacing: 2px;
+			left: 10px;
+			bottom: 7px;
+			font-family: Helvetica;
+			color: white;
+		}
+
 		#menu ul{
+			top: 30px;
+			position: relative;
 			text-indent: -30px;
+			border-bottom: 1px dotted black;
+			width: 90%;
+			left: 50%;
+			transform: translate(-50%);
 		}
 
 		#menu li{
 			list-style-type: none;
-			margin-bottom: 30px;
+			margin-bottom: 10px;
 		}
 			#menu p{
 				font-size: 16px;
 				margin-bottom: 0;
-				font-family: Verdana;
+				font-family: Helvetica;
 
 				color: black;
 			}
@@ -32,16 +57,18 @@
 			#menu li a{
 				text-decoration: none;
 				font-size: 14px;
-				font-family: verdana;
-				color: #595959
+				font-family: Helvetica;
+				color: #000
 			}
 			#menu li a:hover{
 				color: #a8a8a8;
 			}
 
 				#menu ul ul{
-					text-indent: 0;
-					margin-top: 10px;
+					text-indent: -10px;
+					top: 10px;
+					border: none;
+
 				}
 
 				#menu ul li ul li{

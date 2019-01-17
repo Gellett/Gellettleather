@@ -24,12 +24,12 @@ body{
 
 			#kategori_beskrivelse {
 				position: relative;
-				width: 87%;
+				width: 94%;
 				left: 50%;
-				transform: translate(-45%);
+				transform: translate(-47%);
 				text-align: justify;
 				font-family: Helvetica;
-				color: #474747;
+				color: #000;
 			}
 
 			#kategori_beskrivelse a{
@@ -39,17 +39,17 @@ body{
 
 			.product_container{
 				padding-top: 30px;
-				margin: 10px 10px;
+				margin: 30px 10px;
 				position: relative;
-				width: 325px;
+				width: 300px;
 				height: 370px;
 				display: inline-block;
 				background-color: white;
 				text-align: center;
 				left: 50%;
 				transform: translate(-50%);
+				box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   				transition: box-shadow 0.4s ease-in-out;
-				box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 			}
 
 				.product_container:hover{
@@ -68,6 +68,7 @@ body{
 				}
 
 					.path_text {
+						display: none;
 						color: #474747;
 						font-family: Verdana;
 						font-size: 17px;
@@ -112,43 +113,53 @@ body{
 			.product_text{
 				width: 100%;
 				position: absolute;
-				top: 235px;
-				text-align: center;
+				bottom: 40px;
 				font-size: 20px;
 				font-family: "Trebuchet MS";
 				font-weight: bold;
-				color: #5b5b5b;
+				color: #000;
+				left: 50%;
+				transform: translate(-50%);
+				text-align: initial;
 			}
 
 			.product_text p{
 				display: inline-block;
+				position: relative;
+				width: 50%;
+				text-align: center;
 			}
 
+			.product_text span{
+				font-size: 12px;
+				position: absolute;
+				right: 0;
+				top: 25px;
+				color: #3cc900;
+				width: 50%;
+				text-align: center;
+			}
 
 			.buy{
-				position: relative;
-				top: 60px;
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
 			}
 
 			#info_button, #buy_button{
+				float: left;
 				height: 30px;
-				width: 49%;
+				width: 50%;
 				display: inline-block;
+				position: relative;
+				box-sizing: unset;
 			}
 
 			.info_btn{
-				color: whitesmoke;
-				height: 30px;
-				width: 90px;
-				/*background-color: #4CAF50;*/
-				background-color: white;
-				border: 1px solid black;
-				border-right: none;
-				/*border-radius: 20px; */
+				height: 40px;
+				width: 100%;
+				background-color: lightgray;
 				position: absolute;
-				left: 50%;
-				transform: translate(-100%);
-				top: -15px;
 				cursor: pointer;
 				transition: background-color 0.15s ease-out;
 			}
@@ -160,20 +171,22 @@ body{
 			}
 
 			.info_btn:active{
-				transform: scale(1.5) translate(-65%);
+				transform: scale(1.5) translate(0);
+				z-index: 2;
 			}
 
-			.info_text{
+			.info_text, .buy_text{
 				color: black;
-				width: 90px;
+				width: 100%;
 				position: absolute;
-				left: 50%;
-				transform: translate(-100%);
-				top: -18px;
+				text-align: center;
+				top: 2px;
 				pointer-events: none;
-				font-family: Verdana;
-				font-size: 11px;
+				font-family: Helvetica;
+				font-size: 12px;
 			}
+
+			.buy_text{color: white}
 
 			.info_btn:hover + .info_text{
 				color: black;
@@ -181,16 +194,10 @@ body{
 
 			.buy_btn{
 				color: whitesmoke;
-				height: 30px;
-				width: 90px;
-				/*background-color: #4CAF50;*/
+				height: 40px;
+				width: 100%;
 				background-color: black;
-				border: 1px solid black;
-				border-left: none;
-				/*border-radius: 20px; */
 				position: absolute;
-				left: 50%;
-				top: -15px;
 				cursor: pointer;
 				transition: background-color 0.15s ease-out;
 			}
@@ -205,20 +212,14 @@ body{
 				transform: scale(1.5) translate(0%);
 			}
 
-			.buy_text{
-				color: whitesmoke;
-				width: 90px;
-				position: absolute;
-				left: 50%;
-				top: -18px;
-				pointer-events: none;
-				font-family: Verdana;
-				font-size: 11px;
-			}
-
 			.buy_btn:hover + .buy_text{
 				color: black;
 			}
+
+@media only screen and (max-width: 1200px){
+
+
+}
 
 
 @media only screen and (max-width: 700px){
@@ -233,11 +234,14 @@ body{
 
 	.path_container {
 		padding-bottom: 0;
+		padding-top: 0;
 	}
 
+
 	.product_container{
-		width: 100%;
+		width: 97%;
 		height: 273px;
+		margin: 30px 0;
 	}
 
 		.billede{
@@ -255,7 +259,7 @@ body{
 		}
 
 		.buy{
-			top: 0;
+			bottom: 30px;
 			height: 10px;
 		}
 }

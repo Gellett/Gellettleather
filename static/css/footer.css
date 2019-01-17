@@ -1,5 +1,5 @@
 #footer_row{
-	background-color: #353535;
+	background-color: #000;
 	font-family: "Trebuchet MS";
 }
 
@@ -7,7 +7,7 @@
 	padding-top: 0px;
 	max-width: 1400px;
 	height: 150px;
-	background-color: #353535;
+	background-color: #000;
 	margin: auto;
 }
 		#footer_container{

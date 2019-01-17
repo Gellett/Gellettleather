@@ -10,6 +10,7 @@ body{
 }
 
     #content{
+		font-family: Helvetica;
             position: relative;
             background-color: white;
             max-width: 1400px;

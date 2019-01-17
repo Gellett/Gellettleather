@@ -16,9 +16,9 @@
     <meta name="description" content="Punge, tasker og andet, lavet i kvalitetslæder">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/css/colums.css?v=1.04">
-    <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.14">
+    <link rel="stylesheet" type="text/css" href="/static/css/varer.css?v=1.15">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/static/js/varer.js?v=1.14"></script>
+    <script src="/static/js/varer.js?v=1.15"></script>
     <title>{{ titel }}</title>
 
     <style>
@@ -31,10 +31,8 @@
             height: {{ content_height }}px;
         }
 
-
-
         #border_container{
-			border-left: 0.5px #969696 solid;
+
 			max-width: 1030px;
 			height: {{ height }}px;
             min-height: 1150px;
@@ -101,6 +99,10 @@
 
             #content{
                 height: {{ mobile_content_height }}px;
+            }
+
+            .products{
+                margin-top: 0px;
             }
          }
 
@@ -174,7 +176,7 @@
                                         <div class="billede billede_{{ num }}" id="{{ image_path[num] }}"><img src="{{ image_path[num] }}"
                                                                                                                alt="vare_billede"> </div>
                                         <div class="product_text">
-                                            <p class="product_text_{{ num }}">{{ product_price[num] }} DKK.-</p>
+                                            <p class="product_text_{{ num }}">{{ product_price[num] }} DKK.-</p> <span>Varenr. {{ varenummer[num] }}<br>på lager</span>
                                         </div>
 
                                         <div class="buy">

@@ -2,7 +2,8 @@ $(function(){
 
         antal = 1;
 
-        x = document.getElementsByTagName("Div")[35];
+        x = document.getElementsByTagName("Div")[38];
+        console.log(x);
 
         $.getJSON('/API/get_image', {image: x.id}, function(data) {
 			$("#show_image").css("backgroundImage", "url("+data+")");

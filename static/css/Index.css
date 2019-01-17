@@ -61,7 +61,7 @@ button:hover {
 
 #content{
 	background-color: white;
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: auto;
 	overflow: visible;
 }
@@ -81,6 +81,7 @@ button:hover {
 		#center_pic{
 			z-index: 0;
 			position: relative;
+			margin-top: 20px;
 			width: 1200px;
 			height: 600px;
 			background-size: cover;
