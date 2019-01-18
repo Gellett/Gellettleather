@@ -2,7 +2,7 @@ $(function(){
 
         antal = 1;
 
-        x = document.getElementsByTagName("Div")[38];
+        x = document.getElementsByTagName("Div")[47];
         console.log(x);
 
         $.getJSON('/API/get_image', {image: x.id}, function(data) {
