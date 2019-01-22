@@ -23,7 +23,13 @@ body{
 		max-width: 1200px;
 		margin: auto;
 	}
-    
+
+        #container p a{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
         #projekter{
             text-align: justify;
             line-height: 1.5;

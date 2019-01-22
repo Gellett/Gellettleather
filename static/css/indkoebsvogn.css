@@ -64,7 +64,7 @@ body{
 		#buy_btn{
 			background-color: black;
 			border: none;
-			color: white;
+			color: floralwhite;
 			padding: 15px 32px;
 			margin-top: 10px;
 			text-align: center;
@@ -77,7 +77,7 @@ body{
 		#empty_btn{
 			background-color: black;
 			border: none;
-			color: white;
+			color: floralwhite;
 			padding: 15px 32px;
 			margin-top: 10px;
 			text-align: center;
@@ -90,7 +90,7 @@ body{
 		#rabat_btn{
 			background-color: black;
 			border: none;
-			color: white;
+			color: floralwhite;
 			padding: 15px 32px;
 			margin-top: 10px;
 			text-align: center;
