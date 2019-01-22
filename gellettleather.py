@@ -112,18 +112,18 @@ def varer(varetype, varetype_1):
                     w = 0
 
     if z:
-        height = (y + 1) * 410 + 127 + 150
-        content_height = (y + 1) * 410 + 127 + 20 + 127 + 150
+        height = (y + 1) * 415 + 127 + 150
+        content_height = (y + 1) * 415 + 127 + 20 + 127 + 150
 
     else:
-        height = y * 410 + 150
-        content_height = y * 410 + 127 + 20 + 150
+        height = y * 415 + 150
+        content_height = y * 415 + 127 + 20 + 150
 
     if w:
-        mobile_height = (h + 1) * 328
+        mobile_height = (h + 1) * 330
         mobile_content_height = (h + 1) * 328 + 100
     else:
-        mobile_height = h * 328
+        mobile_height = h * 330
         mobile_content_height = h * 328 + 100
 
     return render_template("varer.html", varenummer=varenummer, kategori=kategori, arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1,
