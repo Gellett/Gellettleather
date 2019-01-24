@@ -200,7 +200,10 @@ body{
 	}
 
 	.alt_text{
-		border-top: 2px solid black;
+		letter-spacing: 2px;
+		border-bottom: 2px solid black;
+		font-family: Helvetica;
+		font-size: 30px;
 	}
 
 @media only screen and (max-width: 1200px) {
