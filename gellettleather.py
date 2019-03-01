@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, jsonify, json
 import sqlite3
 
@@ -22,26 +23,88 @@ billede_list = []
 text_list = []
 pris_list = []
 
-orderID = 1481
+orderID = 1491
+
+
+def switch_titel(argument):
+    titel_switcher = {
+        "Tasker": u"Billige Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Dametasker": u"Billige Dame Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Kunstlaeder": u"Billige Tasker i Kunstlæder - Høj Kvalitet l Gellett Leather Danmark",
+        "Computertasker": u"Billige Computer Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Punge": u"Billige Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Damepunge": u"Billige Dame Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Herrepunge": u"Billige Herre Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Mapper": u"Billige Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Skrivemapper": u"Billige Skrive Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Kredit&visitkortmapper": u"Billige Kredit Kort Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Rejseserien": u"Rejse Tasker & Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Rejsetasker": u"Billige Rejse Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Valutamapper": u"Billige Valuta Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Tilbehoer": u"Billige Accessories i Læder - Høj Kvalitet l Gellett Leather Danmark"
+    }
+    titel_tag = titel_switcher[argument]
+    return titel_tag
+
+
+def switch_desc(argument):
+    desc_switcher = {
+        "Tasker": u"Søger du en Taske? Hos Gellett Leather Danmark har vi et bredt udvalg af Tasker lavet i det"
+                  u" fineste kvalitets læder. Dame Tasker, Tasker i kuntlæder og Computertasker.",
+        "Dametasker": u"Søger du en Dame Taske i lækkert læder eller kunstlæder? Så er Gellett Leather stedet at lede."
+                      u"Vi har et bredt udvalg af billige dame tasker i fineste kvalitetslæder",
+        "Kunstlaeder": u"Søger du en taske lavet i lækkert kunstlæder? Så se vores udvalg af cross over tasker,"
+                       u" skulder tasker og rygsække lavet i kvalitets læder",
+        "Computertasker": u"Søger du en Computertaske? Vi har hos Gellett Leather Computertasker i læder af højeste "
+                          u"kvalitet med plads til hele kontoret.",
+        "Punge": u"Søger du en Læder Pung? Få Punge i læder af højeste kvalitet hos Gellett Leather. Der er stort "
+                 u"udvalg både til dame og herre.",
+        "Damepunge": u"Søger du en Dame Pung? Vi har et stort udvalg, med punge i alle størrelser og former, lavet i "
+                     u"læder af højeste kvalitet, til en overskuelig pris.",
+        "Herrepunge": u"Søger du en Herre Pung i læder af høj kvalitet? Så se vores mange Herre Punge og find lige den"
+                      u" pung du leder efter.",
+        "Mapper": u"Søger du en Mappe i læder til din skriveblok eller kreditkort? Hos os kan du finde lige hvad du "
+                  u"mangler, og vi garanterer kvalitet.",
+        "Skrivemapper": u"Søger du en Skrive Mappe i læder i A4 eller A5 størrelse? Så kig her og find lige den "
+                        u"du har brug for, og vær sikker på at få kvalitet",
+        "Kredit&visitkortmapper": u"Søger du en kredit- eller visitkortmappe lavet i lækkert læder? Hos os har vi et "
+                                  u"udvalg, der dækker over mapper med plads til 6 kort helt op til 72 kort.",
+        "Rejseserien": u"Søger du en Rejse Taske eller en Valuta Mappe i læder af højeste kvalitet? Så er Gellett "
+                       u"Leather hvor du skal hen. Vi har noget til enhver smag og budget.",
+        "Rejsetasker": u"Søger du en holdbar Rejse Taske i læder? Så har vi lige det du mangler. Se vores udvalg af "
+                       u"Rejse Tasker lavet af kvalitetslæder og find den der passer dig.",
+        "Valutamapper": u"Søger du en Valuta Mappe i læder af høj kvalitet? Hos Gellett Leather har vi Valuta Mapper "
+                        u"med plads til det hele og til en god pris.",
+        "Tilbehoer": u"Søger du Iphone Covers, Armbånd, Nøgleringe eller andre accessories i læder? Så kig her og find "
+                     u"lige det du mangler, eller skriv til os, og så lave vi det for dig."
+    }
+    desc_tag = desc_switcher[argument]
+    return desc_tag
+
 
 @app.route('/')
 def index():
     return render_template("index.html")
 
+
 @app.route('/info')
 def info():
     return render_template("info.html")
 
+
 @app.route('/confirmed', methods=['GET', 'POST'])
 def confirmed():
     return render_template("confirmed.html")
+
 
 @app.route('/<varetype>/<varetype_1>')
 @app.route('/<varetype>', defaults={'varetype_1': ''})
 def varer(varetype, varetype_1):
 
     if varetype_1 != "":
-        titel = varetype_1.capitalize()
+        Titel = varetype_1.capitalize()
+        titel = switch_titel(Titel)
+        description = switch_desc(Titel)
         path_go_1 = varetype
         path_go_2 = varetype+"/"+varetype_1
         path_1 = varetype.capitalize()
@@ -52,7 +115,9 @@ def varer(varetype, varetype_1):
         path_go_2 = ""
         path_1 = varetype.capitalize()
         path_2 = ""
-        titel = varetype.capitalize()
+        Titel = varetype.capitalize()
+        titel = switch_titel(Titel)
+        description = switch_desc(Titel)
         arrow = ""
 
     x = 1
@@ -126,10 +191,12 @@ def varer(varetype, varetype_1):
         mobile_height = h * 330
         mobile_content_height = h * 328 + 100
 
-    return render_template("varer.html", varenummer=varenummer, kategori=kategori, arrow=arrow, path_go_1=path_go_1, path_go_2=path_go_2, path_1=path_1,
-                           path_2=path_2, image_path=image_path, image_number=image_number, product_text=product_text,
-                           product_price=product_price, height=height, titel=titel, content_height=content_height,
-                           antal=antal, buy_btn_value=buy_btn_value, mobile_height = mobile_height, mobile_content_height=mobile_content_height)
+    return render_template("varer.html", varenummer=varenummer, kategori=kategori, arrow=arrow, path_go_1=path_go_1,
+                           path_go_2=path_go_2, path_1=path_1, path_2=path_2, image_path=image_path,
+                           image_number=image_number, product_text=product_text, product_price=product_price,
+                           height=height, titel=titel, content_height=content_height, antal=antal,
+                           buy_btn_value=buy_btn_value, description=description, mobile_height=mobile_height,
+                           mobile_content_height=mobile_content_height)
 
 
 @app.route('/<varetype>/<varetype_1>/<varenummer>', methods=['GET'])
@@ -166,35 +233,42 @@ def om_os():
     titel = "Om os"
     return render_template("om_os.html", titel=titel)
 
+
 @app.route('/indkoebsvogn', methods=['GET', 'POST'])
 def indkoebsvogn():
     titel = "Indkoebsvogn"
     return render_template("indkoebsvogn.html", titel=titel)
+
 
 @app.route('/handelsbetingelser')
 def handelsbetingelser():
     titel = "Handelsbetingelser"
     return render_template("handelsbetingelser.html", titel=titel)
 
+
 @app.route('/API/get_varenummer', methods=['POST'])
 def get_varenummer():
     varenummer = request.args.get('varenummer')
     return jsonify(varenummer)
+
 
 @app.route('/API/get_image', methods=['GET', 'POST'])
 def get_image():
     image_path = request.args.get('image', 0, type=str)
     return jsonify(image_path)
 
+
 @app.route('/API/get_image_1', methods=['GET', 'POST'])
 def get_image_1():
     image_path = request.args.get('image', 0, type=str)
     return jsonify(image_path)
 
+
 @app.route('/API/get_image_2', methods=['GET', 'POST'])
 def get_image_2():
     image_path = request.args.get('image', 0, type=str)
     return jsonify(image_path)
+
 
 @app.route('/API/get_image_antal', methods=['GET', 'POST'])
 def get_image_antal():
@@ -202,6 +276,7 @@ def get_image_antal():
     c3.execute('SELECT Billeder FROM varer WHERE varer_image_path=?', (image_path,))
     antal = ''.join(c3.fetchone())
     return jsonify(antal)
+
 
 @app.route('/API/vare', methods=['GET', 'POST'])
 def vare():
@@ -211,9 +286,11 @@ def vare():
     vare_list.append(x)
     return jsonify(x, y, z)
 
+
 @app.route('/API/varer', methods=['GET', 'POST'])
 def varerjs():
     return jsonify(vare_list)
+
 
 @app.route('/API/billede', methods=['GET', 'POST'])
 def billede():
@@ -222,12 +299,14 @@ def billede():
     billede_list.append(x)
     return jsonify(billede_list)
 
+
 @app.route('/API/text', methods=['GET', 'POST'])
 def text():
     global text_list
     x = request.args.get('data', "", type=str)
     text_list.append(x)
     return jsonify(text_list)
+
 
 @app.route('/API/pris', methods=['GET', 'POST'])
 def pris():
@@ -236,11 +315,13 @@ def pris():
     pris_list.append(x)
     return jsonify(pris_list)
 
+
 @app.route('/API/orderID', methods=['GET', 'POST'])
 def order_id():
     global orderID
     orderID = orderID + 1
     return jsonify(orderID)
+
 
 @app.route('/API/send_conf_email', methods=['GET', 'POST'])
 def send_conf_email():
@@ -266,6 +347,7 @@ def send_conf_email():
     server.sendmail(fromaddr, toaddr, msg.as_string())
     server.quit()
     return ""
+
 
 @app.route('/API/rabat', methods=['GET', 'POST'])
 def rabatkode():

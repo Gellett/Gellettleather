@@ -180,8 +180,9 @@ button:hover {
 #cookies{
 	position: fixed;
 	bottom: -171px;
-	background-color: #bababa;
+	background-color: #000;
 	font-family: Helvetica;
+	color: white;
 	z-index: 2;
 	width: 100%;
 }
@@ -210,6 +211,7 @@ button:hover {
 			text-align: center;
 			font-size: 16px;
 			border: 1px solid #5b5b5b;
+			color: black;
 		}
 
 			#okay:hover{

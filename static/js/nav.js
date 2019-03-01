@@ -20,10 +20,8 @@ $(function(){
        nav_item = "Accessories";
    }
 
-    console.log(nav_item);
    $(".list_text").each(function(){
        if (this.text === nav_item) {
-           console.log(this.text);
           $(this).parent($(".dropdown_start")).css({"border-right":"2px solid black", "border-top":"2px solid black", "border-left":"2px solid black", "background-color":"black"});
           $(this).css({"color":"white"});
        }
