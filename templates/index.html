@@ -3,7 +3,7 @@
 
 
 <head>
-
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121222558-1"></script>
     <script>
@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/Index.css?v=1.21">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="/static/js/index.js?v=5.11"></script>
+    <script src="/static/js/varer.js?v=1.16"></script>
 	<title>Gellett Leather Denmark - kvalitetslæder til en god pris</title>
 </head>
 
@@ -28,41 +29,127 @@
 <body id="body">
 
 	{% include 'header.html' %}
-
+    {% include 'nav.html' %}
 	<div id="content">
-		{% include 'nav.html' %}
 
-        <div class="row">
-            <div id="pic_container">
-                <div class="col-12 col-m-12 col-s-12" id="front_pic">
-                    <div class="center_pic">
-                        <img src="/static/images/Forside-billede1-min.jpg" alt="læder produkter" id="center_pic"><button onclick="window.location.href='/tasker'" id="buy_btn1"> <span>SHOP</span></button>
-                        <hr>
+        <div id="products_top">
+            <div class="row">
+                <div id="nyhed" class="col-5 col-m-6 col-s-12">
+                    <h1>Nyhed!</h1>
+                    <h2>349,-</h2>
+                </div>
+                <div class="product_container_top col-7 col-m-6 col-s-12">
+                    <div class="vare_nr_0112" id="Varenr.: 0112"></div>
+                    <div class="nyhed_product_container nyhed_product">
+                        <div class="product_img_container">
+                            <div class="kategori kategori_996"> <h2>Dametaske</h2> </div>
+                            <div class="product_pic billede billede_996" id="/static/images/varer/punge/herrepunge/0112.png" onclick="window.location.href='/punge/herrepunge/0112'">
+                                <img src="/static/images/varer/punge/herrepunge/0112.png" alt="taske" class="pic_mid">
+                            </div>
+                            <div class="product_text">
+                                <p class="product_text_p product_text_996">349 DKK.-</p> <span>Varenr. 0112<br>på lager</span>
+                            </div>
+
+                            <div class="buy">
+                                <div id="info_button">
+                                    <div class="info_btn"></div>
+                                    <div class="info_text" onclick="window.location.href='/punge/herrepunge/0112'"><p>INFO</p></div>
+                                </div>
+                                <div id="buy_button">
+                                    <div class="buy_btn" id="996"></div>
+                                    <div class="buy_text"><p>LÆG I KURV</p></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div id="products">
-           <div id="bestseller"><h1>Populære kategorier</h1></div>
+        <div class="row">
+            <div id="pic_container">
+                <div class="col-12 col-m-12 col-s-12" id="front_pic">
+                    <div class="center_pic">
+                        <img onclick="window.location.href='/tasker'" src="/static/images/Forside-billede1-min.jpg" alt="læder produkter" id="center_pic">
+                        <h1>Se udvalg</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="products_bot">
+            <div id="bestseller">
+                <h1>Mest solgte</h1>
+            </div>
             <div class="row">
 
-                <div class="col-4 col-m-4 col-s-12">
+                <div class="col-4 col-m-6 col-s-12">
                     <div class="product_container" id="product_left">
-                        <img src="/static/images/punge1-min.jpg" alt="punge" class="product_pic" id="pic_left"><button onclick="window.location.href='/punge'" id="buy_btn2"><span>SHOP PUNGE</span></button>
-                        <div class="product_text"></div>
+                        <div class="vare_nr_8789" id="Varenr.: 8789"></div>
+                            <div class="kategori kategori_997"> <h2>Dametaske</h2> </div>
+                            <div class="billede billede_997" id="/static/images/varer/tasker/dametasker/8789.png" onclick="window.location.href='/tasker/dametasker/8789'">
+                                <img src="/static/images/varer/tasker/dametasker/8789.png" alt="taske" class="product_pic pic_mid">
+                            </div>
+                            <div class="product_text">
+                                <p class="product_text_p product_text_997">759 DKK.-</p> <span>Varenr. 8789<br>på lager</span>
+                            </div>
+
+                            <div class="buy">
+                                <div id="info_button">
+                                    <div class="info_btn" onclick="window.location.href='/tasker/dametasker/8789'"></div>
+                                    <div class="info_text"><p>INFO</p></div>
+                                </div>
+                                <div id="buy_button">
+                                    <div class="buy_btn" id="997"></div>
+                                    <div class="buy_text"><p>LÆG I KURV</p></div>
+                                </div>
+                            </div>
                     </div>
                 </div>
-                <div class="col-4 col-m-4 col-s-12">
+                <div class="col-4 col-m-6 col-s-12">
                     <div class="product_container" id="product_mid">
-                        <img src="/static/images/taskepic-min.jpg" alt="taske" class="product_pic" id="pic_mid"><button onclick="window.location.href='/tasker'" id="buy_btn3"><span>SHOP TASKER</span></button>
-                        <div class="product_text"></div>
+                        <div class="vare_nr_0111" id="Varenr.: 0111"></div>
+                        <div class="kategori kategori_998"> <h2>Herrepung</h2> </div>
+                            <div class="billede billede_998" id="/static/images/varer/punge/herrepunge/0111.png" onclick="window.location.href='/punge/herrepunge/0111'">
+                                <img src="/static/images/varer/punge/herrepunge/0111.png" alt="taske" class="product_pic pic_mid" id="pic_mid">
+                            </div>
+                            <div class="product_text">
+                                <p class="product_text_p product_text_998">349 DKK.-</p> <span>Varenr. 0111<br>på lager</span>
+                            </div>
+
+                            <div class="buy">
+                                <div id="info_button">
+                                    <div class="info_btn" onclick="window.location.href='/punge/herrepunge/0111'"></div>
+                                    <div class="info_text"><p>INFO</p></div>
+                                </div>
+                                <div id="buy_button">
+                                    <div class="buy_btn" id="998"></div>
+                                    <div class="buy_text"><p>LÆG I KURV</p></div>
+                                </div>
+                            </div>
                     </div>
                 </div>
-                <div class="col-4 col-m-4 col-s-12">
-                    <div class="product_container" id="product_right">
-                        <img src="/static/images/bromance-min.jpg" alt="armbånd" class="product_pic" id="pic_right"><button onclick="window.location.href='/tilbehoer'" id="buy_btn4"><span>SHOP ACCESSORIES</span></button>
-                        <div class="product_text"></div>
+                <div class="col-4 col-m-6 col-s-12 no_show_from_700">
+                    <div class="product_container">
+                        <div class="vare_nr_885" id="Varenr.: 885"></div>
+                        <div class="kategori kategori_999"> <h2>Ekstra</h2> </div>
+                            <div class="billede billede_999" id="/static/images/varer/ekstra/tilbehoer/885" onclick="window.location.href='/ekstra/tilbehoer/885'">
+                                <img src="/static/images/varer/ekstra/tilbehoer/885.png" alt="taske" class="product_pic pic_mid">
+                            </div>
+                            <div class="product_text">
+                                <p class="product_text_p product_text_999">329 DKK.-</p> <span>Varenr. 885<br>på lager</span>
+                            </div>
+
+                            <div class="buy">
+                                <div id="info_button">
+                                    <div class="info_btn" onclick="window.location.href='/ekstra/tilbehoer/885'"></div>
+                                    <div class="info_text"><p>INFO</p></div>
+                                </div>
+                                <div id="buy_button">
+                                    <div class="buy_btn" id="999"></div>
+                                    <div class="buy_text"><p>LÆG I KURV</p></div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -73,7 +160,7 @@
             <h3>Velkommen til Gellett Leather Danmark</h3>
             <p>Vi bruger cookies, hvilket vi bruger til analysere hjemmesiden, og finde ud af hvad kunderne gerne vil se på,
                 og hvad der fungerer, sådan at kunderne får den mest behagelige oplevelse hos os.</p>
-            <div id="okay"><p>Okay</p></div>
+            <div id="okay"><p>Jeg accepterer</p></div>
         </div>
     </div>
 

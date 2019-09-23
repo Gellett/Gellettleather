@@ -1,6 +1,5 @@
 $(function(){
 
-
 	localStorage.setItem("antal_varekurv", "0");
 
     antal = 1;
@@ -45,7 +44,7 @@ $(function(){
 
 		var nummer = this.id;
 		var billede = $(".billede_"+nummer).attr("id");
-		var beskrivelse = $(".kategori_"+nummer).text() +" - "+ $(".vare_nr_"+nummer).attr("id");
+		var beskrivelse = $(".kategori_"+nummer).text(); // +" - "+ $(".vare_nr_"+nummer).attr("id");
 		var pris = $(".product_text_"+nummer).text();
 
 

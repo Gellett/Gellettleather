@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121222558-1"></script>
     <script>
@@ -26,12 +26,11 @@
 <body id="body">
 
     {% include 'header.html' %}
+    {% include 'nav.html' %}
 
         <div id="content">
 
             <div id="container">
-
-                {% include 'nav.html' %}
 
                 <div class="row">
 
@@ -121,11 +120,12 @@
 
             </div>
 
-            <div class="row">
+        </div>
+    <div class="row">
                 <div class="alt_container col-12 col-m-12 col-s-12">
                     <div class="box_container">
                         <div class="alt_text">
-                            <p>Alternativer</p>
+                            <p>Andre har også kigget på</p>
                         </div>
 
                         {% for num in alternativer_list %}
@@ -135,9 +135,6 @@
                     </div>
                 </div>
             </div>
-
-
-        </div>
     {% include 'footer.html' %}
 
 </body>

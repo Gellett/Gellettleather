@@ -7,7 +7,6 @@ html, body {
 
 body{
 	background-color: white;
-	overflow: auto;
 }
 
 button{
@@ -29,94 +28,176 @@ button:hover {
 	cursor: pointer;
 }
 
-#buy_btn1{
-	height: 40px;
-	width: 83px;
+#nyhed{
+	height: 550px;
+	transform: rotate(-20deg);
 }
 
-#buy_btn2{
-	height: 54px;
-	width: 98px;
-	left: 175px;
+#nyhed h1{
+	position: relative;
+	top: 40%;
+	font-size: 60px;
+	letter-spacing: 7px;
+	font-family: sans-serif;
 }
 
-#buy_btn3{
-	height: 54px;
-	width: 112px;
+#nyhed h2{
+	position: relative;
+	top: 40%;
+	font-size: 30px;
+	letter-spacing: 7px;
+	font-family: sans-serif;
 }
 
-#buy_btn4{
-	height: 54px;
-	width: 190px;
-	left: 225px;
+.product_container_top{
+	position: relative;
 }
 
-.center_pic button{
-	top: 50%;
+.nyhed_product_container{
+	padding-top: 30px;
+	position: relative;
+	width: 450px;
+	height: 553.5px;
+	display: inline-block;
+	background-color: white;
+	transition: box-shadow 0.4s ease-in-out;
 }
 
-.product_pic button{
-	top: 50%;
+.product_pic img{
+	height: 488.5px;
+	max-height: unset;
 }
+
 
 #content{
-	background-color: white;
 	max-width: 1200px;
 	margin: auto;
-	overflow: visible;
+	z-index: -1;
+}
+
+.product_img_container .billede{
+	height: 488.5px;
+}
+
+.product_pic img{
+	height: 80%;
+	width: 100%;
 }
 
 	#pic_container{
 		position: relative;
-		max-width: 1200px;
-		height: 600px;
+		width: 100vw;
+		background-color: #fcfcfc;
+		height: 550px;
 		margin: auto;
 		z-index: 0;
+		left: 50%;
+		transform: translate(-50%);
 	}
 		#front_pic{
-			height: 600px;
-			width: 1200px;
+			height: 550px;
+			width: 100%;
 		}
 
 		#center_pic{
 			z-index: 0;
-			position: relative;
-			margin-top: 20px;
 			width: 1200px;
-			height: 600px;
+			height: 550px;
 			background-size: cover;
 			background-repeat: no-repeat;
-		}
-
-		#pic_container hr{
+			margin: auto;
 			position: relative;
-			top: 10px;
+			left: 50%;
+			transform: translate(-50%);
+			transition: opacity 0.4s ease-in-out;
 		}
 
-	#products{
+		.product_img_container{
+			height: 100%;
+			transition: box-shadow 0.4s ease-in-out;
+		}
+
+		.center_pic h1, .product_img_container h1{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: #dfe6e9;
+			letter-spacing: 5px;
+			opacity: 0;
+			transition: opacity 0.4s ease-in-out;
+		}
+
+		.product_img_container h1{
+			top: 65%;
+
+		}
+
+		.product_img_container:hover > h1{
+			display: block;
+		}
+
+		#center_pic:hover{
+			cursor: pointer;
+			opacity: 0.8;
+		}
+
+		#center_pic:hover + h1{
+			opacity: 1;
+		}
+
+	#products_top{
+		position: relative;
+		max-width: 1400px;
+		height: 675px;
+		background-color: white;
+		width: 1200px;
+		margin-bottom: 130px;
+		text-align: center;
+		padding-top: 80px;
+	}
+
+	#products_bot{
 		position: relative;
 		margin: auto;
-		padding-top: 60px;
 		max-width: 1400px;
 		height: 600px;
 		background-color: white;
 		width: 1200px;
+		margin-bottom: 130px;
+		text-align: center;
+		margin-top: 155px;
+	}
+
+	#bestseller{
+		text-align: left;
 	}
 
 		#bestseller h1{
-			width: 100%;
-			text-align: center;
-			font-family: Roboto;
+			padding-left: 5%;
+			font-family: sans-serif;
+			font-weight: 400;
+			letter-spacing: 3px;
+			font-size: 45px;
 		}
 
-		.product_container{
+		#pic_top{
 			position: relative;
-			height: 450px;
-			display: inline-block;
-			background-color: white;
-			width: 100%;
+			background-size: cover;
+			height: 485.5px;
+			width: unset;
+			max-height: unset;
 		}
 
+		#pic_top img{
+			height: 70%;
+			width: 100%;
+			max-height: unset;
+		}
+
+		#pic_top:hover{
+			cursor: pointer;
+		}
 			.product_name{
 				position: absolute;
 				background-color: rgba(0,0,0,0.5);
@@ -148,17 +229,18 @@ button:hover {
 			#pic_left{
 				position: relative;
 				background-size: cover;
-				height: 400px;
-				width: 350px;
+				height: 350px;
+				width: 450px;
+				left: -50px;
+				top: 10%;
 			}
 
-			#pic_mid{
+			.pic_mid{
 				position: relative;
 				background-size: cover;
-				height: 400px;
-				width: 350px;
-				left: 50%;
-				transform: translate(-50%);
+				height: 250px;
+				top: 0;
+				width: 75%;
 			}
 
 			#pic_right{
@@ -166,7 +248,7 @@ button:hover {
 				background-size: cover;
 				height: 400px;
 				width: 350px;
-				left: 50px;
+				left: 5px;
 			}
 
 		.product_text {
@@ -175,12 +257,217 @@ button:hover {
 			text-align: center;
 			left: 50%;
 			transform: translate(-50%);
+			font-family: Roboto;
+			font-size: 25px;
 		}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.product_container{
+				padding-top: 30px;
+				margin: 30px 10px;
+				position: relative;
+				width: 300px;
+				height: 370px;
+				display: inline-block;
+				background-color: white;
+				text-align: center;
+				transition: box-shadow 0.4s ease-in-out;
+			}
+
+				.product_container:hover, .product_img_container:hover{
+					box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+					/*-webkit-box-shadow: 0 0 32px 0 rgba(0,0,0,0.35);
+					-moz-box-shadow: 0 0 32px 0 rgba(0,0,0,0.35);
+					box-shadow: 0 0 32px 0 rgba(0,0,0,0.35);*/
+					z-index: 1;
+				}
+
+				        .billede{
+							background-size: contain;
+							background-repeat: no-repeat;
+							width: 100%;
+							height: 305px;
+							display: inline-block;
+						}
+
+						.billede img{
+
+						}
+
+			.kategori, .kategori h2{
+				margin: 0;
+				padding-bottom: 10px;
+				display: none;
+			}
+
+			.billede:hover {
+				cursor: pointer;
+			}
+
+			#pic_mid{
+				width: 95%;
+			}
+
+			.product_text{
+				width: 100%;
+				position: absolute;
+				bottom: 40px;
+				font-size: 20px;
+				font-family: "Trebuchet MS";
+				font-weight: bold;
+				color: #000;
+				left: 50%;
+				transform: translate(-50%);
+				text-align: initial;
+			}
+
+			.product_text p{
+				display: inline-block;
+				position: relative;
+				width: 50%;
+				text-align: center;
+			}
+
+			.product_text span{
+				font-size: 12px;
+				position: absolute;
+				right: 0;
+				top: 25px;
+				color: #3cc900;
+				width: 50%;
+				text-align: center;
+			}
+
+			.buy{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 35px;
+				box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+			}
+
+			#info_button, #buy_button{
+				float: left;
+				height: 35px;
+				width: 50%;
+				display: inline-block;
+				position: relative;
+				box-sizing: unset;
+			}
+
+			.info_btn{
+				height: inherit;
+				width: 100%;
+				background-color: lightgray;
+				position: absolute;
+				cursor: pointer;
+				transition: background-color 0.15s ease-out;
+			}
+
+			.info_btn:hover{
+				background-color: rgba(0, 0, 0, 0.2);
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				transition: background-color 0.15s ease-out;
+			}
+
+			.info_btn:active{
+				transform: scale(1.5) translate(0);
+				z-index: 2;
+			}
+
+			.info_text, .buy_text{
+				color: black;
+				width: 100%;
+				position: absolute;
+				text-align: center;
+				pointer-events: none;
+				font-family: Helvetica;
+				font-size: 12px;
+				height: inherit;
+			}
+
+			.info_text p, .buy_text p{
+				margin: 0;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.buy_text{
+				color: white
+			}
+
+			.info_btn:hover + .info_text{
+				color: black;
+			}
+
+			.buy_btn{
+				color: whitesmoke;
+				height: inherit;
+				width: 100%;
+				background-color: black;
+				position: absolute;
+				cursor: pointer;
+				transition: background-color 0.15s ease-out;
+			}
+
+			.buy_btn:hover{
+				background-color: rgba(0, 0, 0, 0.2);
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				transition: background-color 0.15s ease-out;
+			}
+
+			.buy_btn:active{
+				transform: scale(1.5) translate(0%);
+			}
+
+			.buy_btn:hover + .buy_text{
+				color: black;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #cookies{
+	height: 200px;
 	position: fixed;
-	bottom: -171px;
-	background-color: #000;
+	bottom: -200px;
+	background-color: grey;
 	font-family: Helvetica;
 	color: white;
 	z-index: 2;
@@ -191,6 +478,7 @@ button:hover {
 		position: relative;
 		width: 70%;
 		left: 50%;
+		top: 15%;
 		transform: translate(-50%);
 		height: 80px;
 	}
@@ -204,18 +492,20 @@ button:hover {
 			position: relative;
 			left: 20px;
 			bottom: 20px;
-			width: 70px;
+			width: 150px;
 			display: inline-block;
 			height: 30px;
-			background-color: white;
+			background-color: darkgray;
 			text-align: center;
 			font-size: 16px;
 			border: 1px solid #5b5b5b;
-			color: black;
+			color: white;
 		}
 
 			#okay:hover{
 				cursor: pointer;
+				background-color: lightgrey;
+				color: black;
 			}
 
 			#cookies h3{
@@ -228,60 +518,46 @@ button:hover {
 				padding-top: 5px;
 			}
 
-@media only screen and (max-width: 1200px){
-	.center_pic{
-		margin-top: 8px;
+
+@media only screen and (max-width: 1023px){
+	.no_show_from_700{
+		display: none;
+	}
+}
+
+
+@media only screen and (max-width: 1025px){
+
+	.dropbtn img{
+		margin-left: 10px;
 	}
 
-	.product_container{
-		height: 350px;
-	}
-
-	#pic_left{
-		width: 90%;
-		height: 300px;
-	}
-
-	#pic_mid{
-		width: 90%;
-		height: 300px;
-	}
-
-	#pic_right{
-		width: 90%;
-		height: 300px;
-		left: 35px;
-	}
-
-	button{
-		font-size: 16px;
-	}
-
-	#buy_btn1{
-		width: 100px;
-	}
-
-	#buy_btn2{
-		width: 120px;
-		left: 110px;
-	}
-
-	#buy_btn3{
-		width: 120px;
-	}
-
-	#buy_btn4{
-		left: 145px;
-		width: 180px;
-	}
-
-	#products{
+	#products_top{
 		width: 100vw;
+		height: 500px;
+		padding-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	#products_bot{
+		width: 100vw;
+	}
+
+	#nyhed{
+		height: 400px;
+	}
+
+	.nyhed_product_container{
+		width: 300px;
+		height: 400px;
+	}
+
+	.product_img_container .billede{
 		height: 300px;
 	}
 
-	#mand{
-		margin-bottom: 8px;
+	#front_pic, #pic_container{
+		height: 347px;
 	}
 
 	#center_pic{
@@ -289,62 +565,8 @@ button:hover {
 		height: auto;
 	}
 
-	hr{
-		display: none;
-	}
-
-	#pic_container{
-		height: 450px;
-	}
-
-	#front_pic{
-		height: 450px;
-	}
-
-	#products{
-		padding-top: 20px;
-	}
-
-	#cookies{
-		position: fixed;
-		bottom: -150px;
-		height: 150px;
-		background-color: #bababa;
-		font-family: Helvetica;
-		z-index: 2;
-		width: 100%;
-	}
-}
-
-
-@media only screen and (max-width: 700px){
-
-	html{
-		overflow-x: hidden;
-	}
-
 	#products{
 		display: none;
-	}
-
-	#buy_btn1{
-		width: 65px;
-	}
-
-	#buy_btn1 span{
-		position: relative;
-		margin: 0;
-		left: -12px;
-	}
-
-	#center_pic{
-		z-index: 0;
-		position: relative;
-		content: url("../images/punge1-min.jpg");
-		background-size: contain;
-		width: 100vw;
-		height: 80vh;
-		background-repeat: no-repeat;
 	}
 
 	#cookies{
@@ -359,39 +581,47 @@ button:hover {
 		height: 30px;
 	}
 
-	#okay p{
-
+	#list{
+		width: 950px;
 	}
 
-	#pic_container{
-		margin: 0;
-		width: 100%;
-		max-width: 500px;
-		height: 79vh;
-	}
-
-	.center_pic{
-		width: 100%;
-		height: 100%;
-		margin: 0;
-	}
-
-	#dame{
-		margin-bottom: 0px;
-		height: 85vh;
+	#cookies{
+		position: fixed;
+		bottom: -150px;
+		height: 150px;
+		background-color: #bababa;
+		font-family: Helvetica;
+		z-index: 2;
 		width: 100%;
 	}
-
-	#product_left{
-		border-top: 0.5px solid #b7b7b7;
-		border-right: none;
-		border-bottom: 0.5px solid #b7b7b7;
-	}
-
-	#product_right{
-		border-left: none;
-		border-top: 0.5px solid #b7b7b7;
-	}
-
-
 }
+
+@media only screen and (max-width: 750px){
+
+
+	#nyhed{
+		height: 200px;
+	}
+
+	#nyhed h1, #nyhed h2{
+		top: 5%;
+	}
+
+	#products_top{
+		height: 630px;
+	}
+
+	#pic_container, #front_pic{
+		height: 169px;
+	}
+
+	#products_bot{
+		margin-top: 100px;
+	}
+
+	#bestseller{
+		text-align: center;
+	}
+}
+
+

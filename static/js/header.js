@@ -13,18 +13,8 @@ $(function() {
         document.getElementById("vare_antal_header").value = parseInt(localStorage.getItem('antal_kurv'));
 
     $(".dropbtn").on('click', function () {
-        if (menu_clicked == false) {
-            $("#overlay").css({display: "block"});
             $(".dropdown-content").css({display: "block"});
             $(".dropdown-content").animate({right: "0px"});
-            menu_clicked = true;
-            }
-        else {
-            $("#overlay").css({display: "none"});
-            $(".dropdown-content").animate({right: "-220px"});
-            $(".dropdown-content").css({overflow: "no-content"});
-            menu_clicked = false;
-        }
     });
 
     $(".dropdown_content_tasker").on('click', function () {
@@ -70,5 +60,10 @@ $(function() {
             rejseserien_clicked = false;
         }
     });
+
+    $("#x").on('click', function () {
+        $(".dropdown-content").animate({right: "-220px"});
+        $(".dropdown-content").css({overflow: "no-content"});
+    })
 
 });

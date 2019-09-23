@@ -15,7 +15,7 @@ body{
         max-width: 1400px;
         margin: auto;
         min-height: 1000px;
-        font-family: Helvetica;
+        font-family: Roboto;
         }
 
 	#container{
@@ -34,10 +34,20 @@ body{
             text-align: justify;
             line-height: 1.5;
             width: 90%;
+            margin-top: 50px;
+        }
+
+            #container h4{
+                font-weight: 700;
+            }
+
+        #levering{
+            margin-top: 50px;
         }
         
         #støtter{
             line-height: 1.5;
+            margin-top: 50px;
         }
 
 
@@ -77,22 +87,22 @@ body{
             position: relative;
         }
 
-        #logo-container1{
-            background-image: url("../images/postnord.png");
+        .logo_container{
             height: 30px;
             width: 200px;
             background-size: contain;
             background-repeat: no-repeat;
             display: inline-block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #logo-container1{
+            background-image: url("../images/postnord.png");
         }
 
         #logo-container2{
             background-image: url("../images/gls_logo.png");
-            height: 30px;
-            width: 200px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            display: inline-block;
         }
 
 

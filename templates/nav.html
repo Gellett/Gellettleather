@@ -1,106 +1,107 @@
 <div class="row" id="nav_row">
 
         <div id="nav">
-            <div class="col-12 col-s-10">
-                <div class="dropdown">
-                    <button class="dropbtn">Menu
-                      <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="/tasker">tasker</a>
-                        <a href="/punge">Punge</a>
-                        <a href="/mapper">Mapper</a>
-                        <a href="/rejseserien">Rejseserien</a>
-                        <a href="/tilbehoer">Tilbehør</a>
-                        <a href="/om_os">Om os</a>
+            <div id="nav_content">
+                <div class="col-12 col-m-12 col-s-10">
+                    <div class="dropdown">
+                        <button class="dropbtn">Menu
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="/tasker">tasker</a>
+                            <a href="/punge">Punge</a>
+                            <a href="/mapper">Mapper</a>
+                            <a href="/rejseserien">Rejseserien</a>
+                            <a href="/tilbehoer">Tilbehør</a>
+                            <a href="/om_os">Om os</a>
+                        </div>
+                    </div>
+
+
+                    <div id="list">
+                        <ul>
+                            <li>
+                                <div class="dropdown_start">
+                                    <a class="list_text" href="/tasker">Tasker</a>
+                                    <div class="dropdwn_content">
+                                        <div class="drop_border">
+                                            <a class="drop_text not_last" href="/tasker/dametasker">Dametasker</a>
+                                        </div>
+                                        <div class="drop_border">
+                                            <a class="drop_text not_last" href="/tasker/kunstlaeder">Kunstlæder</a>
+                                        </div>
+                                        <div class="drop_border">
+                                            <a class="drop_text" href="/tasker/computertasker">Computertasker</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown_start">
+                                    <a class="list_text" href="/punge">Punge</a>
+                                    <div class="dropdwn_content">
+                                        <div class="drop_border">
+                                            <a class="drop_text not_last" href="/punge/damepunge">Damepunge</a>
+                                        </div>
+                                        <div class="drop_border">
+                                            <a class="drop_text" href="/punge/herrepunge">Herrepunge</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown_start">
+                                    <a class="list_text" href="/mapper">Mapper</a>
+                                    <div class="dropdwn_content">
+                                        <div class="drop_border">
+                                            <a class="drop_text not_last" href="/mapper/skrivemapper">Skrivemapper</a>
+                                        </div>
+                                        <div class="drop_border">
+                                            <a class="drop_text" href="/mapper/kredit&visitkortmapper">Kredit- & <br> visitkortmapper</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown_start">
+                                    <a class="list_text" href="/rejseserien">Rejseserien</a>
+                                    <div class="dropdwn_content">
+                                        <div class="drop_border">
+                                            <a class="drop_text not_last" href="/rejseserien/rejsetasker">Rejsetasker</a>
+                                        </div>
+                                        <div class="drop_border">
+                                            <a class="drop_text" href="/rejseserien/valutamapper">Valutamapper</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown_start">
+                                    <a class="list_text" href="/tilbehoer">Accessories</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown_start">
+                                    <a class="list_text" href="/om_os">Om os</a>
+                                </div>
+                            </li>
+                            <li  id="katalog">
+                                <div class="dropdown_start">
+                                    <a class="list_text" href="../static/Katalog_2019.pdf" download="Gellett_Leather_Danmark_Katalog">Katalog.pdf</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="kurv_container">
+                        <div class="kurv_img">
+                            <input id="vare_antal" name="antal" type="text" value="0" readonly>
+                        </div>
                     </div>
                 </div>
-
-
-                <div id="list">
-                    <ul>
-                        <li>
-                            <div class="dropdown_start">
-                                <a class="list_text" href="/tasker">Tasker</a>
-                                <div class="dropdwn_content">
-                                    <div class="drop_border">
-                                        <a class="drop_text not_last" href="/tasker/dametasker">Dametasker</a>
-                                    </div>
-                                    <div class="drop_border">
-                                        <a class="drop_text not_last" href="/tasker/kunstlaeder">Kunstlæder</a>
-                                    </div>
-                                    <div class="drop_border">
-                                        <a class="drop_text" href="/tasker/computertasker">Computertasker</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown_start">
-                                <a class="list_text" href="/punge">Punge</a>
-                                <div class="dropdwn_content">
-                                    <div class="drop_border">
-                                        <a class="drop_text not_last" href="/punge/damepunge">Damepunge</a>
-                                    </div>
-                                    <div class="drop_border">
-                                        <a class="drop_text" href="/punge/herrepunge">Herrepunge</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown_start">
-                                <a class="list_text" href="/mapper">Mapper</a>
-                                <div class="dropdwn_content">
-                                    <div class="drop_border">
-                                        <a class="drop_text not_last" href="/mapper/skrivemapper">Skrivemapper</a>
-                                    </div>
-                                    <div class="drop_border">
-                                        <a class="drop_text" href="/mapper/kredit&visitkortmapper">Kredit- & <br> visitkortmapper</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown_start">
-                                <a class="list_text" href="/rejseserien">Rejseserien</a>
-                                <div class="dropdwn_content">
-                                    <div class="drop_border">
-                                        <a class="drop_text not_last" href="/rejseserien/rejsetasker">Rejsetasker</a>
-                                    </div>
-                                    <div class="drop_border">
-                                        <a class="drop_text" href="/rejseserien/valutamapper">Valutamapper</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown_start">
-                                <a class="list_text" href="/tilbehoer">Accessories</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dropdown_start">
-                                <a class="list_text" href="/om_os">Om os</a>
-                            </div>
-                        </li>
-                        <li  id="katalog">
-                            <div class="dropdown_start">
-                                <a class="list_text" href="../static/Katalog_2019.pdf" download="Gellett_Leather_Danmark_Katalog">Katalog.pdf <span>(b2b)</span></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
-
-                <div class="kurv_container">
-                    <div class="kurv_img">
-                        <input id="vare_antal" name="antal" type="text" value="0" readonly>
-                    </div>
-                </div>
-
-            </div>
+        </div>
 
 
 </div>

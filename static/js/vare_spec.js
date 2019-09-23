@@ -2,8 +2,7 @@ $(function(){
 
         antal = 1;
 
-        x = document.getElementsByTagName("Div")[47];
-        console.log(x);
+        x = document.getElementsByTagName("Div")[48];
 
         $.getJSON('/API/get_image', {image: x.id}, function(data) {
 			$("#show_image").css("backgroundImage", "url("+data+")");
@@ -12,6 +11,8 @@ $(function(){
 		});
 
         $.getJSON('/API/get_image_antal', {test: x.id}, function(data) {
+
+            console.log(data);
 
             if (data == "1"){
                 $(".image_1").hide();

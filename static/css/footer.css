@@ -6,13 +6,16 @@
 #footer{
 	padding-top: 0px;
 	max-width: 1400px;
-	height: 150px;
+	height: 320px;
 	background-color: #000;
 	margin: auto;
+	line-height: 30px;
 }
 		#footer_container{
 			max-width: 1400px;
 			margin: auto;
+			position: relative;
+			top: 20%;
 		}
 
 		.footer_text{
@@ -20,7 +23,7 @@
 			display: inline-block;
 			left: 50%;
 			transform: translate(-50%);
-			color: #9c9c9c;
+			color: lightgrey;
 		}
 
 		.footer_text li:before {
@@ -41,7 +44,7 @@
 
 		.footer_text a{
 			text-decoration: none;
-			color: #9c9c9c;
+			color: lightgrey;
 		}
 
 		#pp_logo{
@@ -68,11 +71,11 @@
 
 		#footer hr{
 			margin: 0;
-			background-color: #bfbfbf;
+			background-color: lightgrey;
 		}
 
 	span a:hover{
-		color: #d1d1d1;
+		color: white;
 	}
 
 @media only screen and (max-width: 700px){
@@ -84,6 +87,10 @@
 	.footer_text{
 		left: 20px;
 		transform: translate(0);
+	}
+
+	#footer_container{
+		top: 0;
 	}
 
 }

@@ -28,20 +28,20 @@ orderID = 1491
 
 def switch_titel(argument):
     titel_switcher = {
-        "Tasker": u"Billige Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Dametasker": u"Billige Dame Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Kunstlaeder": u"Billige Tasker i Kunstlæder - Høj Kvalitet l Gellett Leather Danmark",
-        "Computertasker": u"Billige Computer Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Punge": u"Billige Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Damepunge": u"Billige Dame Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Herrepunge": u"Billige Herre Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Mapper": u"Billige Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Skrivemapper": u"Billige Skrive Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Kredit&visitkortmapper": u"Billige Kredit Kort Punge i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Rejseserien": u"Rejse Tasker & Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Rejsetasker": u"Billige Rejse Tasker i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Valutamapper": u"Billige Valuta Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
-        "Tilbehoer": u"Billige Accessories i Læder - Høj Kvalitet l Gellett Leather Danmark"
+        "Tasker": u"Tasker i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Dametasker": u"Dame Tasker i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Kunstlaeder": u"Tasker i Kunstlæder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Computertasker": u"Computer Tasker i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Punge": u"Punge i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Damepunge": u"Dame Punge i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Herrepunge": u"Herre Punge i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Mapper": u"Mapper i Læder - Høj Kvalitet l Gellett Leather Danmark",
+        "Skrivemapper": u"Skrive Mapper i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Kredit&visitkortmapper": u"Kredit Kort Punge i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Rejseserien": u"Tasker & Mapper i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Rejsetasker": u"Rejse Tasker i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Valutamapper": u"Valuta Mapper i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark",
+        "Tilbehoer": u"Accessories i Læder - Høj Kvalitet | Billig | Gellett Leather Danmark"
     }
     titel_tag = titel_switcher[argument]
     return titel_tag
@@ -185,11 +185,11 @@ def varer(varetype, varetype_1):
         content_height = y * 415 + 127 + 20 + 150
 
     if w:
-        mobile_height = (h + 1) * 330
-        mobile_content_height = (h + 1) * 328 + 100
+        mobile_height = (h*2 + 1) * 390
+        mobile_content_height = (h*2 + 1) * 388 + 100
     else:
-        mobile_height = h * 330
-        mobile_content_height = h * 328 + 100
+        mobile_height = h*2 * 390
+        mobile_content_height = h*2 * 388 + 100
 
     return render_template("varer.html", varenummer=varenummer, kategori=kategori, arrow=arrow, path_go_1=path_go_1,
                            path_go_2=path_go_2, path_1=path_1, path_2=path_2, image_path=image_path,

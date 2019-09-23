@@ -1,38 +1,38 @@
 #menu{
-	position: sticky;
+
 	top: 10px;
 	width: 160px;
 	float: left;
 }
 	#menu_list{
-		border: 1px solid black;
+
 		width: 160px;
 		position: relative;
-		top: 55px;
-		min-height: 680px;
+		top: 210px;
+		min-height: 649px;
 	}
 
 	#kategorier{
 		position: absolute;
 		top: 0;
-		background-color: #212121;
 		width: 100%;
 	}
 
 		#menu_list #kategorier p{
 			position: relative;
 			letter-spacing: 2px;
-			left: 10px;
-			bottom: 7px;
-			font-family: Helvetica;
-			color: white;
+			left: 18px;
+			bottom: 38px;
+			font-family: Roboto;
+			font-weight: 600;
+			color: #2d3436;
 		}
 
 		#menu ul{
 			top: 30px;
 			position: relative;
-			text-indent: -30px;
-			border-bottom: 1px dotted black;
+			padding-inline-start: 5px;
+			border-bottom: 1px solid #dfe6e9;
 			width: 90%;
 			left: 50%;
 			transform: translate(-50%);
@@ -43,10 +43,10 @@
 			margin-bottom: 10px;
 		}
 			#menu p{
-				font-size: 16px;
+				font-size: 14px;
 				margin-bottom: 0;
 				font-family: Helvetica;
-
+				font-weight: 100;
 				color: black;
 			}
 

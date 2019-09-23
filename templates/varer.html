@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="shortcut icon" href="/static/images/favicon.ico" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121222558-1"></script>
     <script>
@@ -113,12 +114,12 @@
 <body id="body">
 
     {% include 'header.html' %}
-
+{% include 'nav.html' %}
     <div id="content">
 
 
         <div id="container">
-            {% include 'nav.html' %}
+
 
 
                 {% include 'menu.html' %}
@@ -169,7 +170,7 @@
                         <div class="row">
                             {% for num in image_number %}
 
-                                <div class="col-4 col-m-4 col-s-6">
+                                <div class="col-4 col-m-6 col-s-12">
                                     <div class="product_container">
                                         <div class="vare_nr_{{ num }}" id="Varenr.: {{ varenummer[num] }}"></div>
                                         <div class="kategori kategori_{{ num }}"> <h2>{{ kategori[num] }}</h2> </div>

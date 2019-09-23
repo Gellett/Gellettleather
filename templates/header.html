@@ -2,13 +2,13 @@
 
 <div class="row" id="bot_header">
     <div id="info_container">
-        <img class="info_arrow" src="/static/images/icons8-double-right-arow-50.png" alt="white_arrow">
+        <!--<img class="info_arrow" src="/static/images/icons8-double-right-arow-50.png" alt="white_arrow">
         <p>1-2 Dages levering</p>
-        <img class="info_arrow" src="/static/images/icons8-double-right-arow-50.png" alt="white_arrow">
+
         <p>Top kvalitet</p>
-        <img class="info_arrow" src="/static/images/icons8-double-right-arow-50.png" alt="white_arrow">
-        <p id="info_p_last">Fast lav pris</p>
-        <!-- <p>Fri fragt ved køb over 300 DKK.-</p>-->
+
+        <p id="info_p_last">Fast lav pris</p>-->
+        <p>Kun 1-2 dages levering!</p>
     </div>
 </div>
 
@@ -27,23 +27,27 @@
 
                     <div class="right_header col-6 col-m-6 col-s-6">
 
+                        <input id="vare_antal_header" title="antal" name="antal" type="text" value="0" readonly>
+                        <img src="/static/images/shoppingbag.png" id="bag" alt="shopping-bag" style="height: 32px; width: 32px">
+
                         <div class="dropdown">
                             <div class="dropbtn">
-                                <img src="/static/images/icons8-menu-32.png" alt="burgermenu" style="height: 32px; width: 32px">
+                                <img src="/static/images/burger_menu.png" alt="burgermenu" style="height: 22px; width: 32px">
                             </div>
                             <div class="dropdown-content">
+                                <img src="/static/images/x.png" id="x" alt="cross" style="height: 32px; width: 32px">
                                 <!--<p id="produkter" class="dropdown_content_1">Produkter</p>-->
-                                <p><a href="/tasker">Tasker</a> <img class="dropdown_content_tasker" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                <p><a href="/tasker">Tasker</a> <img class="dropdown_content_tasker" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 16px; width: 16px"> </p>
                                     <a class="dropdown_content_2 dropdown_content_2_tasker" href="/tasker/dametasker">- Dametasker</a>
                                     <a class="dropdown_content_2 dropdown_content_2_tasker" href="/tasker/kunstlaeder">- Kunstlæder</a>
                                     <a class="dropdown_content_2 dropdown_content_2_tasker" href="/tasker/computertasker">- Computertasker</a>
-                                <p><a href="/punge">Punge</a> <img class="dropdown_content_punge" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                <p><a href="/punge">Punge</a> <img class="dropdown_content_punge" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 16px; width: 16px"> </p>
                                     <a class="dropdown_content_2 dropdown_content_2_punge" href="/punge/damepunge">- Damepunge</a>
                                     <a class="dropdown_content_2 dropdown_content_2_punge" href="/punge/herrepunge">- Herrepunge</a>
-                                <p><a href="/mapper">Mapper</a><img class="dropdown_content_mapper" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                <p><a href="/mapper">Mapper</a><img class="dropdown_content_mapper" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 16px; width: 16px"> </p>
                                     <a class="dropdown_content_2 dropdown_content_2_mapper" href="/mapper/skrivemapper">- Skrivemapper</a>
                                     <a class="dropdown_content_2 dropdown_content_2_mapper" href="/mapper/kredit&visitkortmapper">- Kredit- & visitkortmapper</a>
-                                <p><a href="/rejseserien">Rejseserien</a> <img class="dropdown_content_rejseserien" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 24px; width: 24px"> </p>
+                                <p><a href="/rejseserien">Rejseserien</a> <img class="dropdown_content_rejseserien" src="/static/images/icons8-sort-down-48.png" alt="arrow_down" style="height: 16px; width: 16px"> </p>
                                     <a class="dropdown_content_2 dropdown_content_2_rejseserien" href="/rejseserien/rejsetasker">- Rejsetasker</a>
                                     <a class="dropdown_content_2 dropdown_content_2_rejseserien" href="/rejseserien/valutamapper">- Valutamapper</a>
                                 <a href="/accessories">Accecories</a>
@@ -51,9 +55,8 @@
                             </div>
                         </div>
 
-                        <a href="/indkoebsvogn"> <img src="/static/images/icons8-shopping-bag.png" alt="shopping-bag" style="height: 32px; width: 32px"></a>
 
-                        <input id="vare_antal_header" title="antal" name="antal" type="text" value="0" readonly>
+
 
                     </div>
 

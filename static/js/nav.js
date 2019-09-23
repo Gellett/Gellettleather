@@ -22,8 +22,8 @@ $(function(){
 
    $(".list_text").each(function(){
        if (this.text === nav_item) {
-          $(this).parent($(".dropdown_start")).css({"border-right":"2px solid black", "border-top":"2px solid black", "border-left":"2px solid black", "background-color":"black"});
-          $(this).css({"color":"white"});
+
+          $(this).css({"border-bottom":"1px solid #2d3436"});
        }
    });
 

@@ -25,7 +25,7 @@ body{
 	}
 
 	.vare_div{
-		border-bottom: 1px solid darkgray;
+		border-bottom: 1px solid #dfe6e9;
 		position: relative;
 		width: 100%;
 		display: block;
@@ -44,65 +44,57 @@ body{
 		.text_div, .pris_div{
 			position: relative;
 			bottom: 40px;
-			font-family: Helvetica;
+			font-family: Roboto;
 		}
 
 		#ialt{
 			width: 100%;
-			border-bottom: 2px solid black;
+			border-bottom: 1px solid #dfe6e9;
 		}
 
 			#ialt_vare, #ialt_pris, #ialt_space{
 				position: relative;
 				display: inline-block;
-				font-family: Helvetica;
-				font-weight: bold;
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: 900;
 				width: 33%;
 				text-align: center;
 			}
 
+			button{
+				font-family: Helvetica;
+				background-color: #dedede;
+				border: none;
+				padding: 15px 32px;
+				color: #2d3436;
+				text-decoration: none;
+				font-size: 16px;
+				margin-top: 10px;
+				text-align: center;
+				display: inline-block;
+				border-radius: 2px;
+				height: 53px;
+			}
+
+			button:hover{
+				cursor: pointer;
+				background-color: lightgrey;
+			}
+
 		#buy_btn{
-			background-color: black;
-			border: none;
-			color: floralwhite;
-			padding: 15px 32px;
-			margin-top: 10px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
 			float: right;
+			background-color: #3b9a45;
+			color: white;
 		}
 
 		#empty_btn{
-			background-color: black;
-			border: none;
-			color: floralwhite;
-			padding: 15px 32px;
-			margin-top: 10px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
 			float: left;
 		}
 
 		#rabat_btn{
-			background-color: black;
-			border: none;
-			color: floralwhite;
-			padding: 15px 32px;
-			margin-top: 10px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 16px;
 			margin-right: 10px;
 			float: right;
-		}
-
-		button:hover{
-			cursor: pointer;
 		}
 
 		#rabatkode{

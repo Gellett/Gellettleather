@@ -14,7 +14,7 @@ body{
 		background-color: white;
 		max-width: 1400px;
 		margin: auto;
-		min-height: 1000px;
+		min-height: 850px;
 	}
 
 	#container{
@@ -71,7 +71,7 @@ body{
 				font-family: Verdana;
 				font-size: 28px;
 				text-align: center;
-				color: #000;
+				color: #2d3436;
 				margin-bottom: 30px;
 			}
 
@@ -86,7 +86,7 @@ body{
 			}
 
 		.text{
-			color: #000;
+			color: #2d3436;
 			margin-top: 50px;
 			text-align: justify;
 			font-size: 17px;
@@ -94,7 +94,12 @@ body{
 		}
 
 		.text ul{
-			padding-left: 18px;
+			padding-inline-start: 0px;
+		}
+
+		.text ul li{
+			line-height: 2em;
+			list-style-type: none;
 		}
 
 		.buy_container{
@@ -108,7 +113,7 @@ body{
 
 		.buy_btn_container{
 			height: 35px;
-			background-color: black;
+			background-color: #3b9a45;
 			border-left: 4px solid white;
 		}
 
@@ -150,13 +155,13 @@ body{
 				color: white;
 				font-size: 16px;
 				border: none;
-				font-family: Verdana;
+				font-family: Helvetica;
 				height: 19px;
 			}
 
 		.follow_container{
 			position: relative;
-			top: 120px;
+			top: 60px;
 		}
 
 		.follow_text{
@@ -177,7 +182,6 @@ body{
 		}
 
 	.alt_container{
-		margin-top: 300px;
 		margin-bottom: 20px;
 		height: 400px;
 	}
@@ -201,7 +205,7 @@ body{
 
 	.alt_text{
 		letter-spacing: 2px;
-		border-bottom: 2px solid black;
+		border-bottom: 1px solid #dfe6e9;
 		font-family: Helvetica;
 		font-size: 30px;
 	}
