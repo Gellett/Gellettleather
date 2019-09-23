@@ -5,17 +5,14 @@ body {
 	color: #2d3436;
 }
 
-#header{
+#header {
 	background-color: white;
 	margin: auto;
 }
 
-	#bot_header{
-		position: relative;
-		position: -webkit-sticky;
-		top: 0;
-		z-index: 6;
-	}
+#bot_header{
+	height: 44px;
+}
 
 	#top_header{
 		max-width: 1200px;
@@ -80,9 +77,10 @@ body {
 
 @media only screen and (max-width: 700px){
 
-	body{
-	overflow-x: hidden;
-	-ms-overflow-x: hidden;
+	body, html{
+		overflow-x: hidden;
+		-ms-overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	#vare_antal_header{
@@ -93,11 +91,12 @@ body {
 		border: none;
 		font-weight: 200;
 		display: inline-block;
-		right: 10px;
+		right: 45px;
     }
 
 	#info_container{
 		position: fixed;
+		z-index: 100;
 		}
 
 	#info_container p{
@@ -107,10 +106,9 @@ body {
 	}
 
 	.header_row{
-		position: sticky;
-		position: -webkit-sticky;
+		position: fixed;
 		top: 44px;
-		z-index: 99;
+		z-index: 5;
 	}
 
 	.right_header{
@@ -119,6 +117,7 @@ body {
 		text-align: right;
 	}
 
+
 	.right_header img{
 		float: right;
 		margin-right: 10px;
@@ -126,25 +125,30 @@ body {
 
 	#x{
 		position: absolute;
-		right: -5px;
+		right: 0px;
 		top: 9px;
 	}
 
 	.dropdown {
 		overflow: auto;
-		height: 25px;
-		width: 35px;
-		display: inline-block !important;
-		position: relative;
-		top: 2px;
+		height: 100vh;
+		width: 220px;
+		position: absolute;
+		top: 0;
+		right: 0;
 		box-sizing: unset;
-		right: 10px;
-    	}
+		background-color: transparent;
+	}
 
 	.dropbtn{
 		width: 35px;
 		display: inline-block;
 		float: unset;
+	}
+
+	.dropbtn img{
+		position: relative;
+    	top: 20px;
 	}
 	
 	.right_header img#bag{
@@ -152,7 +156,7 @@ body {
 		display: inline-block;
 		position: relative;
     	top: 2px;
-		right: 10px;
+		right: 45px;
 	}
 
     .dropdown-content {
@@ -163,12 +167,12 @@ body {
 		right: -220px;
 		position: fixed;
 		border: 1px solid #dfe6e9;
-        background-color: white;
         width: 220px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        z-index: 3;
+        z-index: 200;
 		padding-bottom: 20px;
 		height: 100vh;
+		background-color: white;
     }
 
 	.dropdown_content_2{
@@ -259,7 +263,7 @@ body {
 
 			#mobilepay_logo{
 				height: 50px;
-				width: 100%;
+				width: 150px;
 			}
 
 		#logo_container{

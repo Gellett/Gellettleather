@@ -240,9 +240,6 @@
         z-index: 1;
     }
 
-    #nav hr {
-        display: none;
-    }
 
     .kurv_img{
         position: absolute;

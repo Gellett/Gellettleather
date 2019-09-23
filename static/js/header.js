@@ -63,7 +63,6 @@ $(function() {
 
     $("#x").on('click', function () {
         $(".dropdown-content").animate({right: "-220px"});
-        $(".dropdown-content").css({overflow: "no-content"});
     })
 
 });
