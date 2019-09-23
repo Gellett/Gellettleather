@@ -81,8 +81,8 @@ body {
 @media only screen and (max-width: 700px){
 
 	body{
-	overflow-x: visible;
-	-ms-overflow-x: visible;
+	overflow-x: hidden;
+	-ms-overflow-x: hidden;
 	}
 
 	#vare_antal_header{
