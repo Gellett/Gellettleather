@@ -5,7 +5,7 @@ $(function(){
     }
 
     $("#okay").on('click', function() {
-        $("#cookies").animate({bottom: "-200px"});
+        $("#cookies").animate({bottom: "-50px"});
         sessionStorage.setItem('cookie', '1');
     });
 

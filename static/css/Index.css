@@ -465,9 +465,9 @@ button:hover {
 
 
 #cookies{
-	height: 200px;
+	height: 50px;
 	position: fixed;
-	bottom: -200px;
+	bottom: -50px;
 	background-color: grey;
 	font-family: Helvetica;
 	color: white;
@@ -479,27 +479,33 @@ button:hover {
 		position: relative;
 		width: 70%;
 		left: 50%;
-		top: 15%;
 		transform: translate(-50%);
-		height: 80px;
+		height: 100%;
 	}
 
 		#cookies_wrapper p{
-			width: 75%;
+			position: absolute;
+			right: 65px;
 			display: inline-block;
+			margin-left: 100px;
+			margin-top: 0;
+			margin-bottom: 0;
+			top: 50%;
+			transform: translate(0,-50%);
 		}
 
 		#okay{
-			position: relative;
-			left: 20px;
-			bottom: 20px;
-			width: 150px;
+			position: absolute;
+			right: 0px;
+			width: 50px;
+			transform: translate(0,30%);
 			display: inline-block;
 			height: 30px;
 			background-color: darkgray;
 			text-align: center;
 			font-size: 16px;
 			border: 1px solid #5b5b5b;
+			border-radius: 5px;
 			color: white;
 		}
 
@@ -510,19 +516,29 @@ button:hover {
 			}
 
 			#cookies h3{
+				position: absolute;
+				left: 0;
 				margin-bottom: 0;
+				margin-top: 0;
+				display: inline-block;
+				top: 50%;
+				transform: translate(0,-50%);
 			}
 
 			#okay p{
 				position: relative;
 				margin: 0;
-				padding-top: 5px;
+				right: 0;
 			}
 
 
 @media only screen and (max-width: 1023px){
 	.no_show_from_700{
 		display: none;
+	}
+
+	#cookies_wrapper{
+		width:90%;
 	}
 }
 
@@ -570,17 +586,6 @@ button:hover {
 		display: none;
 	}
 
-	#cookies{
-		font-size: 12px;
-		padding-bottom: 40px;
-	}
-
-	#okay{
-		font-size: 14px;
-		bottom: 70px;
-		left: 220px;
-		height: 30px;
-	}
 
 	#list{
 		width: 950px;
@@ -588,12 +593,18 @@ button:hover {
 
 	#cookies{
 		position: fixed;
-		bottom: -150px;
-		height: 150px;
-		background-color: #bababa;
+		bottom: -50px;
+		height: 50px;
+		background-color: grey;
 		font-family: Helvetica;
 		z-index: 2;
 		width: 100%;
+		font-size: 12px;
+	}
+
+	#cookies_wrapper p{
+		top: 50%;
+		transform: translate(0,-50%);
 	}
 }
 
@@ -622,6 +633,14 @@ button:hover {
 
 	#bestseller{
 		text-align: center;
+	}
+
+	#cookies h3{
+		display: none;
+	}
+
+	#cookies p{
+		width: 80%;
 	}
 }
 
