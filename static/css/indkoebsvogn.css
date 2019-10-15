@@ -185,4 +185,7 @@ body{
 		width: 80%;
 	}
 
+	#content{
+		top: 50px;
+	}
 }

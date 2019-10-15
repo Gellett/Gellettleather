@@ -15,6 +15,9 @@ $(function() {
     $(".dropbtn").on('click', function () {
             $(".dropdown-content").css({display: "block"});
             $(".dropdown-content").animate({right: "0px"});
+            $(".dropdown").css({height: "100vh"});
+            $(".dropdown").css({width: "220px"});
+            $(".dropdown").animate({right: "0px"});
     });
 
     $(".dropdown_content_tasker").on('click', function () {
@@ -63,6 +66,9 @@ $(function() {
 
     $("#x").on('click', function () {
         $(".dropdown-content").animate({right: "-220px"});
+        $(".dropdown").css({height: "50px"});
+        $(".dropdown").css({width: "50px"});
+        $(".dropdown").animate({right: "-0px"});
     })
 
 });
